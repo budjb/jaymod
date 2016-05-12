@@ -1,0 +1,27 @@
+#ifndef GAME_ENTITY_H
+#define GAME_ENTITY_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Entity
+{
+public:
+    Entity        ( );
+    ~Entity       ( );
+
+    void init     ( );
+    void shutdown ( );
+
+    const int  slot;
+
+    map<uint8,float> sharedBuildXP;
+    set<int>         molotovScreamers;
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+extern Entity g_entityObjects[MAX_GENTITIES];
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_ENTITY_H

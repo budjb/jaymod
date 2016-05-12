@@ -1,0 +1,36 @@
+<refentry id="cvar.g_knockback">
+
+<refmeta>
+    <refentrytitle>g_knockback</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_knockback</refname>
+    <refpurpose>set knockback effect</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_knockback</command>
+        <arg><replaceable>amount</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_knockback</command>
+        <arg choice="plain"><literal>1000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_knockback</command>
+    sets the primary scalar value used to calculate how far a player is knocked back when receiving damage.
+</para>
+</refsection>
+
+</refentry>

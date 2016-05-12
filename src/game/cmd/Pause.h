@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_PAUSE_H
+#define GAME_CMD_PAUSE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Pause : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Pause();
+    ~Pause();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_PAUSE_H

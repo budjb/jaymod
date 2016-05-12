@@ -1,0 +1,40 @@
+<refentry id="cvar.sv_maxPing">
+
+<refmeta>
+    <refentrytitle>sv_maxPing</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_maxPing</refname>
+    <refpurpose>set maximum allowable client ping</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_maxPing</command>
+        <arg><replaceable>ping</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_maxPing</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_maxPing</command>
+    sets the maximum ping in milliseconds allowable for a client, checked at time of connecting.
+    At connecting time the client ping is usually significantly worse than at normal gameplay,
+    therefore this setting might need to be inflated to compensate.
+    The server enforces this limit by rejecting client connections exceeding <replaceable>ping</replaceable>.
+    A value of <literal>0</literal> disables this functionality.
+</para>
+</refsection>
+
+</refentry>

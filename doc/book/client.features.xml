@@ -1,0 +1,308 @@
+<chapter id="client.features">
+<title>Features</title>
+
+<section id="client.features.adrenalineSharing">
+<title>Adrenaline Sharing</title>
+<para>
+    You have the ability to share adrenaline with other players.
+    If you switch to the alternate weapon of the adrenaline syringe (usually right click on the mouse),
+    the syringe will point outwards and you can give a live teammate adrenaline.
+    This is an excellent way to promote teamwork in tough situations.
+    This feature is enabled on the server using <xref linkend="cvar.g_medics"/>.
+</para>
+</section>
+
+<section id="client.features.alternateHUD">
+<title>Alternate HUD</title>
+<para>
+    HUD is an acronym for
+    <emphasis role="bold">Heads</emphasis> <emphasis role="bold">U</emphasis>p <emphasis role="bold">D</emphasis>isplay.
+    This is the 2D layout of items are on your screen such as what weapon you’re holding, your compass,
+    how much XP and health you have, etc. &project:name; has an alternative HUD available to use that
+    takes up less screen space.
+    This setting is available on the client using the in-game &project:name; preferences menu.
+</para>
+</section>
+
+<section id="client.features.autorate">
+<title>Automatic Rate Adjustment</title>
+<para>
+    Automatic Rate Adjustment tunes the /rate setting to help deal with big servers
+    running large maps with many players which will help to offer a better gaming experience.
+    If the rate is ramped, it will only be ramped for the current map to avoid entering
+    other servers with a rate which may get you kicked. In all cases, /rate ramping can only
+    increase as high as the server's sv_maxrate setting.
+</para>
+<para>
+    If &project:name; detects that you have the highest normal /rate setting of 25000 and
+    Auto Rate is set to "auto step" under the Jaymod/Misc/Network menu, /rate will be raised
+    in increments of 1000 when the server detects network congestion in the server -> client direction.
+</para>
+<para>
+    If Auto Rate is set to "server max" then /rate will be increased in a similar fashion as "auto step"
+    except that instead of increasing in increments of 1000 it will simply increase all at once and match sv_maxrate.
+</para>
+</section>
+
+<section id="client.features.classStealing">
+<title>Class Stealing</title>
+<para>
+    Class stealing allows a player to steal a dead teammate’s class.
+    This feature is enabled on the server using <xref linkend="cvar.g_covertops"/>.
+</para>
+<para>
+    In order to steal a class, you stand over a dead teammate and hold your activate key,
+    much as you would steal a uniform as a covert ops.
+    When you finish stealing their class, you lose your class abilities and your current weapons.
+    You will gain the weapon the dead player was using (on an empty clip, you must find ammo!)
+    and all the abilities of their class.
+    <tip>
+        If the server administration has enabled it, when you are a disguised covert ops and steal a class,
+        you keep the disguise even though you aren’t a covert ops anymore.
+    </tip>
+</para>
+</section>
+
+<section id="client.features.corpseDragging">
+<title>Corpse Dragging</title>
+<para>
+    Corpse dragging allows a player to drag a dead body (awaiting &medic; revive) along the ground
+    while depressing the activate-key.
+    This feature is enabled on the server using <xref linkend="cvar.g_dragCorpse"/>.
+    <tip>
+        Use this to drag a teammate's body away from danger,
+        or drag a dead enemy to a safe place for uniform stealing.
+    </tip>
+</para>
+</section>
+
+<section id="client.features.doubleJump">
+<title>Double Jump</title>
+<para>
+    Double jump allows you to jump an extra time while in mid-air to gain more height.
+    This feature is enabled on the server using <xref linkend="cvar.g_misc"/>.
+</para>
+</section>
+
+<section id="client.features.goombaKilling">
+<title>Goomba Killing</title>
+<para>
+    Alluding to the Mario Bros. days you can <emphasis>“goomba”</emphasis> kill
+    people by landing on their heads. The farther you fall, the more damage you inflict.
+    Also, if you land on someone’s head, it softens your fall.
+    This feature is enabled on the server using <xref linkend="cvar.g_goomba"/>.
+</para>
+</section>
+
+<section id="client.features.hitsounds">
+<title>Hitsounds</title>
+<para>
+    This extremely popular feature makes a sound when you hit a player.
+    This feature is enabled on the client using the in-game &project:name; preferences menu.
+</para>
+<para>
+    The sound distinguishes between friendly/enemy hits,
+    and depending on the server setting <xref linkend="cvar.g_hitmode"/>, the general body-part of player being hit.
+</para>
+</section>
+
+<section id="client.features.killingSprees">
+<title>Killing Sprees</title>
+<para>
+    The game keeps track of player kills and presents Unreal-Tournament-like killing spree messages and sounds.
+    This feature is enabled on the client using the in-game &project:name; preferences menu.
+    This feature must also be enabled on the server using <xref linkend="cvar.g_killingSpree"/>.
+</para>
+</section>
+
+<section id="client.features.liveUniformStealing">
+<title>Live Uniform Stealing</title>
+<para>
+    &covertops; can sneak behind someone and steal the pants right off of them!
+    You must stay behind the player though.
+    This feature is enabled on the server using <xref linkend="cvar.g_covertops"/>.
+</para>
+</section>
+
+<section id="client.features.obituaries">
+<title>Obituaries</title>
+<para>
+    By default, death messages (obituaries) will show up on the left-middle part of your screen.
+    On larger servers where there are a lot of deaths, it may be desirable to relocate those
+    messages to the chat area.
+    This setting is available on the client using the in-game &project:name; preferences menu.
+</para>
+</section>
+
+<section id="client.features.panzerWar">
+<title>Panzer War</title>
+<para>
+    Panzer war is a fun game-play mode made for destructionists.
+    This feature is enabled on the server using <xref linkend="cvar.g_panzerWar"/>.
+</para>
+&feature.panzerwar;
+</section>
+
+<section id="client.features.playdead">
+<title>Playdead</title>
+<para>
+    A popular &shrub:name; feature, playdead is enabled on the server
+    using <xref linkend="cvar.g_playDead"/>.
+</para>
+&feature.playdead;
+</section>
+
+<section id="client.features.privateMessaging">
+<title>Private Messaging</title>
+<para>
+    Private messaging allows one player to send a private message to another player or group of players
+    on the same server.
+    This feature is enabled on the server using <xref linkend="cvar.g_privateMessages"/>.
+</para>
+<para>
+    To use this feature, simply go into the Misc section of the &project:name; menu, and bind a key to use it.
+    You may also use private messages through the console or global chat window,
+    but this method is deprecated and discouraged.
+</para>
+<para>
+    You can find a player’s slot number by using the admin command <command>!listplayers</command>
+    or the builtin command <command>/players</command> in your client console.
+    This is the best way to make sure only one specific individual receives your message.
+</para>
+<para>
+    You can also specify a partial name match. This is a shorthand way,
+    but also allows for multiple people to receive the message.
+    For example, sending a message to “dam” will send the message “hello!”
+    to players “Adam” and “Damage”, since they both have “dam” in their name.
+    Just be careful that you don’t make the partial name too generic or you might
+    send your message to someone unintended!
+</para>
+<para>
+    There is also the option to block Private Messages.
+    With Admin System enabled, anyone who is equal to your level or lower will be unable
+    to send you a Private Message if you are blocking them.
+    Anyone above you, however, will still be able to do so.
+    This allows server admins to use Private Messaging as a valuable tool.
+    You can find this option also in the in-game &project:name; menu.
+</para>
+</section>
+
+<section id="client.features.poisonSyringes">
+<title>Poison Syringes</title>
+&feature.poisonSyringes;
+</section>
+
+<section id="client.features.sniperWar">
+<title>Sniper War</title>
+<para>
+    Sniper war is a fun game-play mode made for sharpshooters.
+    This feature is enabled on the server using <xref linkend="cvar.g_sniperWar"/>.
+</para>
+&feature.sniperwar;
+</section>
+
+<section id="client.features.poisonGasMines">
+<title>Poison Gas Mines</title>
+<para>
+    Poison gas mines are a new weapon available to level-5 engineers
+    behind the normal weaponbank for landmines.
+    Level-5 engineers are able to use poison gas mines if enabled on the server using
+    <xref linkend="cvar.g_sk5_eng"/>.
+    Similar to S-mines, they bounce into the air, but release a deadly gas for a duration of time.
+</para>
+</section>
+
+<section id="client.features.poisonThrowingKnives">
+<title>Poison Throwing Knives</title>
+<para>
+    Throwing knives will also poison whomever they hit.
+    This feature is enabled on the server using <xref linkend="cvar.g_weapons"/>.
+</para>
+</section>
+
+<section id="client.features.smines">
+<title>S-mines</title>
+<para>
+    S-mines (A.K.A. Bouncing Betties) are a new weapon available to level-5 engineers
+    behind the normal weaponbank for landmines.
+    Level-5 engineers are able to use S-Mines if enabled on the server using
+    <xref linkend="cvar.g_sk5_eng"/>.
+</para>
+<para>
+    The German S-mine (Schrapnellmine in German), also known as the Bouncing Betty,
+    is the best-known version of a class of mines known as bounding mines.
+    These mines launch into the air at about waist height and explode, propelling shrapnel
+    horizontally at lethal speeds. The S-mine was an anti-personnel landmine developed by
+    Nazi Germany in the 1930s and used extensively by German forces during World War II.
+    It was designed to be used in open areas to attack unshielded infantry.
+    Until production ceased with the defeat of Germany in 1945, Germany produced over 1.93 million S-mines.
+</para>
+<para>
+</para>
+</section>
+
+<section id="client.features.shoutcasting">
+<title>Shoutcasting</title>
+<para>
+    Players with the server password specified by <xref linkend="cvar.g_shoutcastpassword"/>
+    can use the shoutcasting feature. This is a beefed up version of spectating.
+    Players will be able to see the names of players above their heads,
+    see timers on dynamite, and see all landmines across the map.
+    To login and logout, use the following client-console commands, respectively:
+    <screen>/sclogin PASSWORD
+/sclogout
+</screen>
+</para>
+</section>
+
+<section id="client.features.throwingKnives">
+<title>Throwing Knives</title>
+<para>
+    Knives can be thrown. You will need to re-bind whatever key you are currently using
+    for alternate weapon to use the new &project:name; command using the in-game &project:name; menu.
+    It acts just like the alternate weapon function, with the addition of allowing very special control
+    over throwing knives. To throw a knife, hold the alt-fire button and release.
+    The longer you hold the knife (up to 1 second), the harder it is thrown.
+    Knives react according to your momentum too – if you are strafing left when releasing,
+    the knife will have a leftward vector as well.
+    This feature is enabled on the server using <xref linkend="cvar.g_weapons"/>.
+</para>
+</section>
+
+<section id="client.features.watermarks">
+<title>Watermarks</title>
+<para>
+    Server admins have the option of displaying a small logo on every player’s screen
+    using <xref linkend="cvar.g_watermark"/>.
+    Usually this logo will fade after a specified period of time,
+    but admins may decide to keep the logo for an extended or indefinite amount of time
+    using <xref linkend="cvar.g_watermarkFadeAfter"/> and <xref linkend="cvar.g_watermarkFadeTime"/>.
+    Clients can adjust the opacity or even completely disable this logo using the in-game
+    &project:name; preferences menu.
+</para>
+</section>
+
+<section id="client.features.m97">
+<title>Winchester M1897</title>
+<para>
+    Winchester M1897 (A.K.A. M97) is a new weapon selection available for every class except &covertops;.
+    It is a pump-action shotgun with an external hammer and tube magazine.
+</para>
+<para>
+    The United States military used a short-barreled version known variously as the
+    <emphasis>trench</emphasis> or <emphasis>riot</emphasis> shotgun.
+    It was developed into a version issued to US troops during World War I.
+    Unlike most modern pump-action shotguns, the Winchester Model 1897
+    (versions of which were type classified as the Model 97 or M97 for short)
+    fired each time the action closed with the trigger depressed (that is, it lacks a trigger disconnector).
+    That and its 6-shot capacity made it extremely effective for close-combat,
+    such that troops referred to it as a <emphasis>trench sweeper</emphasis>.
+    It was used in limited numbers during World War II by the United States Army and Marine Corps.
+</para>
+<para>
+    Reloading works different than most &et:name:abbr; weapons as you must load one shell at a time,
+    and reloading can be interrupted by pressing (not necessarily holding) fire while reloading.
+</para>
+</section>
+
+</chapter>

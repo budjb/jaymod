@@ -1,0 +1,5 @@
+include make/variant/windows-release
+
+###############################################################################
+
+CXX.opt.O += /arch:SSE2

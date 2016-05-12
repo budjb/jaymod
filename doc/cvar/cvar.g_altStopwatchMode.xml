@@ -1,0 +1,45 @@
+<refentry id="cvar.g_altStopwatchMode">
+
+<refmeta>
+    <refentrytitle>g_altStopwatchMode</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_altStopwatchMode</refname>
+    <refpurpose>enable/disable alternative stopwatch gametype</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_altStopwatchMode</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_altStopwatchMode</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_altStopwatchMode</command>
+    enables or disables alternative stopwatch gametype.
+    When enabled causes players to swap teams after each game.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_gametype"/>
+</para>
+</refsection>
+
+</refentry>

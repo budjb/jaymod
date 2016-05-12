@@ -1,0 +1,64 @@
+#include "ui/menudef.h"
+
+// Defines //
+
+//#define WINDOW_X		32
+//#define WINDOW_Y		32
+//#define WINDOW_WIDTH	576
+//#define WINDOW_HEIGHT	416
+#define WINDOW_X		16
+#define WINDOW_Y		16
+#define WINDOW_WIDTH	300
+#define WINDOW_HEIGHT	274
+#define GROUP_NAME		"grpJaymod"
+
+// Macros //
+
+#include "ui/menumacros.h"
+		
+// Customise Game Menu //
+	
+menuDef {
+	name		"jaymod_misc"
+	visible		0
+	fullscreen	0
+	rect		WINDOW_X WINDOW_Y WINDOW_WIDTH WINDOW_HEIGHT
+	style		WINDOW_STYLE_FILLED
+	
+	onESC {
+		close jaymod_misc;
+		open jaymod_main
+	}
+
+// Window //
+
+	WINDOW( "^xJAY^4MOD ^7- Miscellaneous", 94 )
+	
+// Subwindows //
+
+//#define SUBWINDOW_WIDTH		.5*(WINDOW_WIDTH-18)
+#define SUBWINDOW_WIDTH		WINDOW_WIDTH-12
+	
+// Antilag Options //
+
+	SUBWINDOW( 6, 32, (SUBWINDOW_WIDTH), 56, "^xANTILAG" )
+	MULTI( 8, 48, (SUBWINDOW_WIDTH)-4, 10, "Antilag:", .2, 8, "cg_delag", cvarFloatList { "^xOpt-Out" 0 "^xEnabled" 1  }, "Toggle whether the server will delag your shots." )
+	MULTI( 8, 60, (SUBWINDOW_WIDTH)-4, 10, "Optimized Prediction:", .2, 8, "cg_optimizeprediction", cvarFloatList { "^xOff" 0 "^xOn" 1  }, "Use the Unlagged Optimized Prediction routines." )
+	MULTI( 8, 72, (SUBWINDOW_WIDTH)-4, 10, "Connection Icon:", .2, 8, "cg_drawDisconnectIcon", cvarFloatList { "^xOff" 0 "^xOn" 1 }, "Show a disconnection icon over lagging players." )
+
+	SUBWINDOW( 6, 92, (SUBWINDOW_WIDTH), 44, "^xPRIVATE MESSAGES" )
+	MULTI( 8, 108, (SUBWINDOW_WIDTH)-4, 10, "Private Messages:", .2, 8, "cg_pmblock", cvarFloatList {"^xAllow" 0 "^xBlock" 1}, "Block private messages except from those with a higher admin level." )
+	MULTI( 8, 120, (SUBWINDOW_WIDTH)-4, 10, "PM Notification:", .2, 8, "cg_pmsounds", cvarFloatList { "^xOff" 0 "^xOn" 1 }, "Play a sound when you receive a private message." )
+	
+	SUBWINDOW( 6, 140, (SUBWINDOW_WIDTH), 32, "^xNETWORK" )
+	MULTI( 8, 156, (SUBWINDOW_WIDTH)-4, 10, "Auto Rate:", .2, 8, "cg_autoRate", cvarFloatList {"^xOff" 0 "^xAuto Step" 1 "^xServer Max" 2}, "Automatic optimized rate adjustment." )
+	
+	SUBWINDOW( 6, 176, (SUBWINDOW_WIDTH), 56, "^xCONTROLS" )
+	BIND( 8, 192, (SUBWINDOW_WIDTH)-4, 10, "Alternate Fire:", .2, 8, "+attack2", "" )
+	BIND( 8, 204, (SUBWINDOW_WIDTH)-4, 10, "Private Message:", .2, 8, "messagemode4", "" )
+	BIND( 8, 216, (SUBWINDOW_WIDTH)-4, 10, "Playdead:", .2, 8, "playdead", "" )
+
+// Buttons //
+	
+	BUTTON( 6, WINDOW_HEIGHT-24, WINDOW_WIDTH-12, 18, "^xBACK", .3, 14, close jaymod_misc; open jaymod_main )
+}

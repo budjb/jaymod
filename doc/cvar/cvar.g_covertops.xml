@@ -1,0 +1,77 @@
+<refentry id="cvar.g_covertops">
+
+<refmeta>
+    <refentrytitle>g_covertops</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_covertops</refname>
+    <refpurpose>set bitflags for &covertops; behavior</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_covertops</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_covertops.flags" frame="all">
+<?dbfo table-width="70%"?>
+<title>g_covertops Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="61*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>keep disguise when class-switching</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>keep disguise when throwing med packs and reviving</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>keep disguise when throwing ammo packs</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>keep disguise when laying mines or using pliers</entry>
+        </row>
+        <row>
+            <entry>16</entry>
+            <entry>enable stealing uniform from a live player from behind</entry>
+        </row>
+        <row>
+            <entry>32</entry>
+            <entry>enable disguised enemy name drawing when close-up</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_covertops</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_covertops</command>
+    sets bitflags for &covertops; behavior.
+</para>
+</refsection>
+
+</refentry>

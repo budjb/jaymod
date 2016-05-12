@@ -1,0 +1,11 @@
+all:: MODULE.LUA.build
+
+MODULE.LUA.build: CXX.inherit=MODULE.LUA
+MODULE.LUA.build: $(MODULE.LUA.a)
+
+$(MODULE.LUA.objs): $(BUILD/)%.o: $(PROJECT/)src/%.c
+	$(call CXX.fnCompile,$<,$@)
+
+$(MODULE.LUA.a): $(MODULE.LUA.objs)
+	$(call CXX.fnCompileStatic,$@,$^)
+	$(call CXX.fnRanlib,$@)

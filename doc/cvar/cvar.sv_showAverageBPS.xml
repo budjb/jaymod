@@ -1,0 +1,37 @@
+<refentry id="cvar.sv_showAverageBPS">
+
+<refmeta>
+    <refentrytitle>sv_showAverageBPS</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_showAverageBPS</refname>
+    <refpurpose>UNKNOWN</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_showAverageBPS</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_showAverageBPS</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_showAverageBPS</command>
+    UNKNOWN
+</para>
+</refsection>
+
+</refentry>

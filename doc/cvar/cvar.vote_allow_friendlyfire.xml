@@ -1,0 +1,44 @@
+<refentry id="cvar.vote_allow_friendlyfire">
+
+<refmeta>
+    <refentrytitle>vote_allow_friendlyfire</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_allow_friendlyfire</refname>
+    <refpurpose>enable/disable friendly-fire</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_allow_friendlyfire</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_allow_friendlyfire</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_allow_friendlyfire</command>
+    enables or disables friendly-fire.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.vote_limit"/>,
+    <xref linkend="cvar.vote_percent"/>
+</para>
+</refsection>
+</refentry>

@@ -1,0 +1,5 @@
+<!ENTITY bash.prompt.root  "<emphasis role='uid_root'>[root]#</emphasis>">
+<!ENTITY bash.prompt.et    "<emphasis role='uid_et'>[etserver]$</emphasis>">
+
+<!ENTITY et.sconsole  "<emphasis role='sconsole'>[server-console]</emphasis>">
+<!ENTITY et.cconsole  "<emphasis role='cconsole'>[client-console]</emphasis>">

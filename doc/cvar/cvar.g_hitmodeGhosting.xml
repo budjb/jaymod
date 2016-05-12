@@ -1,0 +1,64 @@
+<refentry id="cvar.g_hitmodeGhosting">
+
+<refmeta>
+    <refentrytitle>g_hitmodeGhosting</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeGhosting</refname>
+    <refpurpose>set lifetime of hit ghosting in milliseconds</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeGhosting</command>
+        <arg><literal>0</literal>..<literal>30000</literal></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeGhosting</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeGhosting</command>
+    sets lifetime of hit ghosting in milliseconds.
+    A value of <literal>0</literal> will disable ghosting.
+    This a visual-debugging technique which takes a visual snapshot of a player's boxes when hit.
+    The boxes are drawn (frozen) in place until the duration has expired.
+    The box which has scored a hit is rendered in a different color.
+</para>
+<para>
+    <caution>
+        Hitbox visuals are not free. Each rendered box consumes an game-engine entity
+        which is limited. If you are not careful, high numbers of players with high rates
+        of hits and long lifetimes may lead to entity exhaustion.
+    </caution>
+    <tip>
+        Use <xref linkend="cmd.status"/> to monitor game entities.
+    </tip>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

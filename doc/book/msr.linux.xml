@@ -1,0 +1,11 @@
+<section id="msr.linux">
+<title>&linux:name;</title>
+
+<orderedlist>
+    <listitem>&linux:name; x86 (32-bit) with GLIBC 2.3.2 or higher</listitem>
+    <listitem>Intel® Pentium® III 600Mhz processor or AMD equivalent</listitem>
+    <listitem>hardware-accelerated OpenGL driver</listitem>
+    <listitem>working installation of Enemy Territory 2.60b</listitem>
+</orderedlist>
+
+</section>

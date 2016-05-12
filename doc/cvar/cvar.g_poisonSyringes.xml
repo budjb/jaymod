@@ -1,0 +1,38 @@
+<refentry id="cvar.g_poisonSyringes">
+
+<refmeta>
+    <refentrytitle>g_poisonSyringes</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_poisonSyringes</refname>
+    <refpurpose>enables the use of poison syringes</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_poisonSyringes</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_poisonSyringes</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_poisonSyringes</command>
+    enables the use of poison syringes.
+    &feature.poisonSyringes;
+</para>
+</refsection>
+
+</refentry>

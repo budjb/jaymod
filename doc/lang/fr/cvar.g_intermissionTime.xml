@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_intermissionTime">
+  <refmeta>
+    <refentrytitle>g_intermissionTime</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_intermissionTime</refname>
+
+    <refpurpose>détermine la durée de l'intermission</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_intermissionTime</command>
+
+      <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_intermissionTime</command>
+
+      <arg choice="plain"><literal>60</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_intermissionTime</command> détermine la durée de
+    l'intermission en secondes entre les matches. L'intermission peu prendre
+    fin plus tôt que la valeur spécifiée par cette cvar si un nombre suffisant
+    de joueurs indiquent qu'ils sont prêts à débuter le match.</para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.g_intermissionReadyPercent" /></para>
+  </refsection>
+</refentry>

@@ -1,0 +1,19 @@
+#ifndef BGAME_LOGGER_H
+#define BGAME_LOGGER_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Logger : public ostream
+{
+private:
+    Logger();
+
+public:
+    Logger( const string& );
+    Logger( const string&, ostream& );
+    ~Logger();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // BGAME_LOGGER_H

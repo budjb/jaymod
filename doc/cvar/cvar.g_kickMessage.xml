@@ -1,0 +1,48 @@
+<refentry id="cvar.g_kickMessage">
+
+<refmeta>
+    <refentrytitle>g_kickMessage</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_kickMessage</refname>
+    <refpurpose>set kick message</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_kickMessage</command>
+        <arg><replaceable>"text"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_kickMessage</command>
+        <arg choice="plain">
+            <literal>"You have been kicked for $TIME."</literal>
+        </arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_kickMessage</command>
+    sets the message displayed to players when they attempt to reconnect after being kicked.
+    If the value includes the token <emphasis>$TIME</emphasis> it will be substituted with the
+    human-readable form of <xref linkend="cvar.g_kickTime"/>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_kickTime"/>,
+    <xref linkend="cvar.g_protestMessage"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,45 @@
+<chapter id="xpsave">
+<title>XP-save System</title>
+
+<section id="xpsave.operation">
+<title>Operation</title>
+<para>
+    XP-save is controlled using cvars and are effective immediately upon changing the value.
+    In order for XP-save to function, <xref linkend="cvar.g_admin"/> must be enabled.
+</para>
+
+<table id="xpsave.operation.table" frame="all">
+<?dbfo table-width="75%"?>
+<title>XP-save Operation</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*"/>
+    <colspec colnum="2" colwidth="3*"/>
+    <thead>
+        <row>
+            <entry>CVAR</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry><xref linkend="cvar.g_xpCap"/></entry>
+            <entry>set XP-limit action</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_xpMax"/></entry>
+            <entry>set XP-limit amount</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_xpSave"/></entry>
+            <entry>enable/disable XP-save feature</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_xpSaveTimeout"/></entry>
+            <entry>set XP-save timeout</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+
+</section>
+</chapter>

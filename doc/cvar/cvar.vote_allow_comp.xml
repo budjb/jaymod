@@ -1,0 +1,44 @@
+<refentry id="cvar.vote_allow_comp">
+
+<refmeta>
+    <refentrytitle>vote_allow_comp</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_allow_comp</refname>
+    <refpurpose>enable/disable competition settings</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_allow_comp</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_allow_comp</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_allow_comp</command>
+    enables or disables competition settings.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.vote_limit"/>,
+    <xref linkend="cvar.vote_percent"/>
+</para>
+</refsection>
+</refentry>

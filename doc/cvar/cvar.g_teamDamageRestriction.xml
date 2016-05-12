@@ -1,0 +1,47 @@
+<refentry id="cvar.g_teamDamageRestriction">
+
+<refmeta>
+    <refentrytitle>g_teamDamageRestriction</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_teamDamageRestriction</refname>
+    <refpurpose>set friendly-fire tolerance percentage</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_teamDamageRestriction</command>
+        <arg><replaceable>tolerance</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_teamDamageRestriction</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_teamDamageRestriction</command>
+    sets friendly-fire tolerance percentage.
+    A player's friendly-fire is calculated as hits against friendlies as compared to total hits.
+    A value of <literal>1</literal> to <literal>100</literal> inclusive will set the tolerance limit
+    of fiendly-fire and when exceeded, the player will be kicked.
+    A value of <literal>0</literal> disables this feature.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_teamDamageMinHits"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,90 @@
+<refentry id="cvar.g_watermark">
+
+<refmeta>
+    <refentrytitle>g_watermark</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_watermark</refname>
+    <refpurpose>set server watermark used for client display</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_watermark</command>
+            <group choice="opt">
+                <arg choice="plain"><replaceable>"image"</replaceable></arg>
+                <arg choice="plain"><replaceable>"shader"</replaceable></arg>
+            </group>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_watermark</command>
+        <arg choice="plain"><literal>"jaymod"</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_watermark</command>
+    sets the sever watermark used for client display.
+    An empty value <literal>""</literal> will disable watermarking.
+</para>
+<para>
+    Watermarks can be either an <replaceable>image</replaceable> or a <replaceable>shader</replaceable>.
+</para>
+<para>
+    An <replaceable>image</replaceable> is either in <filename>.tga</filename> or <filename>.jpg</filename> format.
+    A <filename>.tga</filename> file is useful when alpha-channels for transparency effects are desired,
+    (as long as you save them as 32-bit targa format).
+</para>
+<para>
+    <important>
+        The image pixel dimensions must be a power-of-2.
+        Square images of { 32x32, 64x64 or 128x128 } pixels are good for watermarking.
+        Images such as { 30x30, 20x20, 128x100 } are all bad and will not be loaded by &et:name:abbr;.
+    </important>
+</para>
+<para>
+    A <replaceable>shader</replaceable> gives many more advanced options. An example shader:
+</para>
+<screen id="g_watermark.shader"><![CDATA[// shader name
+watermark/bluecherry/bc
+{
+    nocompress
+    nomipmaps
+    nopicmip
+    {
+        // image filename
+        map watermark/bluecherry/bc.tga
+        blendFunc blend
+        rgbGen vertex
+        alphaGen vertex
+    }
+}]]>
+</screen>
+<para>
+    Of course, replace <filename>bluecherry/bc.tga</filename> with your actual file name.
+    When you set a watermark, the game will requires that it be placed in the <filename>watermark/</filename>
+    subdirectory. For example, <command>g_watermark “clanfu.jpg”</command> will attempt to load
+    <filename>watermark/clanfu.jpg</filename>. Make sure you remember this when you make your .pk3.
+</para>
+<para>
+    For more information on using watermarks, check out Rain's
+    <ulink url="http://bani.anime.net/banimod/forums/viewtopic.php?t=2033">post</ulink> on &etpro:name; forums.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_watermarkFadeAfter"/>,
+    <xref linkend="cvar.g_watermarkFadeTime"/>
+</para>
+</refsection>
+</refentry>

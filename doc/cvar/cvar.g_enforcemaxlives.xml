@@ -1,0 +1,39 @@
+<refentry id="cvar.g_enforcemaxlives">
+
+<refmeta>
+    <refentrytitle>g_enforcemaxlives</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_enforcemaxlives</refname>
+    <refpurpose>enables player tracking to enforce max lives between connects</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_enforcemaxlives</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_enforcemaxlives</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_enforcemaxlives</command>
+	enables player tracking to enforce max lives between connects.  If a player disconnects and
+	then reconnects to attempt to gain more lives, the server will kick them for the duration
+	of the map.
+</para>
+</refsection>
+
+</refentry>

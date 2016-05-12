@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_RESTART_H
+#define GAME_CMD_RESTART_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Restart : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Restart();
+    ~Restart();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_RESTART_H

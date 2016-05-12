@@ -1,0 +1,37 @@
+<refentry id="cvar.team_maxplayers">
+
+<refmeta>
+    <refentrytitle>team_maxplayers</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>team_maxplayers</refname>
+    <refpurpose>sets maximum number of players per team</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>team_maxplayers</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>team_maxplayers</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+	<command>team_maxplayers</command> sets the maximum number of players that can be on a team at one time.
+	Setting <replaceable>num</replaceable> to <literal>0</literal> allows for unlimited players on each time,
+    while <literal>1</literal> or higher specifies the maximum number of players per team.
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,105 @@
+<refentry id="cvar.g_weapons">
+
+<refmeta>
+    <refentrytitle>g_weapons</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_weapons</refname>
+    <refpurpose>set bitflags for various weapons behavior</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_weapons</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_weapons.flags" frame="all">
+<?dbfo table-width="80%"?>
+<title>g_weapons Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="71*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>&fieldops; with level 0 battle-sense do not spawn with binoculars</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>syringes function underwater</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>pliers function underwater</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>"Too many air strikes requested" will restore used charge bar</entry>
+        </row>
+        <row>
+            <entry>16</entry>
+            <entry>"Too many air strikes requested" will restore half of used charge bar</entry>
+        </row>
+        <row>
+            <entry>32</entry>
+            <entry>ammo packs restore a lost helmet</entry>
+        </row>
+        <row>
+            <entry>64</entry>
+            <entry>players with binoculars drop them upon death</entry>
+        </row>
+        <row>
+            <entry>128</entry>
+            <entry>allies reload rifles mid-clip to match corresponding axis ability</entry>
+        </row>
+        <row>
+            <entry>256</entry>
+            <entry>enable throwing knives</entry>
+        </row>
+        <row>
+            <entry>512</entry>
+            <entry>enable poison throwing knives</entry>
+        </row>
+        <row>
+            <entry>1024</entry>
+            <entry>enable Winchester M97 (shotgun)</entry>
+        </row>
+        <row>
+            <entry>2048</entry>
+            <entry>disable adrenaline</entry>
+        </row>
+        <row>
+            <entry>4096</entry>
+            <entry>enable Molotov-Cocktails</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_weapons</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_weapons</command>
+    sets bitflags for various weapons behavior.
+</para>
+</refsection>
+
+</refentry>

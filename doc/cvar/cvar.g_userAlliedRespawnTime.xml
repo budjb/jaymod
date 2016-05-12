@@ -1,0 +1,46 @@
+<refentry id="cvar.g_userAlliedRespawnTime">
+
+<refmeta>
+    <refentrytitle>g_userAlliedRespawnTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_userAlliedRespawnTime</refname>
+    <refpurpose>the amount of time between Allied team respawns</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_userAlliedRespawnTime</command>
+        <arg><replaceable>interval</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_userAlliedRespawnTime</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_userAlliedRespawnTime</command> specifies the time interval in seconds between Allied respawns.
+    This cvar is used for custom spawn times -- that is, it overrides the time set in the map's script.
+    It automatically updates the <xref linkend="cvar.g_bluelimbotime"/> cvar accordingly.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_bluelimbotime"/>,
+    <xref linkend="cvar.g_redlimbotime"/>,
+    <xref linkend="cvar.g_userAxisRespawnTime"/>
+</para>
+</refsection>
+
+</refentry>

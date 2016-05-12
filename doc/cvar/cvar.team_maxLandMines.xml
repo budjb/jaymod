@@ -1,0 +1,51 @@
+<refentry id="cvar.team_maxLandMines">
+
+<refmeta>
+    <refentrytitle>team_maxLandMines</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>team_maxLandMines</refname>
+    <refpurpose>sets the maximum numbers or landmines per team</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>team_maxLandMines</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>team_maxLandMines</command>
+        <arg choice="plain"><literal>10</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>team_maxLandMines</command>
+    sets the maximum number of landmines each team can have planted at once.
+	Setting <replaceable>num</replaceable> to <literal>0</literal> disables the landmines altogether,
+    and <literal>1</literal> or higher specifies the maximum number of landmines per team.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.team_maxArtillery"/>,
+    <xref linkend="cvar.team_maxFlamers"/>,
+    <xref linkend="cvar.team_maxGrenLaunchers"/>
+    <xref linkend="cvar.team_maxM97s"/>,
+    <xref linkend="cvar.team_maxMG42s"/>
+    <xref linkend="cvar.team_maxMortars"/>,
+    <xref linkend="cvar.team_maxPanzers"/>
+</para>
+</refsection>
+
+</refentry>

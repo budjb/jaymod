@@ -1,0 +1,38 @@
+<refentry id="cvar.g_saveCampaignStats">
+
+<refmeta>
+    <refentrytitle>g_saveCampaignStats</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_saveCampaignStats</refname>
+    <refpurpose>enables persistent stats across all the maps in a campaign</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_saveCampaignStats</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_saveCampaignStats</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_saveCampaignStats</command>
+    enables persistent stats across all the maps in a campaign.  Turning this feature on duplicates
+	the functionality of etmain's campaigns.
+</para>
+</refsection>
+
+</refentry>

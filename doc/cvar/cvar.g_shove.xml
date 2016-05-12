@@ -1,0 +1,47 @@
+<refentry id="cvar.g_shove">
+
+<refmeta>
+    <refentrytitle>g_shove</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_shove</refname>
+    <refpurpose>set player shoving distance</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_shove</command>
+        <arg><replaceable>distance</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_shove</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_shove</command>
+    sets the distance a player is shoved.
+    The amount specifies the distance a player is shoved and you should experiment with different
+    values until obtaining the desired results.
+    A value of <literal>0</literal> disables player shoving.
+    A value of <literal>100</literal> might be a good starting point to start tuning this feature.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_shoveNoZ"/>
+</para>
+</refsection>
+
+</refentry>

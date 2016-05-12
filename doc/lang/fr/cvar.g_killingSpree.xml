@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_killingSpree">
+  <refmeta>
+    <refentrytitle>g_killingSpree</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_killingSpree</refname>
+
+    <refpurpose>détermine le mode de morts en série</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_killingSpree</command>
+
+      <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+    <table frame="all" id="cvar.g_killingSpree.modes">
+      <?dbfo table-width="75%"?>
+
+      <title>g_killingSpree Modes</title>
+
+      <tgroup align="left" cols="2" colsep="1" rowsep="1">
+        <colspec align="center" colnum="1" colwidth="9*" />
+
+        <colspec colnum="2" colwidth="66*" />
+
+        <thead>
+          <row>
+            <entry>MODE</entry>
+
+            <entry>DESCRIPTION</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>0</entry>
+
+            <entry>désactiver</entry>
+          </row>
+
+          <row>
+            <entry>1</entry>
+
+            <entry>activer</entry>
+          </row>
+
+          <row>
+            <entry>2</entry>
+
+            <entry>actiiver l'enregistrement du plus grand nombre de morts en
+            série par carte</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_killingSpree</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_killingSpree</command> détermine le mode de morts en
+    série.</para>
+  </refsection>
+</refentry>

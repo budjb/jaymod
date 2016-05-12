@@ -1,0 +1,7 @@
+<para>
+    Extract &project:title; distribution bundle available for download from
+    <ulink url="&project:website;"/>.
+</para>
+<screen>&bash.prompt.et; cd ~etserver
+&bash.prompt.et; tar xzf &project:packageBase;.tar.gz
+</screen>

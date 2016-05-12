@@ -1,0 +1,73 @@
+<refentry id="cvar.g_slashKill">
+
+<refmeta>
+    <refentrytitle>g_slashKill</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_slashKill</refname>
+    <refpurpose>set client /kill behavior mode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_slashKill</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_slashKill.modes" frame="all">
+<?dbfo table-width="85%"?>
+<title>g_slashKill Modes</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="76*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>default behavior</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>player will spawn with 50% class charge</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>player will spawn with empty class charge</entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>player will spawn with class charge at same level as when /kill was issued</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>disables /kill command</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_slashKill</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_slashKill</command>
+    set client /kill command behavior mode.
+</para>
+</refsection>
+
+</refentry>

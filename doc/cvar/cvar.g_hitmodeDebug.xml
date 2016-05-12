@@ -1,0 +1,116 @@
+<refentry id="cvar.g_hitmodeDebug">
+
+<refmeta>
+    <refentrytitle>g_hitmodeDebug</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeDebug</refname>
+    <refpurpose>set bitflags for hitmode debugging</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeDebug</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_hitmodeDebug.flags" frame="all">
+<?dbfo table-width="80%"?>
+<title>g_hitmodeDebug Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="71*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>visually render (draw) active boxes</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>visually render (draw) reference boxes</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>visually render (draw) world-collision-box</entry>
+        </row>
+        <row>
+            <entry>16</entry>
+            <entry>log lifecycle (construct/destruct/alloc/free) to client console</entry>
+        </row>
+        <row>
+            <entry>32</entry>
+            <entry>log snapshot use to client console</entry>
+        </row>
+        <row>
+            <entry>64</entry>
+            <entry>log state changes for state-driven models to client console</entry>
+        </row>
+        <row>
+            <entry>256</entry>
+            <entry>log ray text to client console</entry>
+        </row>
+        <row>
+            <entry>512</entry>
+            <entry>log zone text to client console</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeDebug</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeDebug</command>
+    sets bitflags for hitmode debugging.
+    These are expert <emphasis>debugging</emphasis> aids provided for the benefit of people who are
+    interested in learning more detail about boxes, sizes, and how they react to player movements,
+    and is certainly not meant to be enabled during real gameplay.
+</para>
+<para>
+    <caution>
+        Hitmode visuals are expensive. Each rendered box consumes a game-engine entity
+        which is limited and adds to network traffic load. If you are not careful, high numbers
+        of players with high rates of hits and long lifetimes may lead to entity exhaustion.
+        <para/>
+        Flags enabling client console logging can easily cause &et:name:abbr; limitations to
+        be exceeded, resulting in dropped client connections. In other words, do not create rapid hits
+        while this kind of debugging is active.
+    </caution>
+    <tip>
+        Use <xref linkend="cmd.status"/> to monitor game entities.
+    </tip>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

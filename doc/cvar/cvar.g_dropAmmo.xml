@@ -1,0 +1,48 @@
+<refentry id="cvar.g_dropAmmo">
+
+<refmeta>
+    <refentrytitle>g_dropAmmo</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_dropAmmo</refname>
+    <refpurpose>enables ammo crate drops on field ops death</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_dropAmmo</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_dropAmmo</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_dropAmmo</command>
+    enables ammo crate drops on field ops death.  Setting <replaceable>num</replaceable> to <literal>0</literal>
+	disables the feature, while anything greater than <literal>0</literal> is the number of ammo crates to drop
+	when a field ops dies.
+</para>
+
+<caution>
+    Ammo crate drops are expensive. Each crate consumes a game-engine entity
+    which is limited and adds to network traffic load.  If you are not careful, high numbers
+    of field ops in conjunction with this cvar set to a high number may lead to entity exhaustion.
+</caution>
+<tip>
+    Use <xref linkend="cmd.status"/> to monitor game entities.
+</tip>
+
+</refsection>
+
+</refentry>

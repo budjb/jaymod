@@ -1,0 +1,53 @@
+MODULE.CGAME.srcs.pch = $(sort \
+	$(wildcard $(PROJECT/)src/cgame/*.cpp) \
+	$(wildcard $(PROJECT/)src/cgame/cvar/*.cpp) \
+	\
+	$(PROJECT/)src/bgame/Engine.cpp \
+	$(PROJECT/)src/bgame/Process.cpp \
+	$(PROJECT/)src/bgame/SampledStat.cpp \
+	$(PROJECT/)src/bgame/bg_animation.cpp \
+	$(PROJECT/)src/bgame/bg_animgroup.cpp \
+	$(PROJECT/)src/bgame/bg_attack2.cpp \
+	$(PROJECT/)src/bgame/bg_character.cpp \
+	$(PROJECT/)src/bgame/bg_classes.cpp \
+	$(PROJECT/)src/bgame/bg_jaymod.cpp \
+	$(PROJECT/)src/bgame/bg_misc.cpp \
+	$(PROJECT/)src/bgame/bg_molotov.cpp \
+	$(PROJECT/)src/bgame/bg_pmove.cpp \
+	$(PROJECT/)src/bgame/bg_slidemove.cpp \
+	$(PROJECT/)src/bgame/bg_sscript.cpp \
+	$(PROJECT/)src/bgame/bg_stats.cpp \
+	$(PROJECT/)src/bgame/bg_tracemap.cpp \
+	$(PROJECT/)src/bgame/q_math.cpp \
+	$(PROJECT/)src/bgame/q_shared.cpp \
+	\
+	$(wildcard $(PROJECT/)src/bgame/cvar/*.cpp) \
+	$(wildcard $(PROJECT/)src/bgame/str/*.cpp) \
+	\
+	$(PROJECT/)src/bgame/$(PROJECT.platspecific)/Process.cpp \
+	$(PROJECT/)src/bgame/$(PROJECT.platspecific)/bg_cpu.cpp \
+    \
+	$(PROJECT/)src/ui/ui_shared.cpp \
+	\
+	$(wildcard $(PROJECT/)src/cgame/$(PROJECT.platspecific)/*.cpp) \
+	)
+
+MODULE.CGAME.objs.pch = $(MODULE.CGAME.srcs.pch:$(PROJECT/)src/%.cpp=$(BUILD/)cgame/%.o)
+MODULE.CGAME.pchs     = $(foreach i,$(CXX.pch.arch),$(BUILD/)cgame/bgame/impl.h.$(CXX.pch.ext)/$(i))
+MODULE.CGAME.so       = $(BUILD/)cgame/cgame$(IDMODULE.suffix)
+MODULE.CGAME.pdb      = $(BUILD/)cgame/
+
+###############################################################################
+
+MODULE.CGAME.CXX.I<   += $(BUILD/)cgame
+MODULE.CGAME.CXX.D    += CGAMEDLL
+MODULE.CGAME.CXX.l    += $(MATH.l) $(IPHLPAPI.l) $(ADVAPI.l) $(DYNLOAD.l)
+
+
+MODULE.CGAME.CXX.fwork += IOKit CoreFoundation
+
+###############################################################################
+
+BUILD.output += $(MODULE.CGAME.objs.pch)
+BUILD.output += $(MODULE.CGAME.pchs)
+BUILD.output += $(MODULE.CGAME.so)

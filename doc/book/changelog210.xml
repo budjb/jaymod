@@ -1,0 +1,431 @@
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    Added: &cvar:g_misc; 64 bitflag for more realistic aim-spread which factors environment
+    (ground, water, air) and player-state (crouch/prone) for stability.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Greater</emphasis>
+    overall server efficiency w/ 10% CPU workload reduction (as seen on a server with 40+ players)
+    even with our most accurate hitmodel=4 enabled. 
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Overhauled</emphasis>
+    server-side ban logging.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Overhauled</emphasis>
+    !finger.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Overhauled</emphasis>
+    !baninfo.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Overhauled</emphasis>
+    !showbans.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    &cmd:status;.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Optimized</emphasis>
+    entity information to help reduce likelihood of truncated server commands on big servers.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    satchel and dynamite bug: corpses are now blown up.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Adjusted</emphasis>
+    M97 to not give extra damage for headshot.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    Jaymod 2.0 shrubbot -> Jaymod 2.1 user/level database converter (perl).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    automatic purging of oldest anonymous-users (level=0) when > ~8000.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    weaponbank icons to remain sharp w/ r_picmip for m97, binocs, syringe, adren, mortar, mg42, satchel, radio, poison-gas, and all landmines.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Replaced</emphasis>
+    !listlevels.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    legacy debug hitboxes. New hitbox implementation has integrated visual/text debugging system.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    legacy bullet-hit system.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    legacy anti-lag system.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Improved</emphasis>
+    landmine game efficiency by an order of magnitude.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    mounted-MG42 anti-lag support.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">New</emphasis>
+    anti-lag implementation integrated with new hitboxes.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">New</emphasis>
+    hitbox implementation w/ 5 levels of &cvar:g_hitmode; to choose from.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Improved</emphasis>
+    !listplayers to show more information about each player.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    poison-gas landmines to be reclaimed when player leaves team/disconnects.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    poison-gas landmines to also be included for "landmines reported in this area".
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    poison-gas landmines to trigger against tanks (movers).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Improved</emphasis>
+    playdead significantly. Many bugs are fixed, including a nasty bounding box issue,
+    added hitboxes to head and legs while playing dead, made the face static (doesn't animate anymore),
+    players can walk through a playdead player, and much more.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    previous shrubbot system.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    previous xp save system.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    previous longest spree record.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    previous censor implementation.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    user database. This replaces part of the old shrubbot system, and xp save.
+    Data is stored in text, and for every player that connects, basic information is recorded and saved,
+    including tracking information such as ip, guid, and mac. XP info is saved in text format but is
+    encrypted so that admins may not edit it.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    level database. This replaces the levels aspect of the old shrubbot system.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    map database. This currently replaces the longest spree system, and will be expanded on to keep
+    records of stats of maps.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    censor database. This replaces the old censor code, with unlimited words (there was a 50 word limit),
+    and it is significantly more effecient. Also, formatting of words will not be lost, whereas before
+    censored text would have color removed.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    greeting audio at both the level and admin level.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    a nasty sticky movement bug.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    throwing knife while using binocs bug.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    throwing knife charging while playdead bug.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    several spawn weapons bugs, including soldier spawning with a single pistol bug.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    several class switching bugs.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Improved</emphasis>
+    weapons switching when switching classes. Ammo is now taken from the reserve ammo the player had.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    mines so that the owner of the mine is updated if the player who armed it is not the one who threw it.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    mute icon to the scoreboard for muted players.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    new stat for VSP chat parser workaround. Since the stats parser is closed source and cannot be changed,
+    the stat is ignored in the logs now.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    akimbo reload bug. You can now reload if only one shot was fired.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    color to disguised names.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    g_covertops flag 32 - do not cut off disguised covert ops disguise names when close to a player.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    med kit throwing animation (thanks Jaquboss!).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    reverse scrolling through players when spectating. The button bound to +attack2 will do this.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    stuck poll after joining a game.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    chat icons (team graphic next to chat, for example).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    userinfo server logging. This includes the GUID.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    flag 4 to &cvar:g_engineers; for shared construction xp.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    compass. Icons will no longer extend outside of the compass (support for fixed &etpro:name; shaders).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    menu item for compass scale.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    new time format to appropriate CVARS. Time can be specified with D, H, M, and S modifiers,
+    with the default being S.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Adjusted</emphasis>
+    some on-screen HUD text elements. The fonts are smaller and should take up less space.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    #43 - players could launch arty, then quickly switch teams and get kills against their old teammates.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    #42 - /kill counts as a death.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    timed muting.
+</simpara>
+</listitem>

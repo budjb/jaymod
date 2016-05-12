@@ -1,0 +1,43 @@
+<refentry id="cvar.sv_allowDownload">
+
+<refmeta>
+    <refentrytitle>sv_allowDownload</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_allowDownload</refname>
+    <refpurpose>enable/disable direct client download</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_allowDownload</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_allowDownload</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_allowDownload</command>
+    enables or disables direct client downloads from server.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_dl_maxRate"/>
+</para>
+</refsection>
+</refentry>

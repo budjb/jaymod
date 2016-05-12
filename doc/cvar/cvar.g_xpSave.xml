@@ -1,0 +1,77 @@
+<refentry id="cvar.g_xpSave">
+
+<refmeta>
+    <refentrytitle>g_xpSave</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_xpSave</refname>
+    <refpurpose>enable/disable XP-save feature</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_xpSave</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+	<table id="cvar.g_xpSave.modes" frame="all">
+<?dbfo table-width="75%"?>
+<title>g_xpSave Modes</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="66*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>disabled</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>enabled</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>enabled and clear all XP in campaign mode when a new campaign begins</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_xpSave</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_xpSave</command>
+    enables or disables XP-save functionality.
+    If enabled, the server will save XP for up to the amount of time specified by
+    <xref linkend="cvar.g_xpSaveTimeout"/>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_xpCap"/>,
+    <xref linkend="cvar.g_xpMax"/>,
+    <xref linkend="cvar.g_xpSaveTimeout"/>,
+    <xref linkend="xpsave"/>
+</para>
+</refsection>
+
+</refentry>

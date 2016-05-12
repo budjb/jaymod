@@ -1,0 +1,57 @@
+<refentry id="cvar.g_soldiers">
+
+<refmeta>
+    <refentrytitle>g_soldiers</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_soldiers</refname>
+    <refpurpose>set bitflags for &soldier; behavior</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_soldiers</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_soldiers.flags" frame="all">
+<?dbfo table-width="70%"?>
+<title>g_soldiers Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="61*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>enable gravity effect on panzer rockets</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_soldiers</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_soldiers</command>
+    set bitflags for &soldier; behavior.
+</para>
+</refsection>
+
+</refentry>

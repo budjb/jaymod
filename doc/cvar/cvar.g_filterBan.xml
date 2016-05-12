@@ -1,0 +1,60 @@
+<refentry id="cvar.g_filterBan">
+
+<refmeta>
+    <refentrytitle>g_filterBan</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_filterBan</refname>
+    <refpurpose>filters players joining the server</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_filterBan</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	<table id="cvar.g_filterBan.flags" frame="all">
+    <?dbfo table-width="60%"?>
+	<title>g_filterBan modes</title>
+	<tgroup cols="2" align="left" colsep="1" rowsep="1">
+	    <colspec colnum="1" colwidth="9*" align="center"/>
+	    <colspec colnum="2" colwidth="51*"/>
+	    <thead>
+	        <row>
+	            <entry>MODE</entry>
+	            <entry>DESCRIPTION</entry>
+	        </row>
+	    </thead>
+	    <tbody>
+	        <row>
+	            <entry>0</entry>
+	            <entry>only players in the filter list are allowed to join</entry>
+	        </row>
+	        <row>
+	            <entry>1</entry>
+	            <entry>players in the filter list are not allowed to join</entry>
+	        </row>
+	    </tbody>
+	</tgroup>
+	</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_filterBan</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_filterBan</command>
+    filters players joining the server.
+</para>
+</refsection>
+
+</refentry>

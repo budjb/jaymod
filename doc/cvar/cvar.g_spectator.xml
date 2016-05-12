@@ -1,0 +1,74 @@
+<refentry id="cvar.g_spectator">
+
+<refmeta>
+    <refentrytitle>g_spectator</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_spectator</refname>
+    <refpurpose>set bitflags for spectator actions</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_spectator</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_spectator.flags" frame="all">
+<?dbfo table-width="85%"?>
+<title>g_spectator Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="76*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>click targeted spectator to follow</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>click no-target to follow next player, only useful when flag <literal>1</literal> is enabled</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>continue following same player even after they die and respawn</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>enter free-look mode when subject dies</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_spectator</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_spectator</command>
+    sets bitflags controlling various spectator actions.
+</para>
+<para>
+    <note>
+        Flags <literal>4</literal> and <literal>8</literal> are mutually exclusive,
+    </note>
+</para>
+</refsection>
+
+</refentry>

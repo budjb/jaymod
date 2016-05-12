@@ -1,0 +1,62 @@
+<refentry id="cvar.g_levels_medic">
+
+<refmeta>
+    <refentrytitle>g_levels_medic</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_levels_medic</refname>
+    <refpurpose>graduated levels of &medic; XP</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_levels_medic</command>
+        "<arg><replaceable>level1</replaceable></arg>
+        <arg><replaceable>level2</replaceable></arg>
+        <arg><replaceable>level3</replaceable></arg>
+        <arg><replaceable>level4</replaceable></arg>
+        <arg><replaceable>level5</replaceable></arg>"
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_levels_medic</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+    <cmdsynopsis>
+        <command>g_levels_medic</command>
+        <arg choice="plain"><literal>"20 50 90 140 200"</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_levels_medic</command>
+    defines the graduated levels of &medic; XP.
+    Between 1-5 integers are used to specify the amount of XP required for each level.
+    Omitting values will disable any of the levels higher than those specified.
+    A value of <literal>-1</literal> for any skill level also disables that particular level,
+    although the associated skills will still be gained when reaching a higher level, if allowed.
+    Leaving the value blank causes the default values to be used: <literal>"20 50 90 140 200"</literal>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_levels_battlesense"/>,
+    <xref linkend="cvar.g_levels_covertops"/>,
+    <xref linkend="cvar.g_levels_engineer"/>,
+    <xref linkend="cvar.g_levels_fieldops"/>,
+    <xref linkend="cvar.g_levels_lightweapons"/>,
+    <xref linkend="cvar.g_levels_soldier"/>,
+    <xref linkend="cvar.g_defaultSkills"/>
+</para>
+</refsection>
+
+</refentry>

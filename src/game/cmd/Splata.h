@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SPLATA_H
+#define GAME_CMD_SPLATA_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Splata : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Splata();
+    ~Splata();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SPLATA_H

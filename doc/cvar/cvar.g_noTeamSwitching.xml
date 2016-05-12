@@ -1,0 +1,37 @@
+<refentry id="cvar.g_noTeamSwitching">
+
+<refmeta>
+    <refentrytitle>g_noTeamSwitching</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_noTeamSwitching</refname>
+    <refpurpose>disables team switching during a match</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_noTeamSwitching</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_noTeamSwitching</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_noTeamSwitching</command>
+    disables team switching during a match.
+</para>
+</refsection>
+
+</refentry>

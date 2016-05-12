@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_censorPenalty">
+  <refmeta>
+    <refentrytitle>g_censorPenalty</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_censorPenalty</refname>
+
+    <refpurpose>détermine l'indicateur de bits pour les pénalités de
+    censure</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_censorPenalty</command>
+
+      <arg><replaceable>indicateur</replaceable></arg>
+    </cmdsynopsis>
+
+    <table frame="all" id="cvar.g_censorPenalty.flags">
+      <?dbfo table-width="40%"?>
+
+      <title>g_censorPenalty Flags</title>
+
+      <tgroup align="left" cols="2" colsep="1" rowsep="1">
+        <colspec align="center" colnum="1" colwidth="9*" />
+
+        <colspec colnum="2" colwidth="31*" />
+
+        <thead>
+          <row>
+            <entry>FLAG</entry>
+
+            <entry>DESCRIPTION</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>1</entry>
+
+            <entry>tue et extermine</entry>
+          </row>
+
+          <row>
+            <entry>4</entry>
+
+            <entry>tue mais n'extermine pas</entry>
+          </row>
+
+          <row>
+            <entry>8</entry>
+
+            <entry>auto-silence</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_censorPenalty</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_censorPenalty</command> détermine l'indicateur de bits
+    pour les pénalités de censure.</para>
+
+    <para><note>
+         Les indicateurs 
+
+        <literal>1</literal>
+
+         et 
+
+        <literal>4</literal>
+
+         sont mutuellement exclusifs. 
+      </note></para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.g_censor" /></para>
+  </refsection>
+</refentry>

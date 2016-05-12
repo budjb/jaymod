@@ -1,0 +1,36 @@
+<refentry id="cvar.match_minplayers">
+
+<refmeta>
+    <refentrytitle>match_minplayers</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_minplayers</refname>
+    <refpurpose>set minimum number of players required for match to begin</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_minplayers</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_minplayers</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_minplayers</command>
+    sets the minimum number of players required for match to begin.
+</para>
+</refsection>
+
+</refentry>

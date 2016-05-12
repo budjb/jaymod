@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_dynamiteTime">
+  <refmeta>
+    <refentrytitle>g_dynamiteTime</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_dynamiteTime</refname>
+
+    <refpurpose>détermine en secondes le compteur pour l'explosion de la
+    dynamite</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_dynamiteTime</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_dynamiteTime</command>
+
+      <arg choice="plain"><literal>30</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_dynamiteTime</command> détermine en secondes le compteur
+    pour l'explosion de la dynamite.</para>
+  </refsection>
+</refentry>

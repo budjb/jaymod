@@ -1,0 +1,46 @@
+<refentry id="cvar.g_protestMessage">
+
+<refmeta>
+    <refentrytitle>g_protestMessage</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_protestMessage</refname>
+    <refpurpose>sets a short footer message for players disconnected as punishment.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_protestMessage</command>
+        <arg><replaceable>message</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_protestMessage</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_protestMessage</command>
+    sets a short footer message for players disconnected as punishment.
+    If this cvar has anything set, it will be appended to the message displayed to the
+    player when they are kicked or banned.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_kickMessage"/>,
+    <xref linkend="cvar.g_kickTime"/>
+</para>
+</refsection>
+
+</refentry>

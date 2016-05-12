@@ -1,0 +1,36 @@
+<refentry id="cvar.server_motd0">
+
+<refmeta>
+    <refentrytitle>server_motd0</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>server_motd0</refname>
+    <refpurpose>set server message-of-the-day</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>server_motd0</command>
+        <arg><replaceable>"text"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>server_motd0</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>server_motd0</command>
+    sets the server message-of-the-day (line 0) for display in bottom-right corner of connecting splash-screen.
+</para>
+</refsection>
+
+</refentry>

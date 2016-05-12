@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_LAUNCH_H
+#define GAME_CMD_LAUNCH_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Launch : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Launch();
+    ~Launch();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_LAUNCH_H

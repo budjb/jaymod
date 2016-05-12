@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_PANTS_H
+#define GAME_CMD_PANTS_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Pants : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Pants();
+    ~Pants();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_PANTS_H

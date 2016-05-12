@@ -1,0 +1,42 @@
+<refentry id="cvar.g_truePing">
+
+<refmeta>
+    <refentrytitle>g_truePing</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_truePing</refname>
+    <refpurpose>enable/disable true ping calculation</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_truePing</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_truePing</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_truePing</command>
+    enables or disables true ping calculation.
+    When enabled, ping is calculated by averaging the timestamps of commands sent by clients.
+    This is a better way of calculating latency between the client and server.
+    Though it does not affect actual lag or performance, ping numbers will usually be higher
+    with this turned on. Keep this in mind when kicking players for high ping.
+    This has no impact of any kind on antilag support.
+</para>
+</refsection>
+
+</refentry>

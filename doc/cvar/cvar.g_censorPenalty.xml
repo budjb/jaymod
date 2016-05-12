@@ -1,0 +1,77 @@
+<refentry id="cvar.g_censorPenalty">
+
+<refmeta>
+    <refentrytitle>g_censorPenalty</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_censorPenalty</refname>
+    <refpurpose>set bitflags for censorship penalties</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_censorPenalty</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_censorPenalty.flags" frame="all">
+<?dbfo table-width="40%"?>
+<title>g_censorPenalty Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="31*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>kill and gib</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>kill but do not gib</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>auto-mute</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_censorPenalty</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_censorPenalty</command>
+    sets bitflags for censorship penalties.
+</para>
+<para>
+    <note>
+        Flags <literal>1</literal> and <literal>4</literal> are mutually exclusive.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_censor"/>
+</para>
+</refsection>
+
+</refentry>

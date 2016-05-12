@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.sv_zombietime">
+  <refmeta>
+    <refentrytitle>sv_zombietime</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>sv_zombietime</refname>
+
+    <refpurpose>établit la durée de l'état zombie</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>sv_zombietime</command>
+
+      <arg><replaceable>durée</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>sv_zombietime</command>
+
+      <arg choice="plain"><literal>2</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>sv_zombietime</command> établit la
+    <emphasis>durée</emphasis> de l'état zombie en secondes. Quand un client
+    est perdu normalement, il entre dans un état zombie pour une
+    <emphasis>durée</emphasis> (en secondes) permettant suffisamment de temps
+    pour la transimission de messages, si nécessaire. Une valeur de 0 pour
+    <emphasis>durée</emphasis> annule cette option.</para>
+  </refsection>
+</refentry>

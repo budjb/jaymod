@@ -1,0 +1,32 @@
+MODULE.GAME.srcs.pch = $(sort \
+    $(wildcard $(PROJECT/)src/game/*.cpp) \
+    $(wildcard $(PROJECT/)src/game/cmd/*.cpp) \
+    $(wildcard $(PROJECT/)src/game/cvar/*.cpp) \
+    $(wildcard $(PROJECT/)src/game/str/*.cpp) \
+    $(wildcard $(PROJECT/)src/game/$(PROJECT.platspecific)/*.cpp) \
+	\
+    $(wildcard $(PROJECT/)src/bgame/*.cpp) \
+    $(wildcard $(PROJECT/)src/bgame/cvar/*.cpp) \
+    $(wildcard $(PROJECT/)src/bgame/str/*.cpp) \
+    $(wildcard $(PROJECT/)src/bgame/$(PROJECT.platspecific)/*.cpp) \
+	\
+    $(wildcard $(PROJECT/)src/omnibot/common/*.cpp) \
+    $(wildcard $(PROJECT/)src/omnibot/et/*.cpp) \
+    $(wildcard $(PROJECT/)src/omnibot/$(PROJECT.platspecific)/*.cpp))
+
+MODULE.GAME.objs.pch = $(MODULE.GAME.srcs.pch:$(PROJECT/)src/%.cpp=$(BUILD/)game/%.o)
+MODULE.GAME.pchs     = $(foreach i,$(CXX.pch.arch),$(BUILD/)game/bgame/impl.h.$(CXX.pch.ext)/$(i))
+MODULE.GAME.so       = $(BUILD/)game/qagame$(IDMODULE.suffix)
+MODULE.GAME.pdb      = $(BUILD/)game/
+
+###############################################################################
+
+MODULE.GAME.CXX.I< += $(BUILD/)game
+MODULE.GAME.CXX.D  += GAMEDLL
+MODULE.GAME.CXX.l  += $(DYNLOAD.l) $(MATH.l)
+
+###############################################################################
+
+BUILD.output += $(MODULE.GAME.objs.pch)
+BUILD.output += $(MODULE.GAME.pchs)
+BUILD.output += $(MODULE.GAME.so)

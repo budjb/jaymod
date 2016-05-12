@@ -1,0 +1,41 @@
+<refentry id="cvar.g_proneDelay">
+
+<refmeta>
+    <refentrytitle>g_proneDelay</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_proneDelay</refname>
+    <refpurpose>enable/disable extended prone dela</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_proneDelay</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_proneDelay</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_proneDelay</command>
+    enables or disables penalties to players who go prone.  By default, players had to wait
+	750 milliseconds between going prone and standing back up with no penalty to their
+	accuracy.  With this cvar enabled, players will have an additional delay of 1 second
+	(1750 milliseconds total) before they can stand up, and their aim spread will be
+	maximized during this period as well.
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,52 @@
+<refentry id="cvar.team_maxArtillery">
+
+<refmeta>
+    <refentrytitle>team_maxArtillery</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>team_maxArtillery</refname>
+    <refpurpose>sets the maximum number of artillery or airstrikes per minute</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>team_maxArtillery</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>team_maxArtillery</command>
+        <arg choice="plain"><literal>6</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>team_maxArtillery</command>
+    sets the maximum number of artillery or airstrikes each team can have per minute.
+    Setting <replaceable>num</replaceable> to <literal>0</literal> disables artillery and airstrikes altogether,
+    and <literal>1</literal> through to <literal>6</literal> specifies the maximum number of concurrent airstrikes
+    per minute allowed. Anything above <literal>6</literal> will have no effect.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.team_maxFlamers"/>,
+    <xref linkend="cvar.team_maxGrenLaunchers"/>
+    <xref linkend="cvar.team_maxLandMines"/>,
+    <xref linkend="cvar.team_maxM97s"/>,
+    <xref linkend="cvar.team_maxMG42s"/>
+    <xref linkend="cvar.team_maxMortars"/>,
+    <xref linkend="cvar.team_maxPanzers"/>
+</para>
+</refsection>
+
+</refentry>

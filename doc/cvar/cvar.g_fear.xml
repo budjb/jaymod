@@ -1,0 +1,39 @@
+<refentry id="cvar.g_fear">
+
+<refmeta>
+    <refentrytitle>g_fear</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_fear</refname>
+    <refpurpose>awards a kill to on attacker if their victim suicides</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_fear</command>
+        <arg><replaceable>time</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_fear</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_fear</command>
+    awards a kill to on attacker if their victim suicides during the specified time period.
+	<replaceable>Time</replaceable> is in milliseconds, and anything above <literal>0</literal> enables this feature.
+	If the time between the time an attacker hits a victim and the time the victim suicides is less than the time
+	specified by <command>g_fear</command>, a kill is awarded to that attacker.
+</para>
+</refsection>
+
+</refentry>

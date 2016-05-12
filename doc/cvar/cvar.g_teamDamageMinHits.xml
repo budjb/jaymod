@@ -1,0 +1,44 @@
+<refentry id="cvar.g_teamDamageMinHits">
+
+<refmeta>
+    <refentrytitle>g_teamDamageMinHits</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_teamDamageMinHits</refname>
+    <refpurpose>set friendly-fire tolerance minimum hits</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_teamDamageMinHits</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_teamDamageMinHits</command>
+        <arg choice="plain"><literal>6</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_teamDamageMinHits</command>
+    sets the minimum number of hits required before friendly-fire tolerance is in effect.
+    This variable is only used when <xref linkend="cvar.g_teamDamageRestriction"/> is enabled.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_teamDamageRestriction"/>
+</para>
+</refsection>
+
+</refentry>

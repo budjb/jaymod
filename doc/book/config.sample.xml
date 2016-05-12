@@ -1,0 +1,351 @@
+//////////////////////////////////////////////////////////////////////
+//
+// SECURITY
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_password;           "<literal></literal>"
+set &cvar:g_shoutcastpassword;  "<literal></literal>"
+set &cvar:rconpassword;         "<literal></literal>"
+set &cvar:refereePassword;      "<literal></literal>"
+set &cvar:sv_privatePassword;   "<literal></literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// LOGGING
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_log;         "<literal></literal>"
+set &cvar:g_logOptions;  "<literal>0</literal>"
+set &cvar:g_logSync;     "<literal>0</literal>"
+set &cvar:g_adminLog;    "<literal></literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// BRANDING
+//
+//////////////////////////////////////////////////////////////////////
+
+//sets .NAME  "MyClan"
+//sets .URL   "http://www.myserver.net/"
+
+set &cvar:sv_hostname;  "<literal>ETHost</literal>"
+set &cvar:g_watermark;  "<literal></literal>"
+
+set &cvar:g_protestMessage;  "<literal>Visit www.myserver.com to file a protest.</literal>"
+set &cvar:g_kickMessage;     "<literal>You have been kicked for $TIME.</literal>"
+set &cvar:g_kickTime;        "<literal>2m</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// MOTD
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:server_motd0;  "<literal></literal>"
+set &cvar:server_motd1;  "<literal></literal>"
+set &cvar:server_motd2;  "<literal></literal>"
+set &cvar:server_motd3;  "<literal></literal>"
+set &cvar:server_motd4;  "<literal></literal>"
+set &cvar:server_motd5;  "<literal></literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// REGISTRATION
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:sv_master1;  "<literal>etmaster.idsoftware.com</literal>"
+set &cvar:sv_master2;  "<literal></literal>"
+set &cvar:sv_master3;  "<literal></literal>"
+set &cvar:sv_master4;  "<literal></literal>"
+set &cvar:sv_master5;  "<literal></literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// NETWORKING
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:sv_allowDownload;      "<literal>1</literal>"
+set &cvar:sv_dl_maxRate;         "<literal>42000</literal>"
+set &cvar:sv_floodProtect;       "<literal>1</literal>"
+set &cvar:sv_fps;                "<literal>20</literal>"
+set &cvar:sv_fullmsg;            "<literal>Server is full.</literal>"
+set &cvar:sv_lanForceRate;       "<literal>1</literal>"
+set &cvar:sv_maxPing;            "<literal>0</literal>"
+set &cvar:sv_maxRate;            "<literal>13000</literal>"
+set &cvar:sv_maxclients;         "<literal>20</literal>"
+set &cvar:sv_minPing;            "<literal>0</literal>"
+set &cvar:sv_packetdelay;        "<literal>0</literal>"
+set &cvar:sv_packetloss;         "<literal>0</literal>"
+set &cvar:sv_padPackets;         "<literal>0</literal>"
+set &cvar:sv_privateClients;     "<literal>4</literal>"
+set &cvar:sv_pure;               "<literal>1</literal>"
+set &cvar:sv_reconnectlimit;     "<literal>3</literal>"
+set &cvar:sv_showAverageBPS;     "<literal>0</literal>"
+set &cvar:sv_showloss;           "<literal>0</literal>"
+set &cvar:sv_timeout;            "<literal>240</literal>"
+set &cvar:sv_wwwBaseURL;         "<literal></literal>"
+set &cvar:sv_wwwDlDisconnected;  "<literal>0</literal>"
+set &cvar:sv_wwwDownload;        "<literal>0</literal>"
+set &cvar:sv_wwwFallbackURL;     "<literal></literal>"
+set &cvar:sv_zombietime;         "<literal>2</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// VOTING
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:vote_allow_balancedteams;   "<literal>1</literal>"
+set &cvar:vote_allow_comp;            "<literal>1</literal>"
+set &cvar:vote_allow_friendlyfire;    "<literal>1</literal>"
+set &cvar:vote_allow_gametype;        "<literal>1</literal>"
+set &cvar:vote_allow_generic;         "<literal>1</literal>"
+set &cvar:vote_allow_kick;            "<literal>1</literal>"
+set &cvar:vote_allow_map;             "<literal>1</literal>"
+set &cvar:vote_allow_matchreset;      "<literal>1</literal>"
+set &cvar:vote_allow_matchrestart;    "<literal>1</literal>"
+set &cvar:vote_allow_mutespecs;       "<literal>1</literal>"
+set &cvar:vote_allow_muting;          "<literal>1</literal>"
+set &cvar:vote_allow_nextmap;         "<literal>1</literal>"
+set &cvar:vote_allow_pub;             "<literal>1</literal>"
+set &cvar:vote_allow_referee;         "<literal>0</literal>"
+set &cvar:vote_allow_shuffleteamsxp;  "<literal>1</literal>"
+set &cvar:vote_allow_swapteams;       "<literal>1</literal>"
+set &cvar:vote_allow_timelimit;       "<literal>0</literal>"
+set &cvar:vote_allow_warmupdamage;    "<literal>1</literal>"
+set &cvar:vote_limit;                 "<literal>5</literal>"
+set &cvar:vote_percent;               "<literal>50</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// BANNERS
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_bannerLocation;  "<literal>4</literal>"
+set &cvar:g_bannerTime;      "<literal>60</literal>"
+
+set &cvar:g_banners;  "<literal>2</literal>"
+set g_banner1  "<literal>^3THIS SERVER IS RUNNING Jaymod 2.1.7</literal>"
+set g_banner2  "<literal>^3Check forums at http://jaymod.clanfu.org</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// Matchplay
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_gametype;      "<literal>2</literal>"
+set &cvar:g_campaignFile;  "<literal></literal>"
+
+set &cvar:g_headshot;   "<literal>0</literal>"
+set &cvar:g_knifeonly;  "<literal>0</literal>"
+set &cvar:g_panzerWar;  "<literal>0</literal>"
+set &cvar:g_sniperWar;  "<literal>0</literal>"
+
+set &cvar:match_latejoin;       "<literal>1</literal>"
+set &cvar:match_minplayers;     "<literal>0</literal>"
+set &cvar:match_mutespecs;      "<literal>0</literal>"
+set &cvar:match_readypercent;   "<literal>100</literal>"
+set &cvar:match_timeoutcount;   "<literal>3</literal>"
+set &cvar:match_timeoutlength;  "<literal>180</literal>"
+set &cvar:match_warmupDamage;   "<literal>1</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// TEAMS
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_userAlliedRespawnTime;  "<literal>0</literal>"
+set &cvar:g_userAxisRespawnTime;    "<literal>0</literal>"
+set &cvar:g_teamForceBalance;       "<literal>1</literal>"
+
+set &cvar:g_ammoRechargeTime;    "<literal>60000</literal>"
+set &cvar:g_healthRechargeTime;  "<literal>10000</literal>"
+
+set &cvar:team_maxArtillery;  "<literal>6</literal>"
+set &cvar:team_maxLandMines;  "<literal>20</literal>"
+
+set &cvar:team_maxFlamers;        "<literal>-1</literal>"
+set &cvar:team_maxGrenLaunchers;  "<literal>-1</literal>"
+set &cvar:team_maxM97s;           "<literal>-1</literal>"
+set &cvar:team_maxMG42s;          "<literal>-1</literal>"
+set &cvar:team_maxMortars;        "<literal>-1</literal>"
+set &cvar:team_maxPanzers;        "<literal>-1</literal>"
+
+set &cvar:team_maxplayers;  "<literal>0</literal>"
+
+set &cvar:team_maxMedics;     "<literal>-1</literal>"
+set &cvar:team_maxEngineers;  "<literal>-1</literal>"
+set &cvar:team_maxFieldOps;   "<literal>-1</literal>"
+set &cvar:team_maxCovertOps;  "<literal>-1</literal>"
+
+set &cvar:team_nocontrols;  "<literal>1</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// PLAYERS
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_defaultSkills; "<literal>0 0 0 0 0 0 0</literal>"
+
+set &cvar:g_levels_battlesense;   "<literal>20 50 90 140 200</literal>"
+set &cvar:g_levels_covertops;     "<literal>20 50 90 140 200</literal>"
+set &cvar:g_levels_engineer;      "<literal>20 50 90 140 200</literal>"
+set &cvar:g_levels_fieldops;      "<literal>20 50 90 140 200</literal>"
+set &cvar:g_levels_lightweapons;  "<literal>20 50 90 140 200</literal>"
+set &cvar:g_levels_medic;         "<literal>20 50 90 140 200</literal>"
+set &cvar:g_levels_soldier;       "<literal>20 50 90 140 200</literal>"
+
+set &cvar:g_covertops;  "<literal>0</literal>"
+set &cvar:g_engineers;  "<literal>0</literal>"
+set &cvar:g_medics;     "<literal>0</literal>"
+set &cvar:g_soldiers;   "<literal>0</literal>"
+
+set &cvar:g_sk5_battle;     "<literal>1</literal>"
+set &cvar:g_sk5_cvops;      "<literal>7</literal>"
+set &cvar:g_sk5_eng;        "<literal>127</literal>"
+set &cvar:g_sk5_fdops;      "<literal>3</literal>"
+set &cvar:g_sk5_lightweap;  "<literal>1</literal>"
+set &cvar:g_sk5_medic;      "<literal>243</literal>"
+set &cvar:g_sk5_soldier;    "<literal>7</literal>"
+
+set &cvar:g_covertopsChargeTime;  "<literal>30000</literal>"
+set &cvar:g_engineerChargeTime;   "<literal>30000</literal>"
+set &cvar:g_LTChargeTime;         "<literal>40000</literal>"
+set &cvar:g_soldierChargeTime;    "<literal>20000</literal>"
+
+set &cvar:g_medicChargeTime;     "<literal>45000</literal>"
+set &cvar:g_medicSelfHealDelay;  "<literal>0</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// BULLETMODE
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_bulletmode;           "<literal>0</literal>"
+set &cvar:g_bulletmodeDebug;      "<literal>0</literal>"
+set &cvar:g_bulletmodeReference;  "<literal>1</literal>"
+set &cvar:g_bulletmodeTrail;      "<literal>0</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// HITMODE
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_hitmode;             "<literal>0</literal>"
+set &cvar:g_hitmodeAntilag;      "<literal>800</literal>"
+set &cvar:g_hitmodeAntilagLerp;  "<literal>1</literal>"
+set &cvar:g_hitmodeDebug;        "<literal>0</literal>"
+set &cvar:g_hitmodeFat;          "<literal>0</literal>"
+set &cvar:g_hitmodeGhosting;     "<literal>0</literal>"
+set &cvar:g_hitmodeReference;    "<literal>1</literal>"
+set &cvar:g_hitmodeZone;         "<literal>0</literal>"
+
+//////////////////////////////////////////////////////////////////////
+//
+// MISCELLANEOUS
+//
+//////////////////////////////////////////////////////////////////////
+
+set &cvar:g_admin;                     "<literal>1</literal>"
+set &cvar:g_alliedmaxlives;            "<literal>0</literal>"
+set &cvar:g_altStopwatchMode;          "<literal>0</literal>"
+set &cvar:g_antiwarp;                  "<literal>1</literal>"
+set &cvar:g_autoFireteams;             "<literal>0</literal>"
+set &cvar:g_axismaxlives;              "<literal>0</literal>"
+set &cvar:g_censor;                    "<literal>0</literal>"
+set &cvar:g_censorPenalty;             "<literal>0</literal>"
+set &cvar:g_classChange;               "<literal>0</literal>"
+set &cvar:g_complaintlimit;            "<literal>6</literal>"
+set &cvar:g_damagexp;                  "<literal>0</literal>"
+set &cvar:g_debugAlloc;                "<literal>0</literal>"
+set &cvar:g_debugConstruct;            "<literal>0</literal>"
+set &cvar:g_debugDamage;               "<literal>0</literal>"
+set &cvar:g_debugMove;                 "<literal>0</literal>"
+set &cvar:g_debugSkills;               "<literal>0</literal>"
+set &cvar:g_disableComplaints;         "<literal>0</literal>"
+set &cvar:g_dragCorpse;                "<literal>1</literal>"
+set &cvar:g_dropAmmo;                  "<literal>2</literal>"
+set &cvar:g_dropHealth;                "<literal>2</literal>"
+set &cvar:g_dynamiteTime;              "<literal>30</literal>"
+set &cvar:g_enforcemaxlives;           "<literal>1</literal>"
+set &cvar:g_fastres;                   "<literal>0</literal>"
+set &cvar:g_fear;                      "<literal>0</literal>"
+set &cvar:g_filterBan;                 "<literal>1</literal>"
+set &cvar:g_filtercams;                "<literal>0</literal>"
+set &cvar:g_fixedPhysics;              "<literal>1</literal>"
+set &cvar:g_fixedPhysicsFPS;           "<literal>125</literal>"
+set &cvar:g_forcerespawn;              "<literal>0</literal>"
+set &cvar:g_friendlyFire;              "<literal>1</literal>"
+set &cvar:g_glow;                      "<literal>0</literal>"
+set &cvar:g_goomba;                    "<literal>4</literal>"
+set &cvar:g_gravity;                   "<literal>800</literal>"
+set &cvar:g_heavyWeaponRestriction;    "<literal>100</literal>"
+set &cvar:g_inactivity;                "<literal>0</literal>"
+set &cvar:g_intermissionReadyPercent;  "<literal>75</literal>"
+set &cvar:g_intermissionTime;          "<literal>30</literal>"
+set &cvar:g_ipcomplaintlimit;          "<literal>3</literal>"
+set &cvar:g_killSpreeLevels;           "<literal>5 10 15 20 25 30</literal>"
+set &cvar:g_killingSpree;              "<literal>1</literal>"
+set &cvar:g_knockback;                 "<literal>1000</literal>"
+set &cvar:g_landminetimeout;           "<literal>1</literal>"
+set &cvar:g_lms_followTeamOnly;        "<literal>1</literal>"
+set &cvar:g_lms_lockTeams;             "<literal>0</literal>"
+set &cvar:g_lms_matchlimit;            "<literal>2</literal>"
+set &cvar:g_lms_roundlimit;            "<literal>3</literal>"
+set &cvar:g_lms_teamForceBalance;      "<literal>1</literal>"
+set &cvar:g_loseSpreeLevels;           "<literal>10 20 30</literal>"
+set &cvar:g_mapConfigs;                "<literal>mapconfigs</literal>"
+set &cvar:g_mapScriptDirectory;        "<literal>mapscripts</literal>"
+set &cvar:g_maxGameClients;            "<literal>0</literal>"
+set &cvar:g_maxlives;                  "<literal>0</literal>"
+set &cvar:g_maxlivesRespawnPenalty;    "<literal>0</literal>"
+set &cvar:g_misc;                      "<literal>66</literal>"
+set &cvar:g_moverScale;                "<literal>1.0</literal>"
+set &cvar:g_movespeed;                 "<literal>76</literal>"
+set &cvar:g_muteTime;                  "<literal>0</literal>"
+set &cvar:g_noTeamSwitching;           "<literal>0</literal>"
+set &cvar:g_packDistance;              "<literal>4</literal>"
+set &cvar:g_playDead;                  "<literal>1</literal>"
+set &cvar:g_poisonSyringes;            "<literal>1</literal>"
+set &cvar:g_proneDelay;                "<literal>0</literal>"
+set &cvar:g_privateMessages;           "<literal>1</literal>"
+set &cvar:g_reflectFriendlyFire;       "<literal>100</literal>"
+set &cvar:g_saveCampaignStats;         "<literal>1</literal>"
+set &cvar:g_scriptDebug;               "<literal>0</literal>"
+set &cvar:g_scriptDebugLevel;          "<literal>0</literal>"
+set &cvar:g_scriptName;                "<literal></literal>"
+set &cvar:g_shortcuts;                 "<literal>0</literal>"
+set &cvar:g_shove;                     "<literal>100</literal>"
+set &cvar:g_shoveNoZ;                  "<literal>1</literal>"
+set &cvar:g_skills;                    "<literal>0</literal>"
+set &cvar:g_slashKill;                 "<literal>0</literal>"
+set &cvar:g_smoothClients;             "<literal>1</literal>"
+set &cvar:g_snap;                      "<literal>7</literal>"
+set &cvar:g_spawnInvul;                "<literal>3</literal>"
+set &cvar:g_spectator;                 "<literal>0</literal>"
+set &cvar:g_spectatorInactivity;       "<literal>0</literal>"
+set &cvar:g_speed;                     "<literal>320</literal>"
+set &cvar:g_teamDamageMinHits;         "<literal>6</literal>"
+set &cvar:g_teamDamageRestriction;     "<literal>0</literal>"
+set &cvar:g_truePing;                  "<literal>1</literal>"
+set &cvar:g_voiceChatsAllowed;         "<literal>4</literal>"
+set &cvar:g_vulnerableWeapons;         "<literal>0</literal>"
+set &cvar:g_warmup;                    "<literal>30</literal>"
+set &cvar:g_watermarkFadeAfter;        "<literal>60</literal>"
+set &cvar:g_watermarkFadeTime;         "<literal>60</literal>"
+set &cvar:g_weapons;                   "<literal>5606</literal>"
+set &cvar:g_wolfrof;                   "<literal>0</literal>"
+set &cvar:g_xpCap;                     "<literal>0</literal>"
+set &cvar:g_xpMax;                     "<literal>0</literal>"
+set &cvar:g_xpSave;                    "<literal>1</literal>"
+set &cvar:g_xpSaveTimeout;             "<literal>1h</literal>"

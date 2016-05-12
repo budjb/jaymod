@@ -1,0 +1,49 @@
+<refentry id="cvar.g_killSpreeLevels">
+
+<refmeta>
+    <refentrytitle>g_killSpreeLevels</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_killSpreeLevels</refname>
+    <refpurpose>set killing spree XP milestones</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_killSpreeLevels</command>
+        "<arg><replaceable>level1</replaceable></arg>
+        <arg><replaceable>level2</replaceable></arg>
+        <arg><replaceable>level3</replaceable></arg>
+        <arg><replaceable>level4</replaceable></arg>
+        <arg><replaceable>level5</replaceable></arg>
+        <arg><replaceable>level6</replaceable></arg>"
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_killSpreeLevels</command>
+        <arg choice="plain"><literal>"5 10 15 20 25 30"</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_killSpreeLevels</command>
+    sets the XP milestones at which killing spree levels are triggered.
+    The number of levels if fixed at 6 and all levels must be specified or the setting will be ignored.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_loseSpreeLevels"/>
+</para>
+</refsection>
+
+</refentry>

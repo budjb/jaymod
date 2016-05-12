@@ -1,0 +1,38 @@
+<refentry id="cvar.g_playDead">
+
+<refmeta>
+    <refentrytitle>g_playDead</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_playDead</refname>
+    <refpurpose>enables players to play dead</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_playDead</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_playDead</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_playDead</command>
+    enables players to play dead.
+	&feature.playdead;
+</para>
+</refsection>
+
+</refentry>

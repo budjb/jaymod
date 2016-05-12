@@ -1,0 +1,11 @@
+#ifndef BASE_BASE64_UTIL_H
+#define BASE_BASE64_UTIL_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+int encode ( const unsigned char*, size_t, char*, size_t );
+int decode ( const unsigned char*, unsigned char*, size_t );
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // BASE_BASE64_UTIL_H

@@ -1,0 +1,65 @@
+<refentry id="cvar.g_engineers">
+
+<refmeta>
+    <refentrytitle>g_engineers</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_engineers</refname>
+    <refpurpose>set bitflags for &engineer; behavior</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_engineers</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_engineers.flags" frame="all">
+<?dbfo table-width="70%"?>
+<title>g_engineers Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="61*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>friendly landmines are not tripped by own team</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>friendly dynamite cannot be disarmed by own team</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>enable shared construction XP</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_engineers</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_engineers</command>
+    set bitflags for &engineer; behavior.
+</para>
+</refsection>
+
+</refentry>

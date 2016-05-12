@@ -1,0 +1,82 @@
+<chapter id="omni">
+<title>&omni:name;</title>
+
+<para>
+    &project:name; natively supports the &omni:name; product.
+    This product enables servers to set up computer controlled bots with relative ease.
+    There is nothing that you have to set up within &project:name;’s configuration to use them.
+    There is, however, some setup that needs to be done with the &omni:name; installation.
+</para>
+<para>
+    To get &omni:name; for your server, visit <ulink url="http://www.omni-bot.com"/>.
+    There, you will find downloads for the files needed to get running,
+    and installation and configuration documentation.
+</para>
+<para>
+    It is imperative that you match the &omni:name; version exactly that which &project:name; supports.
+    &project:title; supports &omni:namev;, and for all other versions please consult the appropriate documentation.
+</para>
+
+<section id="omni.libpath">
+<title>Native Library Search Path</title>
+<para>
+    &omni:name; can be installed in a variety of ways on your server.
+    Because different people have different needs, a list of directories is searched and the first
+    one which has a native library for your platform is used.
+    Note that any duplicate directories are searched only once.
+    The following is the standard search path, in order of preference, for &omni:name; native libraries:
+</para>
+<orderedlist>
+    <listitem>optional directory specified via CVAR omnibot_path.</listitem>
+    <listitem>optional omni-bot sub-directory of fs_homepath, if specified.</listitem>
+    <listitem>optional omni-bot sub-directory of fs_basepath, if specified.</listitem>
+    <listitem>
+        omni-bot subdir relative to
+        { $HOME (for &linux:name;) or %Program Files% (for &windows:name;) }
+        environment variables of the server process.
+    </listitem>
+    <listitem>default mechanism for server platform's native library loader.</listitem>
+</orderedlist>
+</section>
+
+<para>
+    <note>
+        On &linux:name; systems, if the directory by which the &omni:name; library was found is relative
+        (not absolute) then you must add '.' to the PATH environment variable before launching the process.
+        If this is not done then the library will load but internal &omni:name; initialization routines
+        will fail. It is strongly suggested that absolute paths be used to work around this issue.
+    </note>
+</para>
+
+<para>
+    Example search path for a typical <emphasis role="subject">&linux:name;</emphasis>
+    server with omnibot_path=/somewhere/omni-bot:
+</para>
+<orderedlist>
+    <listitem>/somewhere/omni-bot/</listitem>
+    <listitem>/home/etserver/omni-bot/</listitem>
+    <listitem>/usr/local/games/enemy-territory/omni-bot/</listitem>
+    <listitem>$HOME/omni-bot/</listitem>
+    <listitem>&lt;SYSTEM-LOADER&gt;</listitem>
+</orderedlist>
+
+<para>
+    Example search path for a typical <emphasis role="subject">&windows:name;</emphasis>
+    server with omnibot_path=Z:\Somewhere\Omni-bot:
+</para>
+<orderedlist>
+    <listitem>Z:\Somewhere\Omni-bot\</listitem>
+    <listitem>G:\ETserver\Omni-bot\</listitem>
+    <listitem>C:\Program Files\Wolfenstein - Enemy Territory\Omni-Bot\</listitem>
+    <listitem>C:\Program Files\Omni-bot\</listitem>
+    <listitem>&lt;SYSTEM-LOADER&gt;</listitem>
+</orderedlist>
+
+<section id="omni.also">
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.omnibot_enable"/>
+</para>
+</section>
+
+</chapter>

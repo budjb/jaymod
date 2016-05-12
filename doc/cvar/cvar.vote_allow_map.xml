@@ -1,0 +1,44 @@
+<refentry id="cvar.vote_allow_map">
+
+<refmeta>
+    <refentrytitle>vote_allow_map</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_allow_map</refname>
+    <refpurpose>enable/disable map</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_allow_map</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_allow_map</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_allow_map</command>
+    enables or disables map.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.vote_limit"/>,
+    <xref linkend="cvar.vote_percent"/>
+</para>
+</refsection>
+</refentry>

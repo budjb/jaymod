@@ -1,0 +1,47 @@
+<section id="upgrade.cvar">
+<title>CVAR Changes</title>
+
+<para>
+    This section outlines CVARs which have changed significantly prior to &project:title;.
+    If you are already running &project:version; then you should skip this section.
+</para>
+<para>
+    These CVARs will need to be updated in your server configs or these features may not work as expected. 
+</para>
+
+<variablelist>
+
+<varlistentry>
+    <term>g_censor</term>
+    <listitem>
+    <para>
+        With release 2.1.0 and higher, <varname>g_censor</varname> is no longer
+        a comma-separated list of words, and has changed to accept either
+        { 0, 1 } to respectively { disable, enable } the censor feature.
+    </para>
+    <para>
+        The words list is now read from a <filename>censor.db</filename> located in the &project:name; directory.
+        There is no practical limit to the number of words you can enter into this file.
+        &project:name; expects <emphasis role="bold">one</emphasis> word per line, such as:
+    </para>
+<screen>word1 
+word2 
+word3 
+</screen>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>g_xpSave</term>
+    <listitem>
+    <para>
+        With release 2.1.0 and higher, <varname>g_xpSave</varname> no longer specifies a filename
+        and has changed to accept { 0, 1 } to respectively { disable, enable } the XP-save feature.
+        The reason for this is that XP data is now integrated into <filename>users.db</filename>.
+    </para>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+
+</section>

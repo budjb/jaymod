@@ -1,0 +1,61 @@
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    server frame rate to <emphasis role="subject">!status</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    wasted <emphasis role="subject">bandwidth</emphasis> when bullet-debugging is disabled.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Optimized</emphasis>
+    general <emphasis role="subject">bandwidth</emphasis> usage to be similar to pre-2.1.0 days.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    friendly-fire <emphasis role="subject">poison syringes</emphasis> have no effect.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">poison syringes</emphasis> have no effect when share-adrenaline is disabled.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Antilagged</emphasis>
+    <emphasis role="subject">poison syringes</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed</emphasis>
+    &linux:name; signal management.
+    <emphasis role="subject">SIGHUP</emphasis> now behaves identical to
+    <emphasis role="subject">SIGTERM</emphasis> in that it will cause safe server shutdown.
+    This is done to promote maximum compatibility with screen-style server management scripts.
+    <emphasis role="subject">SIGUSR1</emphasis>
+    is now caught and queued to cause same behavior as !readconfig command.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed</emphasis>
+    serverctl script command <emphasis role="subject">readconfig</emphasis>
+    to <emphasis role="subject">reload</emphasis>.
+</simpara>
+</listitem>

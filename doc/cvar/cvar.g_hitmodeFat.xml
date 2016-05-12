@@ -1,0 +1,51 @@
+<refentry id="cvar.g_hitmodeFat">
+
+<refmeta>
+    <refentrytitle>g_hitmodeFat</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeFat</refname>
+    <refpurpose>set increased torso-box size in inches</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeFat</command>
+        <arg><literal>-10</literal>..<literal>10</literal></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeFat</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeFat</command>
+    sets increased torso-box size in inches.
+    Negative values will attempt to reduce size.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

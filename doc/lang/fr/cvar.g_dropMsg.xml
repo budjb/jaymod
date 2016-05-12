@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_dropMsg">
+  <refmeta>
+    <refentrytitle>g_dropMsg</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_dropMsg</refname>
+
+    <refpurpose>affiche un message sur mesure quand un joueur est débranché à
+    la suite d'une expulsion ou d'un ban</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_dropMsg</command>
+
+      <arg><replaceable>message</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_dropMsg</command>
+
+      <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_dropMsg</command> affiche un message sur mesure quand un
+    joueur est débranché à la suite d'une expulsion ou d'un ban. Si cette
+    variable est utilisée, son message sera ajouté à celui composé au moment
+    de l'expulsion d'un joueur.</para>
+  </refsection>
+</refentry>

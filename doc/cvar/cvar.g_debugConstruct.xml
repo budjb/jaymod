@@ -1,0 +1,38 @@
+<refentry id="cvar.g_debugConstruct">
+
+<refmeta>
+    <refentrytitle>g_debugConstruct</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_debugConstruct</refname>
+    <refpurpose>enables a smaller charge penalty for constructing</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_debugConstruct</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_debugConstruct</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_debugConstruct</command>
+    enables a smaller charge penalty for constructing.  This cvar is cheat protected, and should
+	only be used for testing purposes, such as testing maps.
+</para>
+</refsection>
+
+</refentry>

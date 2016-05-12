@@ -1,0 +1,31 @@
+weaponDef
+{
+    client {
+        weaponConfig "models/multiplayer/molotov/weapon.cfg"
+        handsModel   "models/weapons2/grenade/v_grenade_hand.mdc"
+
+        flashSound    "sound/weapons/grenade/gren_throw.wav"
+        overheatSound "sound/world/glassbreak3.wav"
+
+        weaponSelectedIcon "models/multiplayer/molotov/icon.tga"
+        
+        missileModel     "models/multiplayer/molotov/molotov.md3"
+        missileTrailFunc "GrenadeTrail" // { "GrenadeTrail", "RocketTrail", "PyroSmokeTrail", "DynamiteTrail" }
+
+        firstPerson {
+            model "models/weapons2/grenade/v_grenade.md3"
+
+            weaponLink {
+                part 0
+                {
+                    tag   "tag_barrel"
+                    model "models/multiplayer/molotov/v_molotov.md3"
+                }
+            }
+        }
+        
+        thirdPerson {
+            model "models/multiplayer/molotov/molotov.md3"
+        }
+    }
+}

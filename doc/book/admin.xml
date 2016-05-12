@@ -1,0 +1,378 @@
+<chapter id="admin">
+<title>Admin System</title>
+
+<para>
+    The Admin System is a collection of commands used to aid in server administration.
+    The mechanism allows for a user to issue text-based commands from a variety of sources
+    which are then executed on the game server.
+    The system has been influenced by &et:name:abbr; mod community's comfort level with
+    &shrub:name;, to which we have attempted to maintain some cosmetic familiarity.
+</para>
+<para>
+    Over time the system has grown to include more than just administrative commands;
+    some commands have been added to make game play more enjoyable.
+</para>
+<para>
+    An access control list (ACL) based security system is in place to allow for fine-grained
+    grants or denials of various privileges.
+    <note>
+        After installing &project:name; the only user which has full access to all commands is
+        the server console. Thus one must send commands through rcon or server console.
+        Once users begin connecting and become known to the server, privileges can be granted to
+        online or offline users as per server policy.
+    </note>
+
+    <caution>
+        The person responsible for managing the game server is ultimately responsible for making
+        sure commands are locked down and granted only to other responsible users.
+        Please do not assume that &project:name; offers any kinds of guarantees.
+        This is a free project, so we do not guarantee anything!
+    </caution>
+</para>
+
+<section id="admin.synopsis">
+<title>Synopsis</title>
+<para>
+    Commands may be issued from any of the following sources:
+    <itemizedlist>
+        <listitem>client console</listitem>
+        <listitem>client chat window</listitem>
+        <listitem>client team-chat window (if privilege granted)</listitem>
+        <listitem>client fireteam-chat window (if privilege granted)</listitem>
+        <listitem>client say bindings</listitem>
+        <listitem>client say_team bindings (if privilege granted)</listitem>
+        <listitem>client say_buddy bindings (if privilege granted)</listitem>
+        <listitem>rcon</listitem>
+        <listitem>server console</listitem>
+    </itemizedlist>
+</para>
+<para>
+    General command syntax is as follows. Note that commands are case-insensitive.
+    <screen>!command <arg><emphasis role="cmdopt">OPTION</emphasis></arg>...</screen>
+</para>
+<para>
+    Use the <emphasis>!help</emphasis> command to obtain a list of all available commands.
+    Optionally, a detailed synopsis and description for a specific command is also available.
+    <screen>!help <arg><emphasis role="cmdopt">COMMAND</emphasis></arg></screen>
+</para>
+</section>
+
+<section id="admin.operation">
+<title>Operation</title>
+<para>
+    The admin system is controlled using cvars and are effective immediately upon changing the value.
+</para>
+
+<table id="admin.operation.table" frame="all">
+<?dbfo table-width="80%"?>
+<title>Admin System Operation</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*"/>
+    <colspec colnum="2" colwidth="5*"/>
+    <thead>
+        <row>
+            <entry>CVAR</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry><xref linkend="cvar.g_admin"/></entry>
+            <entry>enable or disables admin system</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_adminLog"/></entry>
+            <entry>sets the filename used for admin command logging</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</section>
+
+<section id="admin.quickstart">
+<title>Quickstart Checklist</title>
+<para>
+    Most admins installing a new version of &project:name; just want to know how to get it up
+    and running as fast as possible. The following is a simple checklist of steps to go through
+    to grant yourself full access after connecting.
+</para>
+
+<orderedlist>
+
+<listitem>
+    Enable server RCON access by setting the password in server console.
+    <screen>&et.sconsole; rconPassword <emphasis role="cmdvar">PASSWORD</emphasis></screen>
+</listitem>
+<listitem>
+    Inform client of default RCON password to use by setting the password in client console.
+    <screen>&et.cconsole; /rconPassword <emphasis role="cmdvar">PASSWORD</emphasis></screen>
+</listitem>
+<listitem>
+    Enable the admin system.
+    <screen>&et.cconsole; /rcon g_admin 1</screen>
+</listitem>
+<listitem>
+    Test that RCON has full access to all available commands. You should see a large list of commands.
+    If you do not get any results there's probably something else wrong.
+    <screen>&et.cconsole; /rcon !help</screen>
+</listitem>
+<listitem>
+    Create a high admin-level. The number is arbitrary but must be a positive value.
+    <screen>&et.cconsole; /rcon !levadd 9</screen>
+</listitem>
+<listitem>
+    Grant level 9 all commands.
+    <screen>&et.cconsole; /rcon !levedit 9 -acl +@commands</screen>
+</listitem>
+<listitem>
+    Determine your client SLOT number as known to the server.
+    This will usually be zero if you connected to an empty server.
+    <screen>&et.cconsole; /players</screen>
+</listitem>
+<listitem>
+    Now set your client SLOT to level 9.
+    <screen>&et.cconsole; /rcon !setlevel <emphasis role="cmdvar">SLOT</emphasis> 9</screen>
+</listitem>
+<listitem>
+    Finished! Now try a few typical commands to see your new level in action.
+    <screen>&et.cconsole; !admintest
+&et.cconsole; !help
+&et.cconsole; !levlist
+</screen>
+</listitem>
+
+</orderedlist>
+</section>
+
+<section id="admin.privileges">
+<title>Privileges</title>
+<para>
+    Access control lists (ACL) are used to grant or deny privileges to an admin level or user.
+    Generally, each admin level is different and by convention more privileges are granted to higher levels.
+    Privilege naming is important and to help keep things clean the naming is a clear indicator of
+    the type of privilege as follows:
+</para>
+<variablelist>
+
+<varlistentry>
+    <term>pseudo</term>
+    <listitem>
+        Pseudo privileges are a logical grouping of other privileges.
+<table id="admin.priv.pseudo.table" frame="all">
+<?dbfo table-width="60%"?>
+<title>Pseudo Privileges</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*"/>
+    <colspec colnum="2" colwidth="3*"/>
+    <thead>
+        <row>
+            <entry>PRIVILEGE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>@all</entry>
+            <entry>all privileges</entry>
+        </row>
+        <row>
+            <entry>@behaviors</entry>
+            <entry>all behavior privileges</entry>
+        </row>
+        <row>
+            <entry>@commands</entry>
+            <entry>all command privileges</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>behavior</term>
+    <listitem>
+        Behavior privileges are used to control the behavior of the server in very specific ways.
+        They usually effect the way commands operate or general policy enforcement.
+<table id="admin.priv.behavior.table" frame="all">
+<?dbfo table-width="100%"?>
+<title>Behavior Privileges</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*"/>
+    <colspec colnum="2" colwidth="5*"/>
+    <thead>
+        <row>
+            <entry>PRIVILEGE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>B/balanceImmunity</entry>
+            <entry>can switch to any team regardless of balance</entry>
+        </row>
+        <row>
+            <entry>B/banPermanent</entry>
+            <entry>does not need to specify the duration of a ban (permanent ban)</entry>
+        </row>
+        <row>
+            <entry>B/censorImmunity</entry>
+            <entry>cannot be censored or flood protected</entry>
+        </row>
+        <row>
+            <entry>B/commandChat</entry>
+            <entry>can run commands from team or fireteam chat</entry>
+        </row>
+        <row>
+            <entry>B/commandSilent</entry>
+            <entry>can run commands silently from console (/!command)</entry>
+        </row>
+        <row>
+            <entry>B/reasonNone</entry>
+            <entry>does not need to specify a reason for kick/ban</entry>
+        </row>
+        <row>
+            <entry>B/specChat</entry>
+            <entry>can see all team, fireteam and PM chat as spectator</entry>
+        </row>
+        <row>
+            <entry>B/voteAny</entry>
+            <entry>can call a vote anytime (even if disabled)</entry>
+        </row>
+        <row>
+            <entry>B/voteImmunity</entry>
+            <entry>cannot be kicked, vote-muted, dropped for inactivity or complained against</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>command</term>
+    <listitem>
+        Each command has a corresponding privilege that follows the naming convention <emphasis>C/command</emphasis> .
+        For example, the privilege for !status is <emphasis>C/status</emphasis>.
+        Privilege names are case-insensitive but for clarity we capitalize the prefix.
+        Use the !help command to determine the privilege for a specific command.
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</section>
+
+<section id="admin.acls">
+<title>Managing ACLs</title>
+<para>
+    ACL management is how we grant or deny a privilege to an admin level or user.
+    Basically, an ACL is a list of intermixed granted or denied privileges, and our goal is
+    to manage that list.
+    In cases of logical conflict, a <emphasis>DENIED</emphasis> privilege takes precedence over a
+    <emphasis>GRANTED</emphasis> privilege.
+    Note ACL lists are reduced to their canonical value automatically by removing superfluous
+    or conflicting entries.
+</para>
+<para>
+    Level manipulation is accomplished with <emphasis>!levedit</emphasis> and effects all users
+    at the level being edited immediately.
+    User manipulation is accomplished with <emphasis>!useredit</emphasis> but only effects the specific user
+    being edited.
+</para>
+<para>
+    For the purposes of this documentation we'll be editing an admin level and assume it already
+    exists. The examples will use level <emphasis>5</emphasis> and privilege <emphasis>C/news</emphasis>
+    which corresponds to the popular !news command. Substitute these values according to your
+    particular needs.
+</para>
+
+<variablelist>
+
+<varlistentry>
+    <term>add grant</term>
+    <listitem>
+        The plus sign <emphasis>+</emphasis> immediately in front of a privilege
+        specifies the privilege is to be granted.
+        <screen>!levedit 5 -acl <emphasis>+</emphasis>C/news</screen>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>add deny</term>
+    <listitem>
+        The minus sign <emphasis>-</emphasis> immediately in front of a privilege
+        specifies the privilege is to be denied.
+        <screen>!levedit 5 -acl <emphasis>-</emphasis>C/news</screen>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>clear privilege</term>
+    <listitem>
+        The exclamation mark <emphasis>!</emphasis> immediately in front of a privilege
+        (without any space!) specifies the privilege is to be cleared (removed) from the ACL.
+        <screen>!levedit 5 -acl <emphasis>!</emphasis>C/news</screen>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</section>
+
+<section id="admin.examples">
+<title>Various examples</title>
+<para>
+    The following are various examples of how the commands may be used for some of the more complex tasks
+    typical for a server admin.
+</para>
+
+<orderedlist>
+
+<listitem>
+    Create a new admin level <emphasis>500</emphasis> for people who donate to server,
+    add commands { <emphasis>!pants, !pip, !pop</emphasis> } to it
+    and then assign some online players to that level.
+    <screen>!levadd 500
+!levedit 500 -name Donators
+!levedit 500 -gtext ^3Greetings donator! Thanks for your contribution.
+!levedit 500 -gsound sound/osp/goat.wav
+!levedit 500 -acl +C/pants
+!levedit 500 -acl +C/pip
+!levedit 500 -acl +C/pop
+!levinfo 500
+!setlevel JohnSmith 500
+!setlevel MarthaKent 500
+!finger JohnSmith
+!finger MarthKent
+</screen>
+</listitem>
+
+<listitem>
+    <para>
+        A nasty user has come and gone from your server, but not without first creating a huge disruption.
+        Maybe it's time to ban the player even though they already disconnected. The two pieces of information
+        we have to go on is that the player's name was <emphasis>Jerry</emphasis> and he was connected within
+        the last hour.
+        <screen>!userlist -name jerry -since 60m</screen>
+    </para>
+    <para>
+        According to the results, the offending user has been identified with ID <emphasis>1fea4ad9</emphasis>.
+        Now let's ban the user for <emphasis>30</emphasis> days.
+        <screen>!banuser 1fea4ad9 30d offensive behavior is not tolerated</screen>
+    </para>
+    <para>
+        And finally lets take a look at our ban list. As luck would have it, the list shows bans in order
+        of newest bans to oldest so he should be right at the top of the list.
+        <screen>!banlist</screen>
+    </para>
+    <para>
+        But we've had a change of heart! Let's review his ban details and unban him.
+        <screen>!baninfo 1fea4ad9
+!unban 1fea4ad9
+</screen>
+    </para>
+</listitem>
+
+</orderedlist>
+</section>
+
+</chapter>

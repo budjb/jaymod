@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_REVIVE_H
+#define GAME_CMD_REVIVE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Revive : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Revive();
+    ~Revive();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_REVIVE_H

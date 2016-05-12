@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_inactivity">
+  <refmeta>
+    <refentrytitle>g_inactivity</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_inactivity</refname>
+
+    <refpurpose>établit la <emphasis>limite</emphasis> d'inactivité tolérée
+    pour un joueur</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_inactivity</command>
+
+      <arg><replaceable>limite</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Default</title>
+
+    <cmdsynopsis>
+      <command>g_inactivity</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_inactivity</command> établit la
+    <emphasis>limite</emphasis> d'inactivité tolérée pour un joueur en
+    secondes. Passé cette limite, le joueur est expulsé. Une valeur de 0 pour
+    <emphasis>limite</emphasis> annule l'option.<literal></literal></para>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <para><xref linkend="cvar.g_spectatorInactivity" /></para>
+  </refsection>
+</refentry>

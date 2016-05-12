@@ -1,0 +1,44 @@
+<refentry id="cvar.g_admin">
+
+<refmeta>
+    <refentrytitle>g_admin</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_admin</refname>
+    <refpurpose>enable/disable admin system</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_admin</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_admin</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_admin</command>
+    enables or disables admin system (<emphasis>!command</emphasis>) functionality.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_adminLog"/>
+</para>
+</refsection>
+
+</refentry>

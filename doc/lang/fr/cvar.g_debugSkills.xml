@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_debugSkills">
+  <refmeta>
+    <refentrytitle>g_debugSkills</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_debugSkills</refname>
+
+    <refpurpose>active le débogage du système des aptitudes
+    (<emphasis>skills</emphasis>)</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_debugSkills</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_debugSkills</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_debugSkills</command> active le débogage du système des
+    aptitudes (<emphasis>skills</emphasis>). Cette variable est réservée
+    exclusivement aux développeurs. Une valeur de 0 pour
+    <replaceable>num</replaceable> annule le débogage (valeur initiale),
+    <literal>1</literal> affiche les infos à la console, et
+    <literal>2</literal> envoie les infos de débogage sur un disque
+    dur.</para>
+  </refsection>
+</refentry>

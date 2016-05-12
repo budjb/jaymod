@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_MUTE_H
+#define GAME_CMD_MUTE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Mute : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Mute();
+    ~Mute();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_MUTE_H

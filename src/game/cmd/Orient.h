@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_ORIENT_H
+#define GAME_CMD_ORIENT_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Orient : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Orient();
+    ~Orient();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_ORIENT_H

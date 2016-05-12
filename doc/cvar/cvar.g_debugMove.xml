@@ -1,0 +1,39 @@
+<refentry id="cvar.g_debugMove">
+
+<refmeta>
+    <refentrytitle>g_debugMove</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_debugMove</refname>
+    <refpurpose>enables debug information for player movement</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_debugMove</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_debugMove</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_debugMove</command>
+    enables debug information for player movement.  This cvar should only be used by developers.
+	Setting <replaceable>num</replaceable> to <literal>0</literal> disables debug (default),
+    <literal>1</literal> enables most debug output,
+    and <literal>2</literal> or higher enables debug for sliding and moving.
+</para>
+</refsection>
+
+</refentry>

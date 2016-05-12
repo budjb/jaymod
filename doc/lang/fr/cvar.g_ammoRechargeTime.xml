@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_ammoRechargeTime">
+  <refmeta>
+    <refentrytitle>g_ammoRechargeTime</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_ammoRechargeTime</refname>
+
+    <refpurpose>détermine le délais entre l'apparition des boîtes de munitions
+    dans les réserves de munitions</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_ammoRechargeTime</command>
+
+      <arg><replaceable>intervale</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_ammoRechargeTime</command>
+
+      <arg choice="plain"><literal>60000</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_ammoRechargeTime</command> détermine le délais (en
+    millisecondes) entre l'apparition des boîtes de munitions dans les
+    réserves de munitions.</para>
+  </refsection>
+</refentry>

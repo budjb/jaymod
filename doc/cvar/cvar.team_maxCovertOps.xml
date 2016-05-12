@@ -1,0 +1,54 @@
+<refentry id="cvar.team_maxCovertOps">
+
+<refmeta>
+    <refentrytitle>team_maxCovertOps</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>team_maxCovertOps</refname>
+    <refpurpose>sets the maximum number of covert-ops per team</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>team_maxCovertOps</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+    <cmdsynopsis>
+        <command>team_maxCovertOps</command>
+        <arg><replaceable>num</replaceable>%</arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>team_maxCovertOps</command>
+        <arg choice="plain"><literal>-1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>team_maxCovertOps</command>
+    sets the maximum number of covert-ops each team can have at once.
+    Setting <replaceable>num</replaceable> to <literal>-1</literal> allows for unlimited covert-ops.
+    Setting <replaceable>num</replaceable> to <literal>0</literal> disables the class altogether,
+	and <literal>1</literal> or higher specifies the maximum number of covert-ops per team.
+    If desired, the maximum can be specified as a percentage of team players by suffixing
+    <replaceable>num</replaceable> with a percent-symbol.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.team_maxMedics"/>,
+    <xref linkend="cvar.team_maxEngineers"/>,
+    <xref linkend="cvar.team_maxFieldOps"/>,
+</para>
+</refsection>
+
+</refentry>

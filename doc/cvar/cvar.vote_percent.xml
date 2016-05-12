@@ -1,0 +1,36 @@
+<refentry id="cvar.vote_percent">
+
+<refmeta>
+    <refentrytitle>vote_percent</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_percent</refname>
+    <refpurpose>set percentage of votes required for it to pass</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_percent</command>
+        <arg><replaceable>pass</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_percent</command>
+        <arg choice="plain"><literal>50</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_percent</command>
+    sets the percentage of votes required for a vote-in-progress to pass.
+</para>
+</refsection>
+
+</refentry>

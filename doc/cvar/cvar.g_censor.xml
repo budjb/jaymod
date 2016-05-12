@@ -1,0 +1,46 @@
+<refentry id="cvar.g_censor">
+
+<refmeta>
+    <refentrytitle>g_censor</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_censor</refname>
+    <refpurpose>enable/disable word-censor feature</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_censor</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_censor</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_censor</command>
+    enables or disables word-censor functionality.
+    When enabled, the server will censor game chat words matching those found in
+    <filename>censor.db</filename>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_censorPenalty"/>
+</para>
+</refsection>
+
+</refentry>

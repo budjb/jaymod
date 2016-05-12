@@ -1,0 +1,46 @@
+<refentry id="cvar.sv_wwwDownload">
+
+<refmeta>
+    <refentrytitle>sv_wwwDownload</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_wwwDownload</refname>
+    <refpurpose>enable/disable HTTP download</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_wwwDownload</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_wwwDownload</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_wwwDownload</command>
+    enables or disables HTTP downloads.
+    If enabled takes precedence over <xref linkend="cvar.sv_allowDownload"/>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_wwwBaseURL"/>,
+    <xref linkend="cvar.sv_wwwDlDisconnected"/>,
+    <xref linkend="cvar.sv_wwwFallbackURL"/>
+</para>
+</refsection>
+</refentry>

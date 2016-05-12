@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_CRYBABY_H
+#define GAME_CMD_CRYBABY_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CryBaby : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    CryBaby();
+    ~CryBaby();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_CRYBABY_H

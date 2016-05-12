@@ -1,0 +1,36 @@
+<refentry id="cvar.g_scriptName">
+
+<refmeta>
+    <refentrytitle>g_scriptName</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_scriptName</refname>
+    <refpurpose>sets an alternative mapscript to use on a map</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_scriptName</command>
+        <arg><replaceable>string</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_scriptName</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_scriptName</command>
+    sets an alternative mapscript to use on a map.  This is intended for development use only.
+</para>
+</refsection>
+
+</refentry>

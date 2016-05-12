@@ -1,0 +1,36 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    missing counters from <emphasis role="subject">!readconfig</emphasis> which shows number of records loaded.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    support for <emphasis role="subject">antiwarp</emphasis> feature from &etpro:name;.
+    See <xref linkend="cvar.g_antiwarp"/>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Merged</emphasis>
+    new interface for <emphasis role="subject">&omni:name; 0.65</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+	<emphasis role="add">Added</emphasis>
+	flag 2 to <xref linkend="cvar.g_xpSave"/> - resets all XP at the beginning of a new campaign.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+	<emphasis role="touch">Fixed:</emphasis>
+	XP save for stopwatch mode.  The game will no longer save any XP regardless of settings
+	in stopwatch mode.
+</simpara>
+</listitem>

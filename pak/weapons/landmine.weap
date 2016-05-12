@@ -1,0 +1,23 @@
+weaponDef
+{
+    client {
+        weaponConfig        "models/multiplayer/landmine/weapon.cfg"
+        handsModel          "models/multiplayer/landmine/v_landmine_hand.md3"
+        
+        weaponSelectedIcon  "models/multiplayer/landmine/icon.tga"
+        
+        missileModel        "models/multiplayer/landmine/landmine.md3"
+        missileTrailFunc    "PyroSmokeTrail" // { "GrenadeTrail", "RocketTrail", "PyroSmokeTrail",  "DynamiteTrail" }
+        
+        modModel 0          "models/multiplayer/mine_marker/allied_marker.md3"
+        modModel 1          "models/multiplayer/mine_marker/axis_marker.md3"
+        
+        firstPerson {
+            model           "models/multiplayer/landmine/v_landmine.md3"
+        }
+        
+        thirdPerson {
+            model           "models/multiplayer/landmine/landmine.md3"
+        }
+    }
+}

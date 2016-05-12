@@ -1,0 +1,16 @@
+<chapter id="mapscript">
+<title>&etpro:name; mapscripting</title>
+
+<para>
+    &project:name; supports &etpro:name;’s extended mapscripting.
+</para>
+<para>
+    The extended mapscripts offered by &etpro:name; add new functions for new spawn points, map bugfixes,
+    and many other possibilities. Documentation for these scripts is available at &etpro:name;'s website
+    <ulink url="http://etpro.anime.net"/>.
+</para>
+<para>
+    To enable use of these scripts, set <xref linkend="cvar.g_mapScriptDirectory"/> appropriately.
+</para>
+
+</chapter>

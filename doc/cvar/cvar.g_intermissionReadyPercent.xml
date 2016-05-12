@@ -1,0 +1,43 @@
+<refentry id="cvar.g_intermissionReadyPercent">
+
+<refmeta>
+    <refentrytitle>g_intermissionReadyPercent</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_intermissionReadyPercent</refname>
+    <refpurpose>sets the percentage of 'readied' players needed to end intermission</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_intermissionReadyPercent</command>
+        <arg><replaceable>percent</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_intermissionReadyPercent</command>
+        <arg choice="plain"><literal>100</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_intermissionReadyPercent</command>
+    sets the percentage of 'readied' players needed to end intermission.  If this percentage isn't reached,
+	intermission will end when the timer expires.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_intermissionTime"/>
+</para>
+</refsection>
+</refentry>

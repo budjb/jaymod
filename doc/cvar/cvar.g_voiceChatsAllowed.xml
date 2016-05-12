@@ -1,0 +1,37 @@
+<refentry id="cvar.g_voiceChatsAllowed">
+
+<refmeta>
+    <refentrytitle>g_voiceChatsAllowed</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_voiceChatsAllowed</refname>
+    <refpurpose>set maximum number of voice chats per 30 second period</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_voiceChatsAllowed</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_voiceChatsAllowed</command>
+        <arg choice="plain"><literal>4</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_voiceChatsAllowed</command>
+    sets the maximum number of voice chats allowable over a 30 second period.
+    A value of <literal>0</literal> disables voice chats.
+</para>
+</refsection>
+
+</refentry>

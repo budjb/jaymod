@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_TIME_H
+#define GAME_CMD_TIME_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Time : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Time();
+    ~Time();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_TIME_H

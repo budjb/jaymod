@@ -1,0 +1,53 @@
+<preface id="introduction">
+<title>Introduction</title>
+
+<para>
+    &project:name; is an add-on modification to &et:name;.
+    The idea for &project:name; came from the main features of &shrub:name;.
+    &shrub:name; has long been out of date and unsupported, and with the instability
+    issues that come with &shrub:name;, something had to be done to get a Shrub-like
+    server-side mod that would provide most of the features, be stable, and be supported.
+</para>
+<para>
+    This mod has long since far outgrown its original objectives and has moved on to implement more
+    advanced features with client-side support. To keep things as simple as possible, only one pak
+    file needs to be downloaded (on the fly) for clients connecting to a &project:name; server for
+    the first time.
+</para>
+<para>
+    With most of the &shrub:name; compatibility implementation complete,
+    the focus has shifted to the requests of the community, many of which mirror features
+    already implemented in &etpro:name;. This mod is becoming a rather well-rounded game play mod as a result.
+    It is seeing more and more options that might be deemed competition-minded while maintaining its fun factor
+    for pub environments.
+</para>
+<para>
+    &project:name; is a closed source project originally forked from the &et:sdk;.
+    In mid-2006 the entire code base was converted to compile cleanly in C++ .
+    Some &et:sdk; and all major &project:name; subsystems have been refactored/implemented
+    to take full advantage of C++ language features.
+</para>
+
+<section id="introduction.download">
+<title>Where to download</title>
+<para>
+    &project:name; is available for download at its official home <ulink url="&project:website;"/>.
+    You may find versions available elsewhere on the internet, but if at all possible download
+    it from the official homepage, as it always has the most up-to-date version available.
+</para>
+</section>
+
+<section id="introduction.further">
+<title>Further information and suggestions</title>
+<para>
+    If there is anything that isn’t answered here, I urge you to visit the website at <ulink url="&project:website;"/>
+    for updated information, as it’s more likely to have information not available at the time this
+    document was published.
+</para>
+<para>
+    Also, I’m always on the lookout for good ideas or suggestions, so, again, please visit the website
+    and let me know what you think!
+</para>
+</section>
+
+</preface>

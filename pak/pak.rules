@@ -1,0 +1,54 @@
+all:: $(MODULE.PAK.out.dat)
+all:: $(MODULE.PAK.out.bin)
+all:: $(MODULE.PAK.out.m4)
+all:: $(MODULE.PAK.out.cgame)
+all:: $(MODULE.PAK.out.ui)
+
+###############################################################################
+
+pak.clean::
+	-rm -fr $(MODULE.PAK.stage/)
+
+$(MODULE.PAK.out.dat):
+	touch $@
+
+###############################################################################
+
+$(MODULE.PAK.out.bin): $(MODULE.PAK.stage/)%: $(PROJECT/)pak/%
+	$(call fn.cp,$<,$@)
+
+$(MODULE.PAK.out.m4): $(MODULE.PAK.stage/)%: $(PROJECT/)pak/%.m4
+	m4 -I $(BUILD/)m4 $< > $@
+ifneq ($(PROJECT.platformName),OSX)
+	chmod --reference=$< $@
+endif
+
+###############################################################################
+
+$(MODULE.PAK.out.cgame): $(MODULE.CGAME.so)
+	$(call fn.cp,$<,$@)
+
+$(MODULE.PAK.out.ui): $(MODULE.UI.so)
+	$(call fn.cp,$<,$@)
+
+###############################################################################
+
+$(BUILD/)make/pak.in.defs:
+	$(call print.HEADER,GENERATING,$@)
+	@mkdir -p $(dir $@)
+	@find $(PROJECT/)pak -type f \
+		-a -not -path "*.m4" \
+		-a -not -path "$(PROJECT/)pak/pak.defs" \
+		-a -not -path "$(PROJECT/)pak/pak.rules" \
+		-a -not -path "*/.svn/*" \
+		-a -not -path "*/.*" \
+		| awk '{ printf("MODULE.PAK.in.bin += %s\n", $$1) }' \
+		> $@
+	@find $(PROJECT/)pak -type f \
+		-a -path "*.m4" \
+		-a -not -path "$(PROJECT/)pak/pak.defs" \
+		-a -not -path "$(PROJECT/)pak/pak.rules" \
+		-a -not -path "*/.svn/*" \
+		-a -not -path "*/.*" \
+		| awk '{ printf("MODULE.PAK.in.m4 += %s\n", $$1) }' \
+		>> $@

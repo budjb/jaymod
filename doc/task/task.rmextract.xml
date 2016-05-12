@@ -1,0 +1,6 @@
+<para>
+    Cleanup. Remove the &project:title; distribution bundle extract.
+</para>
+<screen>&bash.prompt.et; cd ~etserver
+&bash.prompt.et; rm -r &project:packageBase;/
+</screen>

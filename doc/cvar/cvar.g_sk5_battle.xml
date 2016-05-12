@@ -1,0 +1,57 @@
+<refentry id="cvar.g_sk5_battle">
+
+<refmeta>
+    <refentrytitle>g_sk5_battle</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_sk5_battle</refname>
+    <refpurpose>set bitflags for 5th-level battle-sense skill</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_sk5_battle</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_sk5_battle.flags" frame="all">
+<?dbfo table-width="50%"?>
+<title>g_sk5_battle Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="41*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>faster stamina recharge</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_sk5_battle</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_sk5_battle</command>
+    set bitflags for 5th-level battle-sense skill.
+</para>
+</refsection>
+
+</refentry>

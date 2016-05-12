@@ -1,0 +1,54 @@
+<refentry id="cvar.g_knifeonly">
+
+<refmeta>
+    <refentrytitle>g_knifeonly</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_knifeonly</refname>
+    <refpurpose>enable/disable knife-only game mode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_knifeonly</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_knifeonly</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_knifeonly</command>
+    enables or disables knife-only game mode.
+</para>
+<para>
+    <note>
+        This is a fun game mode and as such, it may not be compatible with the objectives of most maps.
+    </note>
+    <warning>
+        This feature is mutually exclusive to <xref linkend="cvar.g_knifeonly"/>,
+        and <xref linkend="cvar.g_sniperWar"/>.
+    </warning>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_panzerWar"/>,
+    <xref linkend="cvar.g_sniperWar"/>
+</para>
+</refsection>
+
+</refentry>

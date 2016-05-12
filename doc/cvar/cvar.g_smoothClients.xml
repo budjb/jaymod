@@ -1,0 +1,37 @@
+<refentry id="cvar.g_smoothClients">
+
+<refmeta>
+    <refentrytitle>g_smoothClients</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_smoothClients</refname>
+    <refpurpose>enable/disable missed client frames smoothing</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_smoothClients</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_smoothClients</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_smoothClients</command>
+    enables or disables extrapolation when client frames are missing.
+</para>
+</refsection>
+
+</refentry>

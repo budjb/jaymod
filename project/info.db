@@ -1,0 +1,45 @@
+name  = Jaymod
+namef = jaymod
+namex = ^xJay^4mod
+
+website   = http://jaymod.clanfu.org
+author    = Jaybird
+copyright = Copyright (c) 2005-2011 Jaybird. All Rights Reserved.
+irc       = irc.freenode.net #jaymod
+
+versionMajor = 2
+versionMinor = 2
+versionPoint = 0
+
+buildDate    = enable
+buildRelease = false
+
+repoURL    = disable
+repoUUID   = enable
+repoRev    = enable
+repoLCRev  = enable
+repoLCDate = enable
+
+###############################################################################
+
+::linux
+
+platformName = Linux
+
+::mingw
+
+platformName = Windows
+
+::osx
+
+platformName = OSX
+
+::windows
+
+platformName = Windows
+
+###############################################################################
+
+::release
+
+buildRelease = true

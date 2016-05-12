@@ -1,0 +1,53 @@
+<refentry id="cvar.g_lms_teamForceBalance">
+
+<refmeta>
+    <refentrytitle>g_lms_teamForceBalance</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_lms_teamForceBalance</refname>
+    <refpurpose>enable/disable passive team balancing</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_lms_teamForceBalance</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_lms_teamForceBalance</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_lms_teamForceBalance</command>
+    enables or disables whether the game will prevent new players from joining the team with more players
+    than the other.
+</para>
+<para>
+    <note>
+        This value is in effect only when LMS gametype is enabled using <xref linkend="cvar.g_gametype"/>.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_lms_followTeamOnly"/>,
+    <xref linkend="cvar.g_lms_lockTeams"/>,
+    <xref linkend="cvar.g_lms_matchlimit"/>,
+    <xref linkend="cvar.g_lms_roundlimit"/>,
+    <xref linkend="cvar.g_gametype"/>
+</para>
+</refsection>
+
+</refentry>

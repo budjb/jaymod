@@ -1,0 +1,244 @@
+a
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:link
+{
+    color: #ff8040;
+}
+
+a:visited
+{
+    color: #ff8040;
+}
+
+a:hover
+{
+    color: #ffffcc;
+}
+
+a:active
+{
+    color: #ff8040;
+}
+
+code,
+pre,
+.command,
+.cmdsynopsis *
+{
+    font-family: "Bitstream Vera Sans Mono",monospace;
+    font-size: 1em;
+}
+
+pre.screen span.uid_et
+{
+    color: #009900;
+}
+
+pre.screen span.uid_root
+{
+    color: #ff0000;
+}
+
+pre.screen span.cconsole
+{
+    color: #009900;
+}
+
+pre.screen span.sconsole
+{
+    color: #ff0000;
+}
+
+pre.screen .cmdopt
+{
+    color: #03f0ff;
+    font-style: italic;
+}
+
+pre.screen .cmdvar
+{
+    color: #03f0ff;
+}
+
+body
+{
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0.25in 0.50in;
+    font-family: helvetica,sans-serif;
+    font-size: small;
+}
+
+h1, h2, h3, h4,
+.toc p b,
+.list-of-figures p b,
+.list-of-tables p b,
+.navheader th,
+.navfooter td,
+.variablelist dt
+{
+    font-variant: small-caps;
+    color: #b9ffd0;
+}
+
+h1.title
+{
+    font-size: 250%;
+}
+
+h2.subtitle, h2.title
+{
+    font-size: 150%;
+}
+
+span.subject
+{
+    color: #03f0ff;
+    font-weight: subject;
+}
+
+.caution img, .important img, .note img, .tip img, .warning img
+{
+    width: 64px;
+    height: 64px;
+}
+
+.caution, .important, .note, .tip, .warning
+{
+    border-color: #888888;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.caution, .warning
+{
+    background-color: #606000;
+}
+
+.important, .note
+{
+    background-color: #400040;
+}
+
+.tip
+{
+    background-color: #004000;
+}
+
+.cmdsynopsis .literal, .cmdsynopsis .replaceable
+{
+    color: #03f0ff;
+}
+
+.programlisting
+{
+    background-color: #282800;
+    border-color: #6666ff;
+    border-color: #888888;
+    border-width: 1px;
+    border-style: dashed;
+    padding: 0.5em;
+}
+.programlisting .literal
+{
+    color: #03f0ff;
+}
+
+.refentry .literal,
+.refentry .replaceable
+{
+    color: #03f0ff;
+}
+
+.screen
+{
+    background-color: #000055;
+    border-color: #777777;
+    border-width: 1px;
+    border-style: dashed;
+    padding: 0.5em;
+}
+
+.informaltable th, .table th
+{
+    background-color: #402010;
+    background-color: #400040;
+}
+
+.informaltable td, .table td
+{
+    background-color: #003030;
+}
+
+.informaltable th, .informaltable td,
+.table th, .table td
+{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.buildinfo td
+{
+    padding-right: 1.0em;
+}
+
+.variablelist dt sup.green,
+.variablelist dt sup.red
+{
+    color: #000000;
+    font-size: 75%;
+    margin-left: 0.50em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    font-variant: normal;
+}
+
+.variablelist dt sup.green
+{
+    background-color: #00ff00;
+}
+
+.variablelist dt sup.red
+{
+    background-color: #ff0000;
+}
+
+.orderedlist .add
+{
+    color: #00ff00;
+    font-weight: bold;
+}
+.orderedlist .rm
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+.orderedlist .security
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+.orderedlist .significant
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+.orderedlist .touch
+{
+    color: #0000ff;
+    font-weight: bold;
+}
+.orderedlist .subject
+{
+    color: #03f0ff;
+}
+
+.emphasis em
+{
+    color: #ffff00;
+    font-style: normal;
+}

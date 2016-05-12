@@ -1,0 +1,36 @@
+<refentry id="cvar.g_soldierChargeTime">
+
+<refmeta>
+    <refentrytitle>g_soldierChargeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_soldierChargeTime</refname>
+    <refpurpose>set amount of time for &soldier; to recharge</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_soldierChargeTime</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_soldierChargeTime</command>
+        <arg choice="plain"><literal>20000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_soldierChargeTime</command>
+    sets the amount of time in milliseconds it takes for &soldier; to recharge.
+</para>
+</refsection>
+
+</refentry>

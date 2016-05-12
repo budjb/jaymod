@@ -1,0 +1,44 @@
+<refentry id="cvar.g_medicChargeTime">
+
+<refmeta>
+    <refentrytitle>g_medicChargeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_medicChargeTime</refname>
+    <refpurpose>set amount of time for &medic; to recharge</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_medicChargeTime</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_medicChargeTime</command>
+        <arg choice="plain"><literal>45000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_medicChargeTime</command>
+    sets the amount of time in milliseconds it takes for &medic; to recharge.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_medicSelfHealDelay"/>,
+    <xref linkend="cvar.g_medics"/>
+</para>
+</refsection>
+
+</refentry>

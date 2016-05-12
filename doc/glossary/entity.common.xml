@@ -1,0 +1,33 @@
+<!ENTITY % entity.project  SYSTEM "entity.project.xml">
+<!ENTITY % entity.glossary SYSTEM "entity.glossary.xml">
+<!ENTITY % entity.people   SYSTEM "entity.people.xml">
+<!ENTITY % entity.unix     SYSTEM "entity.unix.xml">
+<!ENTITY % entity.cmd      SYSTEM "entity.cmd.xml">
+<!ENTITY % entity.cvar     SYSTEM "entity.cvar.xml">
+
+<!ENTITY buildinfo       SYSTEM "buildinfo.xml">
+<!ENTITY syntax          SYSTEM "syntax.xml">
+<!ENTITY syntax.duration SYSTEM "syntax.duration.xml">
+<!ENTITY ref.cmd.all     SYSTEM "ref.cmd.all.xml">
+<!ENTITY ref.cvar.all    SYSTEM "ref.cvar.all.xml">
+<!ENTITY credits         SYSTEM "credits.xml">
+
+<!ENTITY task.backup       SYSTEM "task.backup.xml">
+<!ENTITY task.extract      SYSTEM "task.extract.xml">
+<!ENTITY task.etconfig     SYSTEM "task.etconfig.xml">
+<!ENTITY task.reload       SYSTEM "task.reload.xml">
+<!ENTITY task.requirements SYSTEM "task.requirements.xml">
+<!ENTITY task.restart      SYSTEM "task.restart.xml">
+<!ENTITY task.rmextract    SYSTEM "task.rmextract.xml">
+<!ENTITY task.shutdown     SYSTEM "task.shutdown.xml">
+<!ENTITY task.startup      SYSTEM "task.startup.xml">
+<!ENTITY task.status       SYSTEM "task.status.xml">
+
+%entity.project;
+%entity.glossary;
+%entity.people;
+%entity.unix;
+%entity.cmd;
+%entity.cvar;
+
+<!ENTITY boolean.mode SYSTEM "boolean.mode.xml">

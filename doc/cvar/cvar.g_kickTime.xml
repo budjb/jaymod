@@ -1,0 +1,46 @@
+<refentry id="cvar.g_kickTime">
+
+<refmeta>
+    <refentrytitle>g_kickTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_kickTime</refname>
+    <refpurpose>set duration to ban kicked players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_kickTime</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_kickTime</command>
+        <arg choice="plain"><literal>2</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_kickTime</command>
+    sets the duration in seconds to ban kicked players.
+    When changed, the read-only cvar sv_tempBanMessage is updated accordingly.
+</para>
+&syntax.duration;
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_kickMessage"/>,
+    <xref linkend="cvar.g_protestMessage"/>
+</para>
+</refsection>
+
+</refentry>

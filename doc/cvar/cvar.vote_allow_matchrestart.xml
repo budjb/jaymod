@@ -1,0 +1,44 @@
+<refentry id="cvar.vote_allow_matchrestart">
+
+<refmeta>
+    <refentrytitle>vote_allow_matchrestart</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_allow_matchrestart</refname>
+    <refpurpose>enable/disable matchrestart</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_allow_matchrestart</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_allow_matchrestart</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_allow_matchrestart</command>
+    enables or disables matchrestart.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.vote_limit"/>,
+    <xref linkend="cvar.vote_percent"/>
+</para>
+</refsection>
+</refentry>

@@ -1,0 +1,40 @@
+<refentry id="cvar.g_goomba">
+
+<refmeta>
+    <refentrytitle>g_goomba</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_goomba</refname>
+    <refpurpose>enables damage from above</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_goomba</command>
+        <arg><replaceable>factor</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_goomba</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_goomba</command>
+    enables damage from above (think Super Mario Bros).  If a falling player lands on another player, the victim will receive
+	damage and break the fall of the falling player.  <replaceable>factor</replaceable> is the multiplier of damage the victim
+	will receive from the falling player's falling damage.  For example, if a falling player would have received 20 damage
+	on landing on the ground, and <replaceable>factor</replaceable> is 4, the victim will receive 100 points damage.
+	<replaceable>factor</replaceable> of <literal>0</literal> disables this feature.
+</para>
+</refsection>
+
+</refentry>

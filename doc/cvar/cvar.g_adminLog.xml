@@ -1,0 +1,47 @@
+<refentry id="cvar.g_adminLog">
+
+<refmeta>
+    <refentrytitle>g_adminLog</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_adminLog</refname>
+    <refpurpose>set filename used for admin command logging</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_adminLog</command>
+        <arg><replaceable>"file"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_adminLog</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_adminLog</command>
+    sets the filename used for admin command logging.
+    The file is always appended to.
+    A value of <literal>""</literal> will disable this functionality.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_admin"/>,
+    <xref linkend="cvar.g_log"/>,
+    <xref linkend="cvar.g_logOptions"/>,
+    <xref linkend="cvar.g_logSync"/>
+</para>
+</refsection>
+</refentry>

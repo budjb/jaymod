@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_defaultSkills">
+  <refmeta>
+    <refentrytitle>g_defaultSkills</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_defaultSkills</refname>
+
+    <refpurpose>détermine les valeurs initiales des aptitudes
+    (<emphasis>skills</emphasis>) pour les joueurs se joignant au
+    serveur</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+       
+
+      <command>g_defaultSkills</command>
+
+       "
+
+      <arg>
+        <replaceable>battle sense</replaceable>
+      </arg>
+
+       
+
+      <arg>
+        <replaceable>engineer</replaceable>
+      </arg>
+
+       
+
+      <arg>
+        <replaceable>medic</replaceable>
+      </arg>
+
+       
+
+      <arg>
+        <replaceable>field ops</replaceable>
+      </arg>
+
+       
+
+      <arg>
+        <replaceable>light weapons</replaceable>
+      </arg>
+
+       
+
+      <arg>
+        <replaceable>heavy weapons</replaceable>
+      </arg>
+
+       
+
+      <arg>
+        <replaceable>covert ops</replaceable>
+      </arg>
+
+      " 
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_defaultSkills</command>
+
+      <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_defaultSkills</command> détermine les valeurs initiales
+    des aptitudes (<emphasis>skills</emphasis>) pour les joueurs se joignant
+    au serveur. Les joueurs déjà sur le serveur obtiendront ces valeurs
+    initiales au changement d'une carte si leur classe actuelle est inférieure
+    aux valeurs spécifiées. Si le nombre d'arguments ne totalise pas 7 ou si
+    la cvar est vide, la variable sera considérée nulle pour toutes les
+    classes d'aptitudes. Vous pouvez spécifier une valeur de 0 à 5 pour chaque
+    classe d'aptitude.</para>
+  </refsection>
+</refentry>

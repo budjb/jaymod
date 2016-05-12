@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_UNPAUSE_H
+#define GAME_CMD_UNPAUSE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Unpause : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Unpause();
+    ~Unpause();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_UNPAUSE_H

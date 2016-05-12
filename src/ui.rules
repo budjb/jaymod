@@ -1,0 +1,18 @@
+all:: MODULE.UI.build
+
+MODULE.UI.build: CXX.inherit=MODULE.UI
+MODULE.UI.build: $(MODULE.UI.so)
+
+$(MODULE.UI.pchs): $(MODULE.BASE.pchs)
+$(MODULE.UI.pchs): $(BUILD/)ui/bgame/impl.h.$(CXX.pch.ext)/%: $(PROJECT/)src/bgame/impl.h
+	$(call CXX.fnPrecompile,$<,$@,$*)
+
+$(MODULE.UI.objs): $(MODULE.UI.pchs)
+$(MODULE.UI.objs): $(BUILD/)ui/%.o: $(PROJECT/)src/%.cpp
+	$(call CXX.fnCompilePch,$<,$@,bgame/impl.h,$(MODULE.UI.pchs))
+
+$(MODULE.UI.so): $(CXX.libstdcxx.DEPS)
+$(MODULE.UI.so): $(MODULE.UI.objs) $(MODULE.LUA.a) $(MODULE.BASE.a)
+	$(call CXX.fnLinkSo,$@,$^)
+	$(call CXX.fnStrip,$@)
+	$(OSX.bundle)

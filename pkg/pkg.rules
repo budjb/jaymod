@@ -1,0 +1,106 @@
+pkg:: all
+pkg:: $(MODULE.PKG.out.bin)
+pkg:: $(MODULE.PKG.out.m4)
+pkg:: $(MODULE.PKG.qagame)
+pkg:: $(MODULE.PKG.pk3)
+pkg:: $(MODULE.PKG.tar)
+
+###############################################################################
+
+pkg.clean:: pak.clean
+	-rm -fr $(MODULE.PKG.stage/)
+
+###############################################################################
+
+$(MODULE.PKG.out.bin): $(MODULE.PKG.stage/)%: $(PROJECT/)pkg/%
+	$(call fn.cp,$<,$@)
+
+$(MODULE.PKG.out.m4): $(MODULE.PKG.stage/)%: $(PROJECT/)pkg/%.m4
+	m4 -I $(BUILD/)m4 $< > $@
+ifneq ($(PROJECT.platformName),OSX)
+	chmod --reference=$< $@
+endif
+
+###############################################################################
+
+.PHONY: $(MODULE.PKG.pk3)
+$(MODULE.PKG.pk3):
+	$(call print.HEADER,CREATING,$@)
+	(cd $(MODULE.PAK.stage/) && zip -qr - *) > $@
+
+.PHONY: $(MODULE.PKG.tar)
+$(MODULE.PKG.tar):
+	$(call print.HEADER,CREATING,$@)
+ifneq ($(PROJECT.platformName),OSX)
+	$(call fn.cp,$(MODULE.GAME.so),$(MODULE.PKG.stage/))
+else
+	unzip -o -d $(MODULE.PKG.stage/) $(MODULE.GAME.so)
+endif
+	tar czf $@ -C $(dir $@) $(PROJECT.packageBase)
+
+###############################################################################
+
+$(BUILD/)make/pkg.in.defs:
+	$(call print.HEADER,GENERATING,$@)
+	@mkdir -p $(dir $@)
+	@find $(PROJECT/)pkg -type f \
+		-a -not -path "$(PROJECT/)pkg/osx*" \
+		-a -not -path "$(PROJECT/)pkg/pkg.defs" \
+		-a -not -path "$(PROJECT/)pkg/pkg.rules" \
+		-a -not -path "*/.svn/*" \
+		-a -not -path "*/.*" \
+		-a -not -path "*.m4" \
+		| awk '{ printf("MODULE.PKG.in.bin += %s\n", $$1) }' \
+		> $@
+	@find $(PROJECT/)pkg -type f \
+		-a -not -path "$(PROJECT/)pkg/osx*" \
+		-a -not -path "$(PROJECT/)pkg/pkg.defs" \
+		-a -not -path "$(PROJECT/)pkg/pkg.rules" \
+		-a -not -path "*/.svn/*" \
+		-a -not -path "*/.*" \
+		-a -path "*.m4" \
+		| awk '{ printf("MODULE.PKG.in.m4 += %s\n", $$1) }' \
+		>> $@
+
+###############################################################################
+
+.PHONY: final final.linux final.osx final.windows final.doc final.clean
+
+final:: $(MODULE.PKG.final.pak/) $(MODULE.PKG.final.pkg/) $(dir $(MODULE.PKG.final.doc.pdf))
+final:: final.linux final.osx final.windows final.doc
+	$(call print.HEADER,CREATING,$(MODULE.PKG.final.pkg/)$(PROJECT.pk3))
+	(cd $(MODULE.PKG.final.pak/) && zip -qr - *) > $(MODULE.PKG.final.pkg/)$(PROJECT.pk3)
+	$(call print.HEADER,CREATING,$(MODULE.PKG.final.tar))
+	tar czf $(MODULE.PKG.final.tar) -C $(dir $(MODULE.PKG.final.tar)) $(PROJECT.packageBase)
+
+final.linux:
+	@test -n "$(FINAL_LINUX)" || (echo "$(call value.ERROR2,environment variable not defined,FINAL_LINUX)"; exit 1)
+	rsync $(RSYNC_SSHFLAGS) -vaOP --ignore-existing $(FINAL_LINUX)/pak/ $(MODULE.PKG.final.pak/)
+	rsync $(RSYNC_SSHFLAGS) -vaOP --ignore-existing $(FINAL_LINUX)/$(PROJECT.packageBase)/ $(MODULE.PKG.final.pkg/)
+
+final.osx:
+	@test -n "$(FINAL_OSX)" || (echo "$(call value.ERROR2,environment variable not defined,FINAL_OSX)"; exit 1)
+	rsync $(RSYNC_SSHFLAGS) -vaOP --ignore-existing $(FINAL_OSX)/pak/ $(MODULE.PKG.final.pak/)
+	rsync $(RSYNC_SSHFLAGS) -vaOP --ignore-existing $(FINAL_OSX)/$(PROJECT.packageBase)/ $(MODULE.PKG.final.pkg/)
+
+final.windows:
+	@test -n "$(FINAL_WINDOWS)" || (echo "$(call value.ERROR2,environment variable not defined,FINAL_WINDOWS)"; exit 1)
+	rsync $(RSYNC_SSHFLAGS) -vaOP --ignore-existing $(FINAL_WINDOWS)/pak/ $(MODULE.PKG.final.pak/)
+	rsync $(RSYNC_SSHFLAGS) -vaOP --ignore-existing $(FINAL_WINDOWS)/$(PROJECT.packageBase)/ $(MODULE.PKG.final.pkg/)
+
+final.doc: doc
+	$(call fn.cp,$(MODULE.DOC.out.pdf),$(MODULE.PKG.final.pkg/)doc/.)
+
+final.clean:
+	$(call fn.rmfr,$(MODULE.PKG.final.pak/) $(MODULE.PKG.final.pkg/))
+
+###############################################################################
+
+nightly.clanfu:
+	rsync $(RSYNC_SSHFLAGS) $(MODULE.PKG.final.tar) et.clanfu.org:/var/www/html/jaymod/nightly/.
+	rsync $(RSYNC_SSHFLAGS) --delete -vaP \
+		$(BUILD/)doc/en/html \
+		$(BUILD/)doc/en/figures \
+		$(BUILD/)doc/en/images \
+		$(BUILD/)doc/en/styles \
+		et.clanfu.org:/var/www/html/jaymod/$(PROJECT.versionMajor).$(PROJECT.versionMinor).$(PROJECT.versionPoint)/.

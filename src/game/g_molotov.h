@@ -1,0 +1,18 @@
+#ifndef GAME_G_MOLOTOV_H
+#define GAME_G_MOLOTOV_H
+
+namespace molotov {
+
+///////////////////////////////////////////////////////////////////////////////
+
+void init();
+void runChunks();
+void shutdown();
+
+gentity_t* launch ( gentity_t&, int );
+
+///////////////////////////////////////////////////////////////////////////////
+
+} // namespace molotov
+
+#endif // GAME_G_MOLOTOV_H

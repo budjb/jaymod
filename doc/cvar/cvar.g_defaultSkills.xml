@@ -1,0 +1,46 @@
+<refentry id="cvar.g_defaultSkills">
+
+<refmeta>
+    <refentrytitle>g_defaultSkills</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_defaultSkills</refname>
+    <refpurpose>default skill loadout for connecting players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_defaultSkills</command>
+        "<arg><replaceable>battle sense</replaceable></arg>
+        <arg><replaceable>engineer</replaceable></arg>
+        <arg><replaceable>medic</replaceable></arg>
+        <arg><replaceable>field ops</replaceable></arg>
+        <arg><replaceable>light weapons</replaceable></arg>
+        <arg><replaceable>heavy weapons</replaceable></arg>
+        <arg><replaceable>covert ops</replaceable></arg>"
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_defaultSkills</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_defaultSkills</command>
+    defines the default skill levels for each skill class a player will start at on connection to the server.
+	Players that are already on the server will get these defaults applied on map changes if their current
+	level for each individual class is less than the default specified.  If the number of arguments does not
+	total 7, or the cvar is empty, the cvar will default to 0 for all skill classes.  You may specify
+	<literal>0</literal> to <literal>5</literal> for each skill class.
+</para>
+</refsection>
+
+</refentry>

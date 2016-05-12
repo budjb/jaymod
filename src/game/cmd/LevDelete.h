@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_RMLEVEL_H
+#define GAME_CMD_RMLEVEL_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class LevDelete : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    LevDelete();
+    ~LevDelete();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_RMLEVEL_H

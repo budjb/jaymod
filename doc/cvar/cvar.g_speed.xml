@@ -1,0 +1,38 @@
+<refentry id="cvar.g_speed">
+
+<refmeta>
+    <refentrytitle>g_speed</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_speed</refname>
+    <refpurpose>set player baseline speed</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_speed</command>
+        <arg><replaceable>units</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_speed</command>
+        <arg choice="plain"><literal>320</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_speed</command>
+    sets the rate at which a player moves.
+    This is the baseline speed for player movement which directly effects how fast a player moves when
+    running, sprinting, walking, crouching, crawling, etc.
+</para>
+</refsection>
+
+</refentry>

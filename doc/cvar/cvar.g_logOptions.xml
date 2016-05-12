@@ -1,0 +1,78 @@
+<refentry id="cvar.g_logOptions">
+
+<refmeta>
+    <refentrytitle>g_logOptions</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_logOptions</refname>
+    <refpurpose>set bitflags for log options</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_logOptions</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_logOptions.flags" frame="all">
+<?dbfo table-width="30%"?>
+<title>g_logOptions Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="21*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>deprecated</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>log extended weapons stats for new hitzones</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>deprecated</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>log ban events</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_logOptions</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_logOptions</command>
+    sets bitflags for log options.
+    This setting only applies to <xref linkend="cvar.g_log"/> when enabled.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_log"/>,
+    <xref linkend="cvar.g_logSync"/>,
+    <xref linkend="cvar.g_adminLog"/>
+</para>
+</refsection>
+</refentry>

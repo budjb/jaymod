@@ -1,0 +1,38 @@
+<refentry id="cvar.g_fastres">
+
+<refmeta>
+    <refentrytitle>g_fastres</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_fastres</refname>
+    <refpurpose>enables fast player revives</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_fastres</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_fastres</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_fastres</command>
+    enables fast player revives.  With this enabled, a player will jump up instantly after a revive, will
+	not have a time lock (i.e. can move immediately), and have a lower invulnerability grace period.
+</para>
+</refsection>
+
+</refentry>

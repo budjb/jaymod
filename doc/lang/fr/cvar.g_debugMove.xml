@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_debugMove">
+  <refmeta>
+    <refentrytitle>g_debugMove</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_debugMove</refname>
+
+    <refpurpose>permet d'obtenir de l'information de débogage sur le mouvement
+    d'un joueur</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_debugMove</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_debugMove</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_debugMove</command> permet d'obtenir de l'information de
+    déboguage sur le mouvement d'un joueur. Cette variable est réservée
+    exclusivement aux développeurs. Une valeur de 0 pour
+    <replaceable>num</replaceable> annule le débogage (valeur initiale),
+    <literal>1</literal> affiche la plupart des infos de débogage, et
+    <literal>2</literal> ou plus active le débogage de la glisse et du
+    mouvement.</para>
+  </refsection>
+</refentry>

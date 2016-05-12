@@ -1,0 +1,18 @@
+-include $(BUILD/)make/pak.in.defs
+
+###############################################################################
+
+MODULE.PAK.stage/    = $(BUILD/)pak/
+MODULE.PAK.out.dat   = $(MODULE.PAK.stage/)$(PROJECT.packageBase).dat
+MODULE.PAK.out.bin   = $(MODULE.PAK.in.bin:$(PROJECT/)pak/%=$(MODULE.PAK.stage/)%)
+MODULE.PAK.out.m4    = $(MODULE.PAK.in.m4:$(PROJECT/)pak/%.m4=$(MODULE.PAK.stage/)%)
+MODULE.PAK.out.cgame = $(MODULE.PAK.stage/)$(notdir $(MODULE.CGAME.so))
+MODULE.PAK.out.ui    = $(MODULE.PAK.stage/)$(notdir $(MODULE.UI.so))
+
+###############################################################################
+
+BUILD.output += $(MODULE.PAK.out.dat)
+BUILD.output += $(MODULE.PAK.out.bin)
+BUILD.output += $(MODULE.PAK.out.m4)
+BUILD.output += $(MODULE.PAK.out.cgame)
+BUILD.output += $(MODULE.PAK.out.ui)

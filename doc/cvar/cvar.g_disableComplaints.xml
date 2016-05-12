@@ -1,0 +1,65 @@
+<refentry id="cvar.g_disableComplaints">
+
+<refmeta>
+    <refentrytitle>g_disableComplaints</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_disableComplaints</refname>
+    <refpurpose>disables fiendly death complaints for certain weapons</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_disableComplaints</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_disableComplaints.flags" frame="all">
+<?dbfo table-width="80%"?>
+<title>g_disableComplaints Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="71*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>friendly landmine death complaints are disabled</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>friendly airstrike/artillery death complaints are disabled</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>friendly mortar death complaints are disabled</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_disableComplaints</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_disableComplaints</command>
+    disables fiendly death complaints for certain weapons.
+</para>
+</refsection>
+
+</refentry>

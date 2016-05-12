@@ -1,0 +1,159 @@
+<refentry id="cmd.status">
+
+<refmeta>
+    <refentrytitle>status</refentrytitle>
+    <manvolnum>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>status</refname>
+    <refpurpose>display server resources</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>!status</command>
+        <arg><literal>all</literal></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>status</command>
+    displays critical server resources which may help determine when a server is reaching
+    its limits due to gameplay, maps, settings and other complexities.
+    Some of the resources listed track game-engine limits which if hit will result in a server crash.
+</para>
+<para>
+    If <literal>all</literal> is specified, the output is shown on all players' consoles.
+</para>
+<para>
+    Watermarks (high indicators) only apply to the current match.
+    Heap amounts simply track memory used for a particular feature.
+    Rates are averaged over the last 15 seconds.
+</para>
+</refsection>
+
+<figure id="cmd.status.sample">
+<title>!status Sample Output</title>
+<screen>-SERVER STATUS
+players:       43/64          ( 67.19%)
+entities:     362/958         ( 37.79%) (452 high)
+gamestate:  12549/16000 bytes ( 78.43%)
+serverinfo:   639/1024  bytes ( 62.40%)
+systeminfo:  1511/8192  bytes ( 18.44%)
+largestcs:    274/1024  bytes ( 26.76%) (38 index)
+-DATABASE
+user:  2409 records
+level:    7 records
+map:     10 records
+-HEAP
+bullet-model:    15 KB  (   15 KB high)
+hit-model:      346 KB  (  565 KB high)
+-RATES
+entity spawn:  27.24/s
+entity free:   29.30/s
+</screen>
+</figure>
+
+<variablelist>
+<varlistentry>
+    <term>players</term>
+    <listitem>
+    <para>
+        Indicates active number of player slots consumed out of the total game-engine limit.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>entities</term>
+    <listitem>
+    <para>
+        Indicates the active number of game-entities out of the total game-engine limit.
+        These entities are maticulously replicated to all connected clients and represent
+        dynamic objects in the 3D game world. Primary factors which are known to cause
+        or trigger exhaustion of this resource are:
+
+        <itemizedlist>
+            <listitem>consumed player slots</listitem>
+            <listitem>large and/or poorly designed maps</listitem>
+            <listitem>abuse of <xref linkend="cmd.lol"/></listitem>
+            <listitem>high amount of med or ammo packs left on ground</listitem>
+        </itemizedlist>
+    </para>
+    <para>
+        While not an exhaustive list, some common examples of objects which each consume an entity slot are:
+
+        <itemizedlist>
+            <listitem>players</listitem>
+            <listitem>constructables</listitem>
+            <listitem>capturables (flags)</listitem>
+            <listitem>breakables (glass, charis, crates, fences, doors)</listitem>
+            <listitem>dropped/thrown grenades</listitem>
+            <listitem>dropped weapons</listitem>
+            <listitem>projectiles (panzers and mortar rounds)</listitem>
+            <listitem>supply packs (health and ammo)</listitem>
+            <listitem>landmines</listitem>
+            <listitem>movers (tanks, trains)</listitem>
+            <listitem>map-specials (fire-railgun button, cranes, doors)</listitem>
+        </itemizedlist>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>gsdata</term>
+    <listitem>
+    <para>
+        Indicates the current size of the game-state data structure which has a game-engine limit.
+        This data is maticulously replicated to all connected clients and is limited in size
+        for game-engine networking reasons. Many factors effect the amount of data and they
+        are too numerous to list here. Primary factors which are known to cause or trigger
+        exhaustion of this resource are:
+
+        <itemizedlist>
+            <listitem>excessive amounts of pk3 files on server</listitem>
+            <listitem>large and/or poorly designed maps</listitem>
+            <listitem>consumed player slots</listitem>
+            <listitem>end-game statistics</listitem>
+        </itemizedlist>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>serverinfo</term>
+    <listitem>
+    <para>
+        Indicates the current size of the serverinfo data structure which amongst other
+        things houses information used by public game browsers.
+        This is an entry in <emphasis>gamestate</emphasis>.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>systeminfo</term>
+    <listitem>
+    <para>
+        Indicates the current size of the systeminfo data structure which typically stores
+        referenced pak names, unreferenced pak names, checksums and other non-public server information. 
+        This is an entry in <emphasis>gamestate</emphasis>.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>largestcs</term>
+    <listitem>
+    <para>
+        Indicates the size and index of the the largest config-string entry in the gamestate buffer.
+        This does not include serverinfo or systeminfo entries.
+    </para>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</refentry>

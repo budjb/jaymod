@@ -1,0 +1,5 @@
+include make/variant/linux-release
+
+#########################################################################################
+
+CXX.opt.O = -O3 -march=athlon-xp -ffast-math

@@ -1,0 +1,34 @@
+#include <bgame/impl.h>
+
+namespace cmd {
+
+///////////////////////////////////////////////////////////////////////////////
+
+Reset::Reset()
+    : AbstractBuiltin( "reset" )
+{
+    __usage << xvalue( "!" + _name );
+    __descr << "Restart the current map and also reset XP to what it was when map started.";
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+Reset::~Reset()
+{
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+AbstractCommand::PostAction
+Reset::doExecute( Context& txt )
+{
+    if (txt._args.size() > 1)
+        return PA_USAGE;
+
+    Svcmd_ResetMatch_f( qtrue, qtrue );
+    return PA_NONE;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+} // namespace cmd

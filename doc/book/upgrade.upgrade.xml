@@ -1,0 +1,59 @@
+<section id="upgrade.upgrade">
+<title>Upgrade</title>
+
+<para>
+    This section describes the main upgrade procedure.
+</para>
+
+<orderedlist>
+    <listitem>
+        &task.extract;
+    </listitem>
+
+    <listitem>
+    <para>
+        Create a backup directory to hold files replaced during upgrade.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; mkdir BACKUP
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Backup and copy new <command>servercl</command> script into place.
+        Once you have copied the new script into place, manually apply any edits that are
+        appropriate for your situation by comparing to backup copy.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; mv serverctl BACKUP/.
+&bash.prompt.et; cp ~etserver/&project:packageBase;/linux/serverctl .
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Backup and copy new game server module into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; mv jaymod/qagame.mp.i386.so BACKUP/.
+&bash.prompt.et; cp ~etserver/&project:packageBase;/qagame.mp.i386.so jaymod/.
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Backup and copy new game server pak into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; mv jaymod/jaymod-*.pk3 BACKUP/.
+&bash.prompt.et; cp ~etserver/&project:packageBase;/&project:pk3; jaymod/.
+</screen>
+    </listitem>
+
+    <listitem>
+        &task.etconfig;
+    </listitem>
+</orderedlist>
+
+</section>

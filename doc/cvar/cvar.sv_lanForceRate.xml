@@ -1,0 +1,40 @@
+<refentry id="cvar.sv_lanForceRate">
+
+<refmeta>
+    <refentrytitle>sv_lanForceRate</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_lanForceRate</refname>
+    <refpurpose>enable/disable automatic network settings for LAN clients</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_lanForceRate</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_lanForceRate</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_lanForceRate</command>
+    enables or disables automatic network settings for LAN clients.
+    Some reports indicate clients can be incorrectly identified as a LAN client and in
+    those cases this can be a serious issue to client performance.
+    Use <command>/players</command> on client console to see <varname>rate</varname> for each client.
+</para>
+</refsection>
+
+</refentry>

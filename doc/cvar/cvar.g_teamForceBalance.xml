@@ -1,0 +1,38 @@
+<refentry id="cvar.g_teamForceBalance">
+
+<refmeta>
+    <refentrytitle>g_teamForceBalance</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_teamForceBalance</refname>
+    <refpurpose>force team balance</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_teamForceBalance</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_teamForceBalance</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_teamForceBalance</command>
+    sets whether the game should balance the teams, that is, the game will not allow a team
+	to have more than 1 player more than the other team.
+</para>
+</refsection>
+
+</refentry>

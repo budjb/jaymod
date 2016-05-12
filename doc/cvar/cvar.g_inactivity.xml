@@ -1,0 +1,44 @@
+<refentry id="cvar.g_inactivity">
+
+<refmeta>
+    <refentrytitle>g_inactivity</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_inactivity</refname>
+    <refpurpose>set player inactivity limit</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_inactivity</command>
+        <arg><replaceable>limit</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_inactivity</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_inactivity</command>
+    sets the limit in seconds of player inactivity permitted before player is automatically kicked.
+    A value of <literal>0</literal> disables this feature.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_spectatorInactivity"/>
+</para>
+</refsection>
+
+</refentry>

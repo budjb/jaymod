@@ -1,0 +1,37 @@
+<refentry id="cvar.g_scriptDebugLevel">
+
+<refmeta>
+    <refentrytitle>g_scriptDebugLevel</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_scriptDebugLevel</refname>
+    <refpurpose>enables script generated debug output</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_scriptDebugLevel</command>
+        <arg><replaceable>level</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_scriptDebugLevel</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_scriptDebugLevel</command>
+    enables script generated debug output.  Setting this to <literal>0</literal> disables script debug output, and higher
+	<replaceable>level</replaceable> settings generate more debug output.
+</para>
+</refsection>
+
+</refentry>

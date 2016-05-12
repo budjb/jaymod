@@ -1,0 +1,36 @@
+<refentry id="cvar.g_movespeed">
+
+<refmeta>
+    <refentrytitle>g_movespeed</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_movespeed</refname>
+    <refpurpose>sets the movement speed of players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_movespeed</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_movespeed</command>
+        <arg choice="plain"><literal>76</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_movespeed</command>
+    sets the movement speed of players.
+</para>
+</refsection>
+
+</refentry>

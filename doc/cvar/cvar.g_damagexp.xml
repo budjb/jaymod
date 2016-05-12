@@ -1,0 +1,41 @@
+<refentry id="cvar.g_damagexp">
+
+<refmeta>
+    <refentrytitle>g_damagexp</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_damagexp</refname>
+    <refpurpose>enables XP for weapons damage awarded based on damage inflicted</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_damagexp</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_damagexp</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_damagexp</command>
+    enables XP for weapons damage awarded based on damage inflicted.  The default (disabled) mode is to
+	award XP in a lump-sum at the time of a kill.  When enabled, XP is awarded on a pro rata basis of
+	1 XP per 50 points damage (or essentially 0.02 XP per 1 point damage.  This helps avoid cases where one
+	player will inflict most of the damage on a target player and another player from the same team gets the
+	final killing shot on the target player, gaining all of the XP.
+</para>
+</refsection>
+
+</refentry>

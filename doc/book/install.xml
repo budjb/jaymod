@@ -1,0 +1,8 @@
+<chapter id="install">
+<title>Install</title>
+
+&install.preparing;
+&install.install;
+&install.after;
+
+</chapter>

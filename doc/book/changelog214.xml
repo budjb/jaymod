@@ -1,0 +1,19 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    &linux:name; signal management to work properly when CVAR <emphasis role="subject">ttycon=1</emphasis>.
+    This bug comes about when server operators (namely gaming-server providers) use non-canonical (character)
+    terminal mode with &et:name:abbr; on &linux:name;. A GSP has tested our fix with their screen/loop scripts
+    and indicate our fix looks good.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    regression in <emphasis role="subject">&omni:name; library loading</emphasis>
+    introduced in &project:name; 2.1.3 where the loader consistently fails for &windows:name; platform.
+    Loading logic has been rewritten for both &linux:name; and &windows:name; with added log verbosity
+    for the library search path.
+</simpara>
+</listitem>

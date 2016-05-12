@@ -1,0 +1,21 @@
+<section id="upgrade.preparing">
+<title>Preparing to Upgrade</title>
+<para>
+    This section describes the pre-upgrade procedure.
+</para>
+
+<orderedlist>
+    <listitem>
+        &task.requirements;
+    </listitem>
+
+    <listitem>
+        &task.shutdown;
+    </listitem>
+
+    <listitem>
+        &task.backup;
+    </listitem>
+</orderedlist>
+
+</section>

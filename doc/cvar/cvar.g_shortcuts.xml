@@ -1,0 +1,42 @@
+<refentry id="cvar.g_shortcuts">
+
+<refmeta>
+    <refentrytitle>g_shortcuts</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_shortcuts</refname>
+    <refpurpose>enable/disable text shortcuts</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_shortcuts</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_shortcuts</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_shortcuts</command>
+    enables or disables text shortcuts.
+</para>
+<para>
+    <tip>
+        Use the client console command <command>/textshortcuts</command> to list various shortcuts available.
+    </tip>
+</para>
+</refsection>
+
+</refentry>

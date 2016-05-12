@@ -1,0 +1,80 @@
+<refentry id="cvar.g_bannerLocation">
+
+<refmeta>
+    <refentrytitle>g_bannerLocation</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_bannerLocation</refname>
+    <refpurpose>set banner location</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_bannerLocation</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_bannerLocation.modes" frame="all">
+<?dbfo table-width="40%"?>
+<title>g_bannerLocation Modes</title> 
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*" align="center"/>
+    <colspec colnum="2" colwidth="5*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>chat area</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>left side of screen</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>center of screen</entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>console only</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>top-center of screen</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_bannerLocation</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_bannerLocation</command>
+    sets the location used to display banners on client screens.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_banners"/>,
+    <xref linkend="cvar.g_bannerTime"/>
+</para>
+</refsection>
+</refentry>

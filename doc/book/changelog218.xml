@@ -1,0 +1,157 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    crash bug found with the initial 2.1.8 pre-release.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Added:</emphasis>
+    1 second delay to team switching to avoid a potential exploit.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    panzerfaust damage.  Players that are hit directly with a panzerfaust missile will always gib.  Splash damage is unchanged.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    several potential userinfo exploits.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    callvote exploit bug.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    Athlon64, K10, and Core2 server specialty builds.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    artillery and airstrike bug that caused screen shaking in the incorrect location.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    Omnibot 0.81 support.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    shotgun spread bug.  This was only a visual shot tracer bug and does not affect gameplay.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    widescreen display support.  It is quite possible that I missed a few things, so please post on the Jaymod forums if something looks out of place.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    extra long wait on k43 reload (this should get rid of all long rifle reload problems).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    private message bug that resulted in unintended recipients receiving the message.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    extra long wait on kar98 reload.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    the !war commands now splat all players.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">segmentation-fault</emphasis> introduced in nightly 2007-09-22.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">!splat</emphasis> overflow when no arguments given.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">censor.db</emphasis> file-handle leak.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">!banuser</emphasis> will now also drop the user
+    (disconnect) if they happen to be connected.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed</emphasis>
+    various <emphasis role="subject">colors</emphasis> for PM output and !commands to standout more.
+    Those commands which only output to client console are left unchanged.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <emphasis role="subject">!dbload</emphasis> to also load map.db and censor.db (if enabled).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <xref linkend="cvar.g_skills"/>
+    now correctly enforces <emphasis role="subject">adrenaline carry-over</emphasis> flag.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <xref linkend="cvar.g_medics"/>
+    now permits only &medic; class to <emphasis role="subject">share-adrenaline</emphasis>. 
+</simpara>
+</listitem>

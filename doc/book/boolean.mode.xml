@@ -1,0 +1,23 @@
+<informaltable frame="all">
+<?dbfo table-width="30%"?>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="21*" align="center"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>disabled</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>enabled</entry>
+        </row>
+    </tbody>
+</tgroup>
+</informaltable>

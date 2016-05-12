@@ -1,0 +1,92 @@
+<refentry id="cvar.g_bulletmode">
+
+<refmeta>
+    <refentrytitle>g_bulletmode</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_bulletmode</refname>
+    <refpurpose>set active bulletmode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_bulletmode</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_bulletmode.modes" frame="all">
+<title>g_bulletmode Modes</title>
+<tgroup cols="3" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="12*" align="center"/>
+    <colspec colnum="3" colwidth="79*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>NAME</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>auto</entry>
+            <entry>Automatically selects recommended mode.</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>entity</entry>
+            <entry>
+                Bullet start-point is center of player entity.
+                This is a useful comparison feature only, and should never be used for real gameplay.
+            </entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>etmain</entry>
+            <entry>
+                Baseline (stock) &et:name:abbr; behavior.
+                Bullet start-point is consistent with players' viewpoint.
+            </entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>muzzle</entry>
+            <entry>
+                Bullet start-point is from muzzle of weapon.
+                This mode is not recommended and is highly experimental.
+                Current testing shows that it suffers from <emphasis>sighting</emphasis> problems.
+            </entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_bulletmode</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_bulletmode</command>
+    sets the active bulletmode which controls the specific starting and ending points for bullet path.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_bulletmodeDebug"/>,
+    <xref linkend="cvar.g_bulletmodeReference"/>,
+    <xref linkend="cvar.g_bulletmodeTrail"/>
+</para>
+</refsection>
+</refentry>

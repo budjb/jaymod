@@ -1,0 +1,71 @@
+<refentry id="cvar.g_friendlyFire">
+
+<refmeta>
+    <refentrytitle>g_friendlyFire</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_friendlyFire</refname>
+    <refpurpose>enables friendly fire damage</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_friendlyFire</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	<table id="cvar.g_friendlyFire.mode" frame="all">
+    <?dbfo table-width="70%"?>
+	<title>g_friendlyFire modes</title>
+	<tgroup cols="2" align="left" colsep="1" rowsep="1">
+	    <colspec colnum="1" colwidth="9*" align="center"/>
+	    <colspec colnum="2" colwidth="61*"/>
+	    <thead>
+	        <row>
+	            <entry>MODE</entry>
+	            <entry>DESCRIPTION</entry>
+	        </row>
+	    </thead>
+	    <tbody>
+	        <row>
+	            <entry>0</entry>
+	            <entry>disables friendly fire</entry>
+	        </row>
+	        <row>
+	            <entry>1</entry>
+	            <entry>enables friendly fire</entry>
+	        </row>
+	        <row>
+	            <entry>2</entry>
+	            <entry>enables friendly fire and reflectable friendly fire damage</entry>
+	        </row>
+	    </tbody>
+	</tgroup>
+	</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_friendlyFire</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_friendlyFire</command>
+    enables friendly fire damage.  Reflectable friendly fire damage returns a specified percentage
+	of friendly fire damage to the attacker.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_reflectFriendlyFire"/>
+</para>
+</refsection>
+</refentry>

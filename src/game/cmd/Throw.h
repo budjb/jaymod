@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_THROW_H
+#define GAME_CMD_THROW_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Throw : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Throw();
+    ~Throw();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_THROW_H

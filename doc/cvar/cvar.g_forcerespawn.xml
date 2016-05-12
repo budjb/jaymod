@@ -1,0 +1,38 @@
+<refentry id="cvar.g_forcerespawn">
+
+<refmeta>
+    <refentrytitle>g_forcerespawn</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_forcerespawn</refname>
+    <refpurpose>forces a player to go into limbo after a specified amount of time</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_forcerespawn</command>
+        <arg><replaceable>time</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_forcerespawn</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_forcerespawn</command>
+    forces a player to go into limbo after a specified amount of time.  <replaceable>time</replaceable> is in seconds.
+	<replaceable>time</replaceable> of 0 disables the feature, while anything above forces a player into limbo to
+	respawn after the specified amount of time has passed.
+</para>
+</refsection>
+
+</refentry>

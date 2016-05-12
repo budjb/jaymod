@@ -1,0 +1,38 @@
+<refentry id="cvar.g_debugAlloc">
+
+<refmeta>
+    <refentrytitle>g_debugAlloc</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_debugAlloc</refname>
+    <refpurpose>enables debugging of the game's server stack</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_debugAlloc</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_debugAlloc</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_debugAlloc</command>
+    enables debugging of the game's server stack.  This should not be enabled except by those
+	who need the information and know what they are doing.
+</para>
+</refsection>
+
+</refentry>

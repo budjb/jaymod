@@ -1,0 +1,49 @@
+<refentry id="cvar.g_xpMax">
+
+<refmeta>
+    <refentrytitle>g_xpMax</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_xpMax</refname>
+    <refpurpose>set XP-limit amount</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_xpMax</command>
+        <arg><literal>0</literal>..<literal>999999</literal></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_xpMax</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_xpMax</command>
+    sets the XP-limit amount.
+    A value of <literal>0</literal> will disable limiting.
+    If a positive value, the server will take action when the limit is exceeded.
+    The action is specified by <xref linkend="cvar.g_xpCap"/>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_xpCap"/>,
+    <xref linkend="cvar.g_xpSave"/>,
+    <xref linkend="cvar.g_xpSaveTimeout"/>,
+    <xref linkend="xpsave"/>
+</para>
+</refsection>
+
+</refentry>

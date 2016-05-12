@@ -1,0 +1,168 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed</emphasis>
+    the <emphasis role="subject">team_max weapons cvars</emphasis>.  They now accept a percentage as well as a hard number limit.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">team_max class cvars</emphasis>.  They accept a percentage or a hard number limit.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">Fight!</emphasis> and <emphasis role="subject">Prepare to Fight!</emphasis> sounds.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    a separate <emphasis role="subject">Goomba</emphasis> sound so that sound can be replaced in a soundpack
+	without also changing a regular map sound.  The current sound is the same as what's been used.  The sound
+	is located at <emphasis role="subject">sound/jaymod/goomba.wav</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">goat sound</emphasis> for knife kills.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    a couple enhancements for <emphasis role="subject">antiwarp</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    flag 32 to <xref linkend="cvar.g_medics"/> - do not allow medics to regenerate health until they
+	have not taken damage for 5 seconds.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Replaced</emphasis>
+    flag 8 of <xref linkend="cvar.g_medics"/> - it now completely disables medic regeneration.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed</emphasis>
+    XP awarded for poison and goomba damage/kills.  Poison used to give medic XP, while goomba
+	did not result in XP.  Both now give XP to the Battle Sense skill.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">breath bar</emphasis> for players when they are underwater.  It draws
+	instead of the stamina bar when underwater.  When the meter is out, and damage begins to occur,
+	the bar will flash red indicating that the player needs to surface immediately.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">24-hour format</emphasis> to the local time.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">shove sound</emphasis>.  It uses the grenade throw sound by default,
+	but can be changed through a soundpack.  The sound is located at sound/jaymod/push.wav.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">goomba</emphasis> to the weapons stats screen.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">speedometer</emphasis>.  It can be turned on in the display menu.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">auto rate</emphasis> adjustment.  The client's rate will adjust to help
+	ease heavy network load up to the server's max rate.  There is also an option to simply use
+	the server's maximum rate.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Patched</emphasis>
+    interface for <emphasis role="subject">&omni:name; 0.66</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    cannot hear own <emphasis role="subject">admin greeting</emphasis>.
+    The greeting will now be delayed until the client is fully connected.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    cannot select a new client to spectate while the player you were
+	spectating died with flag <literal>4</literal> of <xref linkend="cvar.g_spectator"/> enabled.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    can occassionally spectate the other team while in limbo.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">class icons</emphasis> to fireteam window.  They replace the
+	single letter class abbreviations.  This should make it somewhat easier to identify
+	what class your fireteam members are playing as.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    an exploit that would allow solders with less than level 4 heavy weapons to spawn with
+	an SMG or M97.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Optimized</emphasis>
+    a few server to client commands that typically eat a lot of bandwidth on busy servers.
+</simpara>
+</listitem>
+

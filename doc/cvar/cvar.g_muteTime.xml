@@ -1,0 +1,49 @@
+<refentry id="cvar.g_muteTime">
+
+<refmeta>
+    <refentrytitle>g_muteTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_muteTime</refname>
+    <refpurpose>specifies how long a mute should last</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_muteTime</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_muteTime</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_muteTime</command>
+    specifies how long a mute should last.  <replaceable>period</replaceable> set to <literal>0</literal> makes
+	mutes permanent (until they are unmuted), while any value above sets the amount of time the player is muted.
+</para>
+<para>
+    For convenience you may specify { days, hours, minutes, seconds } using
+    their respective suffixes { d, h, m, s }.
+    For example, to specify 1 day plus 4 hours, the following are all equivalent:
+
+    <itemizedlist>
+        <listitem><literal>1d4h</literal></listitem>
+        <listitem><literal>1d4h0m0s</literal></listitem>
+        <listitem><literal>100800s</literal></listitem>
+        <listitem><literal>100800</literal></listitem>
+    </itemizedlist>
+</para>
+</refsection>
+
+</refentry>

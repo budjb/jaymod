@@ -1,0 +1,48 @@
+<refentry id="cvar.sv_master4">
+
+<refmeta>
+    <refentrytitle>sv_master4</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_master4</refname>
+    <refpurpose>set supplemental master server for browse-list registration</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_master4</command>
+        <arg><replaceable>"hostname"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_master4</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_master4</command>
+    sets a supplemental master server for browse-list registration.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.dedicated"/>,
+    <xref linkend="cvar.sv_hostname"/>,
+    <xref linkend="cvar.sv_master1"/>,
+    <xref linkend="cvar.sv_master2"/>,
+    <xref linkend="cvar.sv_master3"/>,
+    <xref linkend="cvar.sv_master5"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,37 @@
+<refentry id="cvar.match_mutespecs">
+
+<refmeta>
+    <refentrytitle>match_mutespecs</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_mutespecs</refname>
+    <refpurpose>enable/disable muting of spectators</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_mutespecs</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_mutespecs</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_mutespecs</command>
+    enables or disables muting of spectators.
+</para>
+</refsection>
+
+</refentry>

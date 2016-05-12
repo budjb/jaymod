@@ -1,0 +1,7 @@
+- add server console/rcon commands for:
+
+    csreport
+    csreport
+    csdump <INDEX>
+    entreport
+    gsreport

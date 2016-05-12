@@ -1,0 +1,124 @@
+<refentry id="cvar.g_hitmodeZone">
+
+<refmeta>
+    <refentrytitle>g_hitmodeZone</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeZone</refname>
+    <refpurpose>set zone for debugging</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeZone</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_hitmodeZone.modes" frame="all">
+<?dbfo table-width="30%"?>
+<title>g_hitmodeZone Modes</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="21*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>body</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>head</entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>left-arm</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>right-arm</entry>
+        </row>
+        <row>
+            <entry>5</entry>
+            <entry>left-hand</entry>
+        </row>
+        <row>
+            <entry>6</entry>
+            <entry>right-hand</entry>
+        </row>
+        <row>
+            <entry>7</entry>
+            <entry>torso</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>left-torso</entry>
+        </row>
+        <row>
+            <entry>9</entry>
+            <entry>right-torso</entry>
+        </row>
+        <row>
+            <entry>10</entry>
+            <entry>legs</entry>
+        </row>
+        <row>
+            <entry>11</entry>
+            <entry>left-leg</entry>
+        </row>
+        <row>
+            <entry>12</entry>
+            <entry>right-leg</entry>
+        </row>
+        <row>
+            <entry>13</entry>
+            <entry>left-foot</entry>
+        </row>
+        <row>
+            <entry>14</entry>
+            <entry>right-foot</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection> 
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeZone</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeZone</command>
+    set zone for debugging.
+    This feature has no effect unless the corresponding <xref linkend="cvar.g_hitmodeDebug"/> flag is on.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

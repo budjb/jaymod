@@ -1,0 +1,50 @@
+<refentry id="cvar.g_axismaxlives">
+
+<refmeta>
+    <refentrytitle>g_axismaxlives</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_axismaxlives</refname>
+    <refpurpose>sets maximum number of lives for Axis players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_axismaxlives</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_axismaxlives</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_axismaxlives</command>
+    sets maximum number of lives for Axis players.
+    Setting num to <literal>0</literal> disables max lives enforcement and allows unlimited lives.
+</para>
+<para>
+    <note>
+        This cvar is superceded by <xref linkend="cvar.g_maxlives"/>. 
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_alliedmaxlives"/>,
+    <xref linkend="cvar.g_maxlives"/>
+</para>
+</refsection>
+
+</refentry>

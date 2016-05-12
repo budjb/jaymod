@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SEEN_H
+#define GAME_CMD_SEEN_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Seen : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Seen();
+    ~Seen();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SEEN_H

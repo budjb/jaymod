@@ -1,0 +1,3 @@
+CXX.O    = 1
+LINK.ref = 1
+LINK.dyn = 1

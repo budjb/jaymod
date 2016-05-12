@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.sv_reconnectlimit">
+  <refmeta>
+    <refentrytitle>sv_reconnectlimit</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>sv_reconnectlimit</refname>
+
+    <refpurpose>détermine le délais minimal requis entre les reconnexions des
+    clients</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>sv_reconnectlimit</command>
+
+      <arg><replaceable>délais</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>sv_reconnectlimit</command>
+
+      <arg choice="plain"><literal>3</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>sv_reconnectlimit</command> détermine le délais minimal
+    requis entre les reconnexions des clients en secondes. Les clients se
+    rebranchant avant une attente d'au moins <replaceable>délais</replaceable>
+    secondes seront abandonnés. Une valeur de 0 pour la cvar annule
+    l'option.</para>
+  </refsection>
+</refentry>

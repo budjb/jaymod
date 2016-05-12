@@ -1,0 +1,80 @@
+#ifndef BASE_TEXT_IMPL_H
+#define BASE_TEXT_IMPL_H
+
+namespace text {
+
+///////////////////////////////////////////////////////////////////////////////
+
+/*
+ * These are the codes used for text binary encoding.
+ * Hard-limit is all enums must be in range { 0x80..0xff }.
+ * Note: standard colors must be the fist 31 enums as we assume that in some code.
+ */
+typedef enum {
+    MANIP_COLOR_BLACK = 0x80,
+    MANIP_COLOR_RED,
+    MANIP_COLOR_GREEN,
+    MANIP_COLOR_YELLOW,
+    MANIP_COLOR_BLUE,
+    MANIP_COLOR_CYAN,
+    MANIP_COLOR_MAGENTA,
+    MANIP_COLOR_WHITE,
+    MANIP_COLOR_ORANGE,
+    MANIP_COLOR_MDGREY,
+    MANIP_COLOR_LTGREY,
+    MANIP_COLOR_LTGREY2,
+    MANIP_COLOR_MDGREEN,
+    MANIP_COLOR_MDYELLOW,
+    MANIP_COLOR_MDBLUE,
+    MANIP_COLOR_MDRED,
+    MANIP_COLOR_MDBROWN,
+    MANIP_COLOR_LTORANGE,
+    MANIP_COLOR_DKCYAN,
+    MANIP_COLOR_MDPURPLE,
+    MANIP_COLOR_MDCYAN,
+    MANIP_COLOR_PURPLE,
+    MANIP_COLOR_BLUEGREY,
+    MANIP_COLOR_LTOLIVE,
+    MANIP_COLOR_DKGREEN,
+    MANIP_COLOR_LTRED,
+    MANIP_COLOR_ROSE,
+    MANIP_COLOR_DKORANGE,
+    MANIP_COLOR_LTBROWN,
+    MANIP_COLOR_MDGOLD,
+    MANIP_COLOR_LTGOLD,
+    MANIP_COLOR_GOLD,
+
+    MANIP_COLOR_NONE,
+    MANIP_COLOR_NORMAL,
+    MANIP_COLOR_BOLD,
+    MANIP_COLOR_DIM,
+    MANIP_COLOR_PASS,
+    MANIP_COLOR_FAIL,
+    MANIP_COLOR_WARNING,
+
+    MANIP_COLOR_DEBUG,
+    MANIP_COLOR_DEBUGBOLD,
+    MANIP_COLOR_DEBUGDIM,
+
+    MANIP_COLOR_HEADER,
+    MANIP_COLOR_HEADERBOLD,
+    MANIP_COLOR_HEADERDIM,
+
+    MANIP_COLOR_VALUE,
+    MANIP_COLOR_VALUEBOLD,
+    MANIP_COLOR_VALUEDIM,
+
+    MANIP_CPOP,
+    MANIP_CPUSH,
+    MANIP_LINDENT,
+    MANIP_LUNINDENT,
+    MANIP_NEWLINE,
+    MANIP_RINDENT,
+    MANIP_RUNINDENT,
+} code_t;
+
+///////////////////////////////////////////////////////////////////////////////
+
+} // namespace text
+
+#endif // BASE_TEXT_IMPL_H

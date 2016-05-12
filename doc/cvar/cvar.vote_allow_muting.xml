@@ -1,0 +1,44 @@
+<refentry id="cvar.vote_allow_muting">
+
+<refmeta>
+    <refentrytitle>vote_allow_muting</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_allow_muting</refname>
+    <refpurpose>enable/disable muting</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_allow_muting</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_allow_muting</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_allow_muting</command>
+    enables or disables muting.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.vote_limit"/>,
+    <xref linkend="cvar.vote_percent"/>
+</para>
+</refsection>
+</refentry>

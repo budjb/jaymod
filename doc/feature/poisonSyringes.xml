@@ -1,0 +1,27 @@
+<para>
+    Poison syringes are added to weapon slot #4 (behind grenades).
+    It is a blue colored syringe that you can poke enemies with (or friendlies when friendly-fire enabled).
+    When poked with a poison syringe, your view will start swaying back and forth, and get distorted.
+    You can hear your heart pounding. Better find help.
+    This option is enabled on the server using <xref linkend="cvar.g_poisonSyringes"/>.
+</para>
+<para>
+    Compounding effect - that is, if you are poked multiple times, you loose health faster.
+    This allows XP sharing with poison hits – if you poke someone with a poison syringe,
+    you will get XP for every time damage is dealt until they die.
+    The interval of time that your syringe damages the player is 1.5 seconds,
+    so every 1.5 seconds you will get 0.2 Medic XP and hurt the player 10HP.
+    Since it tracks multiple people hitting the player with a Poison Syringe,
+    the last poison damage inflicted that causes the death of the player gives
+    the person who hit them with the specific syringe that caused the death a final 3 Medic XP.
+</para>
+<para>
+    Poisoned players can be cured with health packs.
+    However, in an effort to make the game more balanced, medics cannot self-antidote.
+    Essentially, a player can antidote themselves by finding a health pack that is not their own.
+    Since poison compounds, you must find a health pack for each time you have been poisoned.
+    For example, if you have been poked 4 times with a syringe, you must find 4 health packs.
+    <tip>
+        Health cabinets provide a good source of health packs.
+    </tip>
+</para>

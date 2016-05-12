@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_UNMUTE_H
+#define GAME_CMD_UNMUTE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Unmute : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Unmute();
+    ~Unmute();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_UNMUTE_H

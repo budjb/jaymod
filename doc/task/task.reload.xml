@@ -1,0 +1,8 @@
+<para>
+    Reload database files.
+    For this example we will assume you are using the <command>serverctl</command> script bundled
+    with &project:name;.
+</para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; ./serverctl <emphasis>reload</emphasis>
+</screen>

@@ -1,0 +1,44 @@
+<refentry id="cvar.g_spectatorInactivity">
+
+<refmeta>
+    <refentrytitle>g_spectatorInactivity</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_spectatorInactivity</refname>
+    <refpurpose>set spectator inactivity limit</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_spectatorInactivity</command>
+        <arg><replaceable>limit</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_spectatorInactivity</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_spectatorInactivity</command>
+    sets the limit in seconds of spectator inactivity permitted before client is automatically kicked.
+    A value of <literal>0</literal> disables this feature.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_inactivity"/>
+</para>
+</refsection>
+
+</refentry>

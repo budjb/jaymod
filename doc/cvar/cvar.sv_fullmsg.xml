@@ -1,0 +1,42 @@
+<refentry id="cvar.sv_fullmsg">
+
+<refmeta>
+    <refentrytitle>sv_fullmsg</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_fullmsg</refname>
+    <refpurpose>set server-full message</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_fullmsg</command>
+        <arg><replaceable>"text"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_fullmsg</command>
+        <arg choice="plain"><literal>"Server is full."</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_fullmsg</command>
+    sets the message displayed to clients when server is full.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_maxclients"/>
+</para>
+</refsection>
+</refentry>

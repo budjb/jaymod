@@ -1,0 +1,36 @@
+<refentry id="cvar.g_healthRechargeTime">
+
+<refmeta>
+    <refentrytitle>g_healthRechargeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_healthRechargeTime</refname>
+    <refpurpose>set time interval between ammo-pack cabinet respawns</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_healthRechargeTime</command>
+        <arg><replaceable>interval</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_healthRechargeTime</command>
+        <arg choice="plain"><literal>10000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_healthRechargeTime</command>
+    sets the time interval in milliseconds between health-pack cabinet respawns.
+</para>
+</refsection>
+
+</refentry>

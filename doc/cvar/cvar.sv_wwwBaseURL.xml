@@ -1,0 +1,48 @@
+<refentry id="cvar.sv_wwwBaseURL">
+
+<refmeta>
+    <refentrytitle>sv_wwwBaseURL</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_wwwBaseURL</refname>
+    <refpurpose>set URL download prefix for WWW downloads of server files</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_wwwBaseURL</command>
+        <arg><replaceable>"URL"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_wwwBaseURL</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_wwwBaseURL</command>
+    sets the URL download prefix for server files which the client uses to download pk3 files.
+    For example, specifying <replaceable>URL</replaceable> as
+    <literal>"http://www.nowhere.com/et/"</literal>
+    will result in the client attempting to download
+    <emphasis role="bold">http://www.nowhere.com/et/jaymod/&project:pk3;</emphasis> .
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_wwwDlDisconnected"/>,
+    <xref linkend="cvar.sv_wwwDownload"/>,
+    <xref linkend="cvar.sv_wwwFallbackURL"/>
+</para>
+</refsection>
+</refentry>

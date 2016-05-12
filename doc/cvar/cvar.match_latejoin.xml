@@ -1,0 +1,37 @@
+<refentry id="cvar.match_latejoin">
+
+<refmeta>
+    <refentrytitle>match_latejoin</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_latejoin</refname>
+    <refpurpose>enable/disable allowing players to join a match in progress</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_latejoin</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_latejoin</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_latejoin</command>
+    enables or disables allowing players to join a match in progress.
+</para>
+</refsection>
+
+</refentry>

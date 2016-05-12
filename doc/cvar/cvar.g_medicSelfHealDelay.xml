@@ -1,0 +1,49 @@
+<refentry id="cvar.g_medicSelfHealDelay">
+
+<refmeta>
+    <refentrytitle>g_medicSelfHealDelay</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_medicSelfHealDelay</refname>
+    <refpurpose>set self-healing delay for &medic; in milliseconds</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_medicSelfHealDelay</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_medicSelfHealDelay</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_medicSelfHealDelay</command>
+    sets the self-healing delay for &medic; in milliseconds.
+    This controls how soon, if at all, a &medic; may benefit from their own medpacks
+    (or medpacks dropped by other teammates).
+    A value of <literal>0</literal> permits immediate self-healing.
+    A value of <literal>-1</literal> disables self-healing.
+    A positive value delays self-healing by <replaceable>period</replaceable> milliseconds.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_medicChargeTime"/>,
+    <xref linkend="cvar.g_medics"/>
+</para>
+</refsection>
+
+</refentry>

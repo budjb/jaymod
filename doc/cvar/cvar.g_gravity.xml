@@ -1,0 +1,37 @@
+<refentry id="cvar.g_gravity">
+
+<refmeta>
+    <refentrytitle>g_gravity</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_gravity</refname>
+    <refpurpose>sets the amount of gravity</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_gravity</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_gravity</command>
+        <arg choice="plain"><literal>800</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_gravity</command>
+    sets the amount of gravity in the world. This cvar is automatically set by the game at the beginning of
+	the match to <literal>800</literal>.
+</para>
+</refsection>
+
+</refentry>

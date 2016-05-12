@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.sv_timeout">
+  <refmeta>
+    <refentrytitle>sv_timeout</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>sv_timeout</refname>
+
+    <refpurpose>détermine le délais de connexion pour le client sur le
+    réseau</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>sv_timeout</command>
+
+      <arg><replaceable>délais</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>sv_timeout</command>
+
+      <arg choice="plain"><literal>240</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>sv_timeout</command> détermine le délais de connexion pour
+    le client sur le réseau en secondes. Les clients incapables de se
+    connecter après <literal>délais</literal> secondes sont abandonnés.</para>
+  </refsection>
+</refentry>

@@ -1,0 +1,5 @@
+CXX.O = 1
+CXX.fnStrip = strip $(1)
+
+CXX.libstdcxx.DEPS = $(BUILD/)libstdc++.a
+CXX.static         = 1

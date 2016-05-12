@@ -1,0 +1,44 @@
+<refentry id="cvar.g_privateMessages">
+
+<refmeta>
+    <refentrytitle>g_privateMessages</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_privateMessages</refname>
+    <refpurpose>enables private messaging</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_privateMessages</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_privateMessages</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_privateMessages</command>
+    enables private messaging.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="client.features.privateMessaging"/>
+</para>
+</refsection>
+
+</refentry>

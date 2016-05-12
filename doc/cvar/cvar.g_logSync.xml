@@ -1,0 +1,47 @@
+<refentry id="cvar.g_logSync">
+
+<refmeta>
+    <refentrytitle>g_logSync</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_logSync</refname>
+    <refpurpose>enable/disable log file sync</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_logSync</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_logSync</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_logSync</command>
+    enables or disables log file synchronization (flushing) after each buffered write.
+    A value of <literal>""</literal> will disable this functionality.
+    This setting only applies to <xref linkend="cvar.g_log"/> when enabled.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_log"/>,
+    <xref linkend="cvar.g_logOptions"/>,
+    <xref linkend="cvar.g_adminLog"/>
+</para>
+</refsection>
+</refentry>

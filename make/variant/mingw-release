@@ -1,0 +1,2 @@
+CXX.O  = 1
+CXX.fnStrip = $(GCC/)bin/strip $(1)

@@ -1,0 +1,36 @@
+<preface id="preface">
+<title>Preface</title>
+
+<blockquote>
+    <attribution>John Carmack</attribution>
+    <para>
+    <quote>
+        The cost of adding a feature isn't just the time it takes to code it.
+        The cost also includes the addition of an obstacle to future expansion.
+        ... The trick is to pick the features that don't fight each other. 
+    </quote>
+    </para>
+</blockquote>
+
+<section id="preface.audience">
+    <title>Audience</title>
+    <para>
+        This guide is intended for anyone who runs or is interested in running a &project:title; server.
+    </para>
+    <para>
+        Although &et:name:abbr; is available on several platforms, &linux:name; will be used
+        as the reference platform for this documentation.
+        Many concepts here apply equally to &osx:name;
+        and, to some degree, more generically to the &windows:name; platform.
+    </para>
+    <para>
+        It is assumed the reader is sufficiently familiar with &linux:name; administration to
+        be able to perform basic operating system tasks.
+    </para>
+</section>
+
+<section id="preface.syntax">
+    &syntax;
+</section>
+
+</preface>

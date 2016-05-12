@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_LSPLAYERS_H
+#define GAME_CMD_LSPLAYERS_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class LsPlayers : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    LsPlayers();
+    ~LsPlayers();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_LSPLAYERS_H

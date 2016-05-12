@@ -1,0 +1,37 @@
+<refentry id="cvar.g_warmup">
+
+<refmeta>
+    <refentrytitle>g_warmup</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_warmup</refname>
+    <refpurpose>sets warmup period before match begins</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_warmup</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_warmup</command>
+        <arg choice="plain"><literal>60</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_warmup</command>
+    sets the warmup period in seconds before match begins.
+    A value of <literal>1</literal> will disable warmup period.
+</para>
+</refsection>
+
+</refentry>

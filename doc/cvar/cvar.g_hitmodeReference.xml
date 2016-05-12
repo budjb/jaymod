@@ -1,0 +1,107 @@
+<refentry id="cvar.g_hitmodeReference">
+
+<refmeta>
+    <refentrytitle>g_hitmodeReference</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeReference</refname>
+    <refpurpose>set reference hitmode for comparison</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeReference</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_hitmodeReference.modes" frame="all">
+<title>g_hitmodeReference Modes</title>
+<tgroup cols="4" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="12*" align="center"/>
+    <colspec colnum="3" colwidth="9*" align="center"/>
+    <colspec colnum="4" colwidth="70*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>NAME</entry>
+            <entry>BOXES</entry>
+            <entry>BRIEF</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>entity</entry>
+            <entry>1</entry>
+            <entry>torso (body)</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>etmain</entry>
+            <entry>3</entry>
+            <entry>head, torso, legs</entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>basic</entry>
+            <entry>3</entry>
+            <entry>head, torso, legs</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>standard</entry>
+            <entry>3</entry>
+            <entry>head, torso, legs</entry>
+        </row>
+        <row>
+            <entry>5</entry>
+            <entry>advanced</entry>
+            <entry>9</entry>
+            <entry>head, larm, rarm, lhand, rhand, torso(2), lfoot and rfoot</entry>
+        </row>
+        <row>
+            <entry>6</entry>
+            <entry>oriented</entry>
+            <entry>10</entry>
+            <entry>head, larm, rarm, lhand, rhand, torso, lleg, rleg, lfoot and rfoot</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeReference</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeReference</command>
+    sets the reference hitmode to render for comparison.
+    This feature has no effect unless the corresponding <xref linkend="cvar.g_hitmodeDebug"/> flag is on.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

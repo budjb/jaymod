@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_FTIME_H
+#define GAME_CMD_FTIME_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class FTime : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    FTime();
+    ~FTime();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_FTIME_H

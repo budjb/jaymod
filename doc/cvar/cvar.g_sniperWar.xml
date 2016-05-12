@@ -1,0 +1,46 @@
+<refentry id="cvar.g_sniperWar">
+
+<refmeta>
+    <refentrytitle>g_sniperWar</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_sniperWar</refname>
+    <refpurpose>enable/disable sniper-war game mode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_sniperWar</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_sniperWar</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_sniperWar</command>
+    enables or disables sniper-war game mode.
+</para>
+&feature.sniperwar;
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_knifeonly"/>,
+    <xref linkend="cvar.g_panzerWar"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,167 @@
+.PHONY: doc.book doc.post
+
+doc:: doc.book
+
+doc.book: DOCBOOK.inherit=MODULE.DOC.DOCBOOK
+
+doc.book: $(MODULE.DOC.out.figures)
+doc.book: $(MODULE.DOC.out.images)
+doc.book: $(MODULE.DOC.out.styles)
+doc.book: $(MODULE.DOC.out.ecmd)
+doc.book: $(MODULE.DOC.out.ecvar)
+doc.book: $(MODULE.DOC.out.eproject)
+doc.book: $(MODULE.DOC.out.rcmd)
+doc.book: $(MODULE.DOC.out.rcvar)
+
+doc.book: $(MODULE.DOC.out.html.chunk)
+doc.book: $(MODULE.DOC.out.html.single)
+doc.book: $(MODULE.DOC.out.pdf)
+
+###############################################################################
+
+doc.clean::
+	-rm -fr $(MODULE.DOC.stage/)
+
+doc.post:
+	$(call fn.cp,$(MODULE.DOC.out.pdf),$(PROJECT/)pkg/doc/)
+
+doc.clanfu:
+	rsync $(RSYNC_SSHFLAGS) --delete -vaP \
+		$(BUILD/)doc/en/html \
+		$(BUILD/)doc/en/figures \
+		$(BUILD/)doc/en/images \
+		$(BUILD/)doc/en/styles \
+		et.clanfu.org:/var/www/html/jaymod/$(PROJECT.version)/.
+
+doc.gencfg:
+	cat $(MODULE.PKG.stage/)jaymod.cfg \
+	| sed '1,17 d' \
+	| sed '/^set g_banner[0-9]/ { p; d; }; /^set/ { s,set \([^ ]*\),set \&cvar:\1;, }' \
+	| sed '/^set/ { s,"\([^"]*\)"\(.*\),"<literal>\1</literal>"\2, }' \
+	> $(PROJECT/)doc/book/config.sample.xml
+
+###############################################################################
+
+doc.langs:
+	$(MAKE) doc DOCBOOK.lang=af
+	$(MAKE) doc DOCBOOK.lang=am
+	$(MAKE) doc DOCBOOK.lang=ar
+	$(MAKE) doc DOCBOOK.lang=az
+	$(MAKE) doc DOCBOOK.lang=bg
+	$(MAKE) doc DOCBOOK.lang=bn
+	$(MAKE) doc DOCBOOK.lang=bs
+	$(MAKE) doc DOCBOOK.lang=ca
+	$(MAKE) doc DOCBOOK.lang=cs
+	$(MAKE) doc DOCBOOK.lang=cy
+	$(MAKE) doc DOCBOOK.lang=da
+	$(MAKE) doc DOCBOOK.lang=de
+	$(MAKE) doc DOCBOOK.lang=el
+	$(MAKE) doc DOCBOOK.lang=en
+	$(MAKE) doc DOCBOOK.lang=es
+	$(MAKE) doc DOCBOOK.lang=et
+	$(MAKE) doc DOCBOOK.lang=eu
+	$(MAKE) doc DOCBOOK.lang=fa
+	$(MAKE) doc DOCBOOK.lang=fi
+	$(MAKE) doc DOCBOOK.lang=fr
+	$(MAKE) doc DOCBOOK.lang=ga
+	$(MAKE) doc DOCBOOK.lang=gu
+	$(MAKE) doc DOCBOOK.lang=he
+	$(MAKE) doc DOCBOOK.lang=hi
+	$(MAKE) doc DOCBOOK.lang=hr
+	$(MAKE) doc DOCBOOK.lang=hu
+	$(MAKE) doc DOCBOOK.lang=id
+	$(MAKE) doc DOCBOOK.lang=it
+	$(MAKE) doc DOCBOOK.lang=ja
+	$(MAKE) doc DOCBOOK.lang=kn
+	$(MAKE) doc DOCBOOK.lang=ko
+	$(MAKE) doc DOCBOOK.lang=la
+	$(MAKE) doc DOCBOOK.lang=lt
+	$(MAKE) doc DOCBOOK.lang=mn
+	$(MAKE) doc DOCBOOK.lang=nl
+	$(MAKE) doc DOCBOOK.lang=nn
+	$(MAKE) doc DOCBOOK.lang=no
+	$(MAKE) doc DOCBOOK.lang=or
+	$(MAKE) doc DOCBOOK.lang=pa
+	$(MAKE) doc DOCBOOK.lang=pl
+	$(MAKE) doc DOCBOOK.lang=pt
+	$(MAKE) doc DOCBOOK.lang=ro
+	$(MAKE) doc DOCBOOK.lang=ru
+	$(MAKE) doc DOCBOOK.lang=sk
+	$(MAKE) doc DOCBOOK.lang=sl
+	$(MAKE) doc DOCBOOK.lang=sq
+	$(MAKE) doc DOCBOOK.lang=sr
+	$(MAKE) doc DOCBOOK.lang=sv
+	$(MAKE) doc DOCBOOK.lang=ta
+	$(MAKE) doc DOCBOOK.lang=th
+	$(MAKE) doc DOCBOOK.lang=tl
+	$(MAKE) doc DOCBOOK.lang=tr
+	$(MAKE) doc DOCBOOK.lang=uk
+	$(MAKE) doc DOCBOOK.lang=vi
+	$(MAKE) doc DOCBOOK.lang=xh
+
+doc.langs.clanfu:
+	mkdir -p $(BUILD/)clanfu/
+	rsync $(RSYNC_SSHFLAGS) --delete -dv $(BUILD/)doc/. $(BUILD/)clanfu/
+	for langp in $(BUILD/)clanfu/*; \
+	do \
+		lang=`basename $$langp`; \
+		rsync --delete -aP $(BUILD/)doc/$$lang/html/. $(BUILD/)clanfu/$$lang/.; \
+	done
+	rsync -aP \
+		--include="figures/" --include="figures/**" \
+		--include="html/"    --include="html/**"    \
+		--include="images/"  --include="images/**"  \
+		--include="styles/"  --include="styles/**"  \
+		--exclude="*" \
+		$(BUILD/)doc/en/. \
+		$(BUILD/)clanfu/.
+	rsync $(RSYNC_SSHFLAGS) --delete -aP $(BUILD/)clanfu/. et.clanfu.org:/var/www/html/jaymod/$(PROJECT.version)/lang/.
+
+###############################################################################
+
+$(MODULE.DOC.out.figures): $(MODULE.DOC.stage/)%: $(PROJECT/)doc/%
+	$(call fn.cp,$<,$@)
+
+$(MODULE.DOC.out.images): $(MODULE.DOC.stage/)%: $(PROJECT/)doc/lib/%
+	$(call fn.cp,$<,$@)
+
+$(MODULE.DOC.out.styles): $(MODULE.DOC.stage/)%: $(PROJECT/)doc/lib/%
+	$(call fn.cp,$<,$@)
+
+###############################################################################
+
+$(MODULE.DOC.out.eproject): $(PROJECT/)project/info.py $(PROJECT/)project/info.db
+	$(call print.HEADER,GENERATING,$@)
+	@$< -xml $(PROJECT/)project/info.db > $@
+
+$(MODULE.DOC.out.ecmd): $(PROJECT/)doc/lib/gen-entity.py
+	$(call print.HEADER,GENERATING,$@)
+	$< $(PROJECT/)doc/cmd/cmd.*.xml > $@
+
+$(MODULE.DOC.out.ecvar): $(PROJECT/)doc/lib/gen-entity.py
+	$(call print.HEADER,GENERATING,$@)
+	$< $(PROJECT/)doc/cvar/cvar.*.xml > $@
+
+$(MODULE.DOC.out.rcmd): $(PROJECT/)doc/lib/gen-ref.py
+	$(call print.HEADER,GENERATING,$@)
+	$< $(PROJECT/)doc/cmd/cmd.*.xml > $@
+
+$(MODULE.DOC.out.rcvar): $(PROJECT/)doc/lib/gen-ref.py
+	$(call print.HEADER,GENERATING,$@)
+	$< $(PROJECT/)doc/cvar/cvar.*.xml > $@
+
+###############################################################################
+
+$(MODULE.DOC.out.html.single): $(BUILD/)%/$(DOCBOOK.lang)/book.html: $(PROJECT/)%/book/book.xml
+	$(call DOCBOOK.fnXML_HTML,$@,$(PROJECT/)doc/lib/html.single.xsl,$<)
+
+$(MODULE.DOC.out.html.chunk): $(BUILD/)%/$(DOCBOOK.lang)/html/index.html: $(PROJECT/)%/book/book.xml
+	$(call DOCBOOK.fnXML_HTMLCHUNK,$@,$(PROJECT/)doc/lib/html.chunk.xsl,$<)
+
+###############################################################################
+
+$(MODULE.DOC.out.fo): $(BUILD/)%/$(DOCBOOK.lang)/book.fo: $(PROJECT/)%/book/book.xml
+	$(call DOCBOOK.fnXML_FO,$@,$(PROJECT/)doc/common/fo.xsl,$<)
+
+$(MODULE.DOC.out.pdf): $(MODULE.DOC.out.fo)
+	$(call DOCBOOK.fnFO_PDF,$@,$<)

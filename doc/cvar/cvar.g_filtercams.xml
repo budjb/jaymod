@@ -1,0 +1,37 @@
+<refentry id="cvar.g_filtercams">
+
+<refmeta>
+    <refentrytitle>g_filtercams</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_filtercams</refname>
+    <refpurpose>removes players from camera views</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_filtercams</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_filtercams</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_filtercams</command>
+    removes players from camera views.  An example is the camera of the objectives in the limbo screen.
+</para>
+</refsection>
+
+</refentry>

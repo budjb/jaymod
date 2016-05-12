@@ -1,0 +1,39 @@
+<refentry id="cvar.sv_floodProtect">
+
+<refmeta>
+    <refentrytitle>sv_floodProtect</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_floodProtect</refname>
+    <refpurpose>enable/disable client commands flood protection</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_floodProtect</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_floodProtect</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_floodProtect</command>
+    enables or disables client commands flood protection.
+    Malicious users may try using too many string commands to lag other players.
+    When enabled, this feature causes flooders to lag themselves but not other players.
+</para>
+</refsection>
+
+</refentry>

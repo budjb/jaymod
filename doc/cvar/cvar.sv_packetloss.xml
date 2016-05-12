@@ -1,0 +1,46 @@
+<refentry id="cvar.sv_packetloss">
+
+<refmeta>
+    <refentrytitle>sv_packetloss</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_packetloss</refname>
+    <refpurpose>set simulated server packet loss</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_packetloss</command>
+        <arg><replaceable>loss</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_packetloss</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_packetloss</command>
+    sets the simulated server packet loss as a percentage.
+    The server can be coaxed into simulated network loss by artificially losing packets in
+    direction of server -> client.
+    A value of <literal>0</literal> disables this functionality.
+    For example, a value of <literal>30</literal> would simulate 30% packet loss.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_packetdelay"/>
+</para>
+</refsection>
+</refentry>

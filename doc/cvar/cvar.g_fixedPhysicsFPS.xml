@@ -1,0 +1,40 @@
+<refentry id="cvar.g_fixedPhysicsFPS">
+
+<refmeta>
+    <refentrytitle>g_fixedPhysicsFPS</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_fixedPhysicsFPS</refname>
+    <refpurpose>sets the emulated FPS used for fixed physics</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_fixedPhysicsFPS</command>
+        <arg><replaceable>frames per second</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_fixedPhysicsFPS</command>
+        <arg choice="plain"><literal>125</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_fixedPhysicsFPS</command>
+    sets the emulated FPS value when calculating the artificial rounding error
+	used in g_fixedPhysics.  The "magic" numbers to use for this setting are
+	<literal>76</literal>, <literal>125</literal>, and <literal>333</literal>,
+	however, <literal>125</literal> works well and since this value is used as the default
+	for several other mods, it should feel comfortable to most players.
+</para>
+</refsection>
+
+</refentry>

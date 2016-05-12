@@ -1,0 +1,52 @@
+<refentry id="cvar.g_lms_matchlimit">
+
+<refmeta>
+    <refentrytitle>g_lms_matchlimit</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_lms_matchlimit</refname>
+    <refpurpose>set maximum number of matches to play before nextmap</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_lms_matchlimit</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_lms_matchlimit</command>
+        <arg choice="plain"><literal>2</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_lms_matchlimit</command>
+    sets the maximum number of matches to play before moving on to the next map in rotation.
+</para>
+<para>
+    <note>
+        This value is in effect only when LMS gametype is enabled using <xref linkend="cvar.g_gametype"/>.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_lms_followTeamOnly"/>,
+    <xref linkend="cvar.g_lms_lockTeams"/>,
+    <xref linkend="cvar.g_lms_roundlimit"/>,
+    <xref linkend="cvar.g_lms_teamForceBalance"/>,
+    <xref linkend="cvar.g_gametype"/>
+</para>
+</refsection>
+
+</refentry>

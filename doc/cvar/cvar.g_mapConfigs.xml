@@ -1,0 +1,44 @@
+<refentry id="cvar.g_mapConfigs">
+
+<refmeta>
+    <refentrytitle>g_mapConfigs</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_mapConfigs</refname>
+    <refpurpose>set directory for map-specific configuration files</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_mapConfigs</command>
+        <arg><replaceable>dir</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_mapConfigs</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_mapConfigs</command>
+    sets the directory for map-specific configuration files.
+    If <replaceable>dir</replaceable> has a value, the following procedure is followed at every map load:
+    <itemizedlist>
+        <listitem>execute <filename><replaceable>dir</replaceable>/default.cfg</filename></listitem>
+        <listitem>
+            execute <filename><replaceable>dir</replaceable>/<emphasis>MAPNAME</emphasis>.cfg</filename>
+            (eg. <filename><replaceable>dir</replaceable>/<emphasis>fueldump</emphasis>.cfg</filename>)
+        </listitem>
+    </itemizedlist>
+</para>
+</refsection>
+
+</refentry>

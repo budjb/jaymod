@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SPLAT_H
+#define GAME_CMD_SPLAT_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Splat : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Splat();
+    ~Splat();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SPLAT_H

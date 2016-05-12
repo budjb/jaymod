@@ -1,0 +1,117 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+               "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+[
+<!ENTITY % entity.common SYSTEM "entity.common.xml">
+%entity.common;
+
+<!ENTITY foreword     SYSTEM "foreword.xml">
+<!ENTITY preface      SYSTEM "preface.xml">
+<!ENTITY introduction SYSTEM "introduction.xml">
+
+<!ENTITY msr.linux   SYSTEM "msr.linux.xml">
+<!ENTITY msr.osx     SYSTEM "msr.osx.xml">
+<!ENTITY msr.windows SYSTEM "msr.windows.xml">
+
+<!ENTITY client.features SYSTEM "client.features.xml">
+
+<!ENTITY upgrade           SYSTEM "upgrade.xml">
+<!ENTITY upgrade.cvar      SYSTEM "upgrade.cvar.xml">
+<!ENTITY upgrade.preparing SYSTEM "upgrade.preparing.xml">
+<!ENTITY upgrade.shrubbot  SYSTEM "upgrade.shrubbot.xml">
+<!ENTITY upgrade.upgrade   SYSTEM "upgrade.upgrade.xml">
+<!ENTITY upgrade.after     SYSTEM "upgrade.after.xml">
+
+<!ENTITY install           SYSTEM "install.xml">
+<!ENTITY install.preparing SYSTEM "install.preparing.xml">
+<!ENTITY install.install   SYSTEM "install.install.xml">
+<!ENTITY install.after     SYSTEM "install.after.xml">
+
+<!ENTITY config        SYSTEM "config.xml">
+<!ENTITY config.sample SYSTEM "config.sample.xml">
+
+<!ENTITY operation SYSTEM "operation.xml">
+<!ENTITY admin     SYSTEM "admin.xml">
+<!ENTITY database  SYSTEM "database.xml">
+<!ENTITY xpsave    SYSTEM "xpsave.xml">
+<!ENTITY hitmode   SYSTEM "hitmode.xml">
+<!ENTITY mapscript SYSTEM "mapscript.xml">
+<!ENTITY omni      SYSTEM "omni.xml">
+
+<!ENTITY changelog    SYSTEM "changelog.xml">
+<!ENTITY changelog210 SYSTEM "changelog210.xml">
+<!ENTITY changelog211 SYSTEM "changelog211.xml">
+<!ENTITY changelog212 SYSTEM "changelog212.xml">
+<!ENTITY changelog213 SYSTEM "changelog213.xml">
+<!ENTITY changelog214 SYSTEM "changelog214.xml">
+<!ENTITY changelog215 SYSTEM "changelog215.xml">
+<!ENTITY changelog216 SYSTEM "changelog216.xml">
+<!ENTITY changelog217 SYSTEM "changelog217.xml">
+<!ENTITY changelog218 SYSTEM "changelog218.xml">
+<!ENTITY changelog219 SYSTEM "changelog219.xml">
+<!ENTITY changelog2110 SYSTEM "changelog2110.xml">
+<!ENTITY changelog220 SYSTEM "changelog220.xml">
+
+<!ENTITY feature.panzerwar      SYSTEM "panzerwar.xml">
+<!ENTITY feature.playdead       SYSTEM "playdead.xml">
+<!ENTITY feature.poisonSyringes SYSTEM "poisonSyringes.xml">
+<!ENTITY feature.sniperwar      SYSTEM "sniperwar.xml">
+]>
+
+<book>
+    <bookinfo>
+        <title>&project:title;</title>
+        <subtitle>a &et:name:tm; modification</subtitle>
+        <copyright>
+            <year>2005-2007</year>
+            <holder><ulink url="&project:website;"/></holder>
+        </copyright>
+        <releaseinfo>&buildinfo;</releaseinfo>
+    </bookinfo>
+
+    &foreword;
+    &preface;
+    &introduction;
+
+   <preface id="msr">
+       <title>Minimum System Requirements</title>
+       &msr.linux;
+       &msr.osx;
+       &msr.windows;
+   </preface>
+
+    <part id="client">
+        <title>Client</title>
+
+        &client.features;
+
+        <chapter id="ref.commands">
+            <title>Command Reference</title>
+            &ref.cmd.all;
+        </chapter>
+    </part>
+
+    <part id="server">
+        <title>Server</title>
+
+        &upgrade;
+        &install;
+        &config;
+
+        &operation;
+        &admin;
+        &database;
+        &xpsave;
+        &hitmode;
+        &mapscript;
+        &omni;
+
+        <chapter id="ref.cvar">
+            <title>CVAR Reference</title>
+            &ref.cvar.all;
+        </chapter>
+    </part>
+
+    &changelog;
+    &credits;
+</book>

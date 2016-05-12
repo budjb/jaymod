@@ -1,0 +1,46 @@
+<refentry id="cvar.g_panzerWar">
+
+<refmeta>
+    <refentrytitle>g_panzerWar</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_panzerWar</refname>
+    <refpurpose>enable/disable panzer-war game mode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_panzerWar</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_panzerWar</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_panzerWar</command>
+    enables or disables panzer-war game mode.
+</para>
+&feature.panzerwar;
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_knifeonly"/>,
+    <xref linkend="cvar.g_sniperWar"/>
+</para>
+</refsection>
+
+</refentry>

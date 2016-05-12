@@ -1,0 +1,5 @@
+include make/variant/mingw-release
+
+#########################################################################################
+
+CXX.opt.O = -O3 -march=prescott -ffast-math

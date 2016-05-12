@@ -1,0 +1,51 @@
+<refentry id="cvar.g_hitmodeAntilagLerp">
+
+<refmeta>
+    <refentrytitle>g_hitmodeAntilagLerp</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeAntilagLerp</refname>
+    <refpurpose>enable/disable antilag lerping</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeAntilagLerp</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeAntilagLerp</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeAntilagLerp</command>
+    enables or disables the use of LERP during backwards-reconciliation.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

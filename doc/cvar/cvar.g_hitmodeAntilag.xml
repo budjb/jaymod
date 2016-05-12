@@ -1,0 +1,51 @@
+<refentry id="cvar.g_hitmodeAntilag">
+
+<refmeta>
+    <refentrytitle>g_hitmodeAntilag</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmodeAntilag</refname>
+    <refpurpose>set maximum amount of antilag in milliseconds</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmodeAntilag</command>
+        <arg><literal>0</literal>..<literal>1500</literal></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmodeAntilag</command>
+        <arg choice="plain"><literal>800</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmodeAntilag</command>
+    sets the maximum amount of antilag in milliseconds which the server uses for backwards-reconciliation.
+    A value of <literal>0</literal> will disable antilag.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmode"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,38 @@
+all:: MODULE.BASE.build
+
+MODULE.BASE.build: CXX.inherit=MODULE.BASE
+MODULE.BASE.build: $(MODULE.BASE.prj)
+MODULE.BASE.build: $(MODULE.BASE.pchs)
+MODULE.BASE.build: $(MODULE.BASE.a)
+
+$(MODULE.BASE.prj): $(PROJECT/)project/info.py $(PROJECT/)project/info.db
+	$(call print.HEADER,GENERATING,$@)
+	@$< -h $(PROJECT/)project/info.db > $@
+
+$(MODULE.BASE.pchs): $(BUILD/)base/public.h.$(CXX.pch.ext)/%: $(PROJECT/)src/base/public.h
+	$(call CXX.fnPrecompile,$<,$@,$*)
+
+$(MODULE.BASE.objs): $(MODULE.BASE.pchs)
+$(MODULE.BASE.objs): $(BUILD/)%.o: $(PROJECT/)src/%.cpp
+	$(call CXX.fnCompilePch,$<,$@,base/public.h,$(MODULE.BASE.pchs))
+
+$(MODULE.BASE.a): $(MODULE.BASE.objs)
+	$(call CXX.fnCompileStatic,$@,$^)
+	$(call CXX.fnRanlib,$@)
+
+###############################################################################
+
+.PHONY: scramble
+scramble: $(PROJECT/)src/bgame/bg_entity_event.h.inc
+scramble: $(PROJECT/)src/bgame/bg_entity_event.cpp.inc
+
+.PHONY: $(PROJECT/)src/bgame/bg_entity_event.h.inc
+.PHONY: $(PROJECT/)src/bgame/bg_entity_event.cpp.inc
+
+$(PROJECT/)src/bgame/bg_entity_event.h.inc:
+	$(call print.HEADER,GENERATING,$@)
+	$(PROJECT/)src/enum-scramble.py -h $@ > $@.$$$$ && mv $@.$$$$ $@
+
+$(PROJECT/)src/bgame/bg_entity_event.cpp.inc: $(PROJECT/)src/bgame/bg_entity_event.h.inc
+	$(call print.HEADER,GENERATING,$@)
+	$(PROJECT/)src/enum-scramble.py -cpp $< > $@.$$$$ && mv $@.$$$$ $@

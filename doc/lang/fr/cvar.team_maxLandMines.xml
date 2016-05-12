@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.team_maxLandMines">
+  <refmeta>
+    <refentrytitle>team_maxLandMines</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>team_maxLandMines</refname>
+
+    <refpurpose>détermine le maximum de mines par équipe</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>team_maxLandMines</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>team_maxLandMines</command>
+
+      <arg choice="plain"><literal>10</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>team_maxLandMines</command> détermine le maximum de mines
+    par équipe posées simultanément. Une valeur de 0 pour
+    <replaceable>num</replaceable> annule l'option, <literal>1</literal> ou
+    plus spécifie le maximum de mines qu'une équipe peut poser
+    simultanément.</para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.team_maxArtillery" />, <xref
+    linkend="cvar.team_maxFlamers" />, <xref
+    linkend="cvar.team_maxGrenLaunchers" /> <xref
+    linkend="cvar.team_maxM97s" />, <xref linkend="cvar.team_maxMG42s" />
+    <xref linkend="cvar.team_maxMortars" />, <xref
+    linkend="cvar.team_maxPanzers" /></para>
+  </refsection>
+</refentry>

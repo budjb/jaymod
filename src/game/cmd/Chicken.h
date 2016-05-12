@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_CHICKEN_H
+#define GAME_CMD_CHICKEN_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Chicken : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Chicken();
+    ~Chicken();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_CHICKEN_H

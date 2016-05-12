@@ -1,0 +1,37 @@
+<refentry id="cvar.g_ipcomplaintlimit">
+
+<refmeta>
+    <refentrytitle>g_ipcomplaintlimit</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_ipcomplaintlimit</refname>
+    <refpurpose>set maximum number of unique complaints allowed for a player</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_ipcomplaintlimit</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_ipcomplaintlimit</command>
+        <arg choice="plain"><literal>3</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_ipcomplaintlimit</command>
+    sets the maximum number of unique (by IP address) complaints a player may
+    have filed against them before they are automatically kicked.
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_dropAmmo">
+  <refmeta>
+    <refentrytitle>g_dropAmmo</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_dropAmmo</refname>
+
+    <refpurpose>active l'apparition de boîtes de munitions à la mort d'un
+    <emphasis>field ops</emphasis></refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_dropAmmo</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_dropAmmo</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_dropAmmo</command> active l'apparition de boîtes de
+    munitions à la mort d'un <emphasis>field ops</emphasis>. Une valeur de 0
+    pour <replaceable>num</replaceable> désactive cette option, alors que
+    toute valeur supérieure à 0 détermine le nombre de boîtes qui apparaîtront
+    à la mort d'un <emphasis>field ops</emphasis>.</para>
+
+    <caution>
+      L'apparition de boîtes de munitions est lourd en ressources. Chaque boîte consomme une ressource du moteur de jeu qui est limité et ajoute une charge au tafic réseau. Si vous êtes imprudents, une valeur élevée de cette variable doublée d'un nombre élevé de field ops pourrait mener à l'épuisement des ressources du jeu. 
+    </caution>
+
+    <tip>
+       Utilisez 
+
+      <xref linkend="cmd.status" />
+
+       pour monitorer cette ressource de jeu. 
+    </tip>
+  </refsection>
+</refentry>

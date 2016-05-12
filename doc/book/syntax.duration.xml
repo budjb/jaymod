@@ -1,0 +1,12 @@
+<para>
+    For convenience you may specify duration { days, hours, minutes, seconds } using
+    their respective suffixes { d, h, m, s }.
+    For example, to specify 10 days plus 4 hours, the following are all equivalent:
+
+    <itemizedlist>
+        <listitem><literal>10d4h</literal></listitem>
+        <listitem><literal>10d4h0m0s</literal></listitem>
+        <listitem><literal>878400s</literal></listitem>
+        <listitem><literal>878400</literal></listitem>
+    </itemizedlist>
+</para>

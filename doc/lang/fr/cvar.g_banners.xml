@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_banners">
+  <refmeta>
+    <refentrytitle>g_banners</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_banners</refname>
+
+    <refpurpose>détermine le nombre de bannières à afficher</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_banners</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_banners</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_banners</command> détermine le nombre de bannières à
+    afficher. Une valeur de <literal>0</literal> n'affiche aucune bannière.
+    Une valeur positive exige que la cvar correspondante
+    <command>g_banner{1..<replaceable>num</replaceable>}</command> soit
+    définie. Par exemple, pour une valeur <replaceable>num</replaceable>
+    <literal>3</literal> de <emphasis role="bold">g_banners</emphasis> il
+    faudra établir la variable <emphasis
+    role="bold">g_banner{1..<replaceable>num</replaceable>}</emphasis> de la
+    façon suivante : <screen>set g_banner1 <literal>"Message text 1."</literal>
+set g_banner2 <literal>"Message text 2."</literal>
+set g_banner3 <literal>"Message text 3."</literal>
+</screen></para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.g_bannerLocation" />, <xref
+    linkend="cvar.g_bannerTime" /></para>
+  </refsection>
+</refentry>

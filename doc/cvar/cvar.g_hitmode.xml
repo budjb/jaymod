@@ -1,0 +1,217 @@
+<refentry id="cvar.g_hitmode">
+
+<refmeta>
+    <refentrytitle>g_hitmode</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_hitmode</refname>
+    <refpurpose>set active hitmode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_hitmode</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_hitmode.modes" frame="all">
+<title>g_hitmode Modes</title>
+<tgroup cols="4" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="12*" align="center"/>
+    <colspec colnum="3" colwidth="12*" align="center"/>
+    <colspec colnum="4" colwidth="67*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>NAME</entry>
+            <entry>BOXES</entry>
+            <entry>SUMMARY</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>auto</entry>
+            <entry>n/a</entry>
+            <entry>automatically selects recommended mode</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>entity</entry>
+            <entry>1</entry>
+            <entry>body</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>etmain</entry>
+            <entry>3</entry>
+            <entry>head, torso, feet</entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>basic</entry>
+            <entry>3</entry>
+            <entry>head, torso, feet</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>standard</entry>
+            <entry>3</entry>
+            <entry>head, torso, feet</entry>
+        </row>
+        <row>
+            <entry>5</entry>
+            <entry>advanced</entry>
+            <entry>9</entry>
+            <entry>head, larm, rarm, lhand, rhand, torso(2), lfoot and rfoot</entry>
+        </row>
+        <row>
+            <entry>6</entry>
+            <entry>oriented</entry>
+            <entry>10</entry>
+            <entry>head, larm, rarm, lhand, rhand, torso, lleg, rleg, lfoot and rfoot</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_hitmode</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_hitmode</command>
+    sets the active hitmode which controls how bullet-hits are calculated and scored against player models.
+</para>
+
+<variablelist>
+
+<varlistentry>
+    <term>entity</term>
+    <listitem>
+    <para>
+        Mimics player's word-collision with only a large body box.
+        This is only useful for reference purposes, or servers uninterested
+        in accuracy.
+    </para>
+    <para>
+        <imageobject>
+            <imagedata fileref="figures/hitmode-1.png" format="PNG" scale="50"/>
+        </imageobject>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>etmain</term>
+    <listitem>
+    <para>
+        Baseline (stock) &et:name:abbr; behavior composed of { head, torso, feet } boxes.
+        Priority-box scoring in order of { head, feet, torso }.
+        That is to say if a bullet can hit a player's <emphasis>head</emphasis>,
+        regardless of whether it travels through another box on the same player such as
+        <emphasis>torso</emphasis>, the headshot will be scored.
+        For example, shooting a player on a ladder from below, resulst in more headshots than
+        you might expect. This behavior is to maintain backwards-compatibility.
+    </para>
+    <para>
+        <imageobject>
+            <imagedata fileref="figures/hitmode-2.png" format="PNG" scale="50"/>
+        </imageobject>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>basic</term>
+    <listitem>
+    <para>
+        Similar but improved over <emphasis>etmain</emphasis> with { crouch, prone, playdead } adjustments
+        for added realism.
+        Uses priority-box scoring in order of { head, feet, torso }.
+        This mode is somewhat similar to that of older &etpub:name; versions.
+    </para>
+    <para>
+        <imageobject>
+            <imagedata fileref="figures/hitmode-3.png" format="PNG" scale="50"/>
+        </imageobject>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>standard</term>
+    <listitem>
+    <para>
+        Similar but improved over <emphasis>basic</emphasis> with animation-accurate head-box.
+        Uses priority-box scoring in order of { head, feet, torso }.
+        This mode matches that of &project:name; prior to 2.1.0 version.
+    </para>
+    <para>
+        <imageobject>
+            <imagedata fileref="figures/hitmode-4.png" format="PNG" scale="50"/>
+        </imageobject>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>advanced</term>
+    <listitem>
+    <para>
+        Advanced (realistic), tight behavior with head, left-arm, right-arm, left-hand, right-hand,
+        torso(2), left-foot and right-foot boxes all tracking animation.
+        Uses closest-box scoring, resulting in more difficult headshots when impeded by other boxes.
+    </para>
+    <para>
+        <imageobject>
+            <imagedata fileref="figures/hitmode-5.png" format="PNG" scale="50"/>
+        </imageobject>
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>oriented</term>
+    <listitem>
+    <para>
+        Oriented, tight behavior with head, left-arm, right-arm, left-hand, right-hand,
+        torso, left-leg, right-leg, left-foot and right-foot boxes all tracking animation.
+        Uses closest-box scoring, resulting in more difficult headshots when impeded by other boxes.
+        This is the tightest and most discriminating model to date.
+        It is unknown at this time how much CPU this mode will consume on busy servers.
+    </para>
+    <para>
+        <imageobject>
+            <imagedata fileref="figures/hitmode-6.png" format="PNG" scale="50"/>
+        </imageobject>
+    </para>
+    </listitem>
+</varlistentry>
+</variablelist>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_hitmodeAntilag"/>,
+    <xref linkend="cvar.g_hitmodeAntilagLerp"/>,
+    <xref linkend="cvar.g_hitmodeDebug"/>,
+    <xref linkend="cvar.g_hitmodeFat"/>,
+    <xref linkend="cvar.g_hitmodeGhosting"/>,
+    <xref linkend="cvar.g_hitmodeReference"/>,
+    <xref linkend="cvar.g_hitmodeZone"/>,
+    <xref linkend="hitmode"/>
+</para>
+</refsection>
+</refentry>

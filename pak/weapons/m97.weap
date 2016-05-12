@@ -1,0 +1,79 @@
+weaponDef
+{
+	client {
+		scaleFirstPerson .85
+		standModel		"models/weapons2/m97/m97_3rd.md3"
+		pickupModel		"models/weapons2/m97/m97_pickup.md3"
+		
+		weaponConfig		"models/weapons2/m97/weapon.cfg"
+		handsModel		"models/weapons2/m97/v_m97_hand.md3"
+		
+		flashDlightColor	1.0 0.6 0.23
+		flashSound			"sound/weapons/m97/shotgun_fire.wav"
+		flashEchoSound		"sound/weapons/m97/shotgun_far.wav"
+		lastShotSound		"sound/weapons/m97/shotgun_fire_last.wav"
+		
+		reloadSound			"sound/weapons/m97/shotgun_reload.wav"
+		reloadFastSound		"sound/weapons/m97/shotgun_reloadpump.wav"	// reload shell and pump
+		
+		weaponSelectedIcon	"models/weapons2/m97/icon.tga"
+		
+		ejectBrassFunc		"MachineGunEjectBrass"
+	
+		firstPerson {
+			model		"models/weapons2/m97/v_m97.md3"
+			flashModel	"models/weapons2/mp40/v_mp40_flash.mdc"
+
+			weaponLink
+			{				
+				part 0
+				{
+					tag		"tag_slide"
+					model		"models/weapons2/m97/v_m97_slide.md3"					
+				}
+				part 1
+				{
+					tag		"tag_carrier"
+					model		"models/weapons2/m97/v_m97_carrier.md3"
+				}
+				part 2
+				{
+					tag		"tag_shell"
+					model		"models/weapons2/m97/v_m97_shell.md3"
+				}
+				part 3
+				{
+					tag		"tag_bolt"
+					model		"models/weapons2/m97/v_m97_bolt.md3"
+				}
+				part 4
+				{
+					tag		"tag_hammer"
+					model		"models/weapons2/m97/v_m97_hammer.md3"
+				}
+				part 5
+				{
+					tag		"tag_sleeve"
+					model		"models/weapons2/m97/v_m97_sleeve.md3"
+				}
+				part 6
+				{
+					tag		"tag_shell2"
+					model		"models/weapons2/m97/v_m97_shell2.md3"
+				}
+				part 7
+				{
+					tag		"tag_arm"
+					model		"models/weapons2/m97/v_m97_larm.md3"
+					axisskin	"models/weapons2/m97/m97_axis.skin"
+					alliedskin	"models/weapons2/m97/m97_allied.skin"
+				}
+			}
+		}
+		
+		thirdPerson {
+			model		"models/weapons2/m97/m97_3rd.md3"
+			flashmodel	"models/weapons2/mp40/v_mp40_flash.mdc"
+		}
+	}
+}

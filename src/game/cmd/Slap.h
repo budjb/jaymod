@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SLAP_H
+#define GAME_CMD_SLAP_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Slap : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Slap();
+    ~Slap();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SLAP_H

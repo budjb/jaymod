@@ -1,0 +1,37 @@
+<refentry id="cvar.g_maxlivesRespawnPenalty">
+
+<refmeta>
+    <refentrytitle>g_maxlivesRespawnPenalty</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_maxlivesRespawnPenalty</refname>
+    <refpurpose>sets the penalty for a player after their lives have run out</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_maxlivesRespawnPenalty</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_maxlivesRespawnPenalty</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_maxlivesRespawnPenalty</command>
+    sets the penalty for a player after their lives have run out.  <replaceable>num</replaceable> is the number
+	of spawns the player must miss to respawn again.
+</para>
+</refsection>
+
+</refentry>

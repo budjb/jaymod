@@ -1,0 +1,54 @@
+<refentry id="cvar.g_lms_followTeamOnly">
+
+<refmeta>
+    <refentrytitle>g_lms_followTeamOnly</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_lms_followTeamOnly</refname>
+    <refpurpose>enable/disable same-team spectator restriction</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_lms_followTeamOnly</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_lms_followTeamOnly</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_lms_followTeamOnly</command>
+    enables or disables same-team spectator restriction.
+    When enabled players can only follow their own teammates.
+</para>
+<para>
+    <note>
+        This value is in effect only when LMS gametype is enabled using <xref linkend="cvar.g_gametype"/>.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_lms_lockTeams"/>,
+    <xref linkend="cvar.g_lms_matchlimit"/>,
+    <xref linkend="cvar.g_lms_roundlimit"/>,
+    <xref linkend="cvar.g_lms_teamForceBalance"/>,
+    <xref linkend="cvar.g_gametype"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,136 @@
+<chapter id="hitmode">
+<title>Hitmode System</title>
+
+<section id="hitmode.introduction">
+<title>Introduction</title>
+<blockquote>
+<attribution>&mxyzptlk:name;, January 2007.</attribution>
+<para>
+    The hitmode system is responsible for detecting bullet-hits on players.
+    You might also know it as a <emphasis>hitbox</emphasis> system.
+    As of &project:name; 2.1.0, an entirely new hitmode architecture has been implemented.
+    I would like to acknowledge that we continue to use contributed code from &zinx:name;
+    for server-side player-animation tracking.
+</para>
+<para>
+    A great deal of care, thought and testing went into this system as we feel it is one of the most
+    important aspects of gameplay. I hope you enjoy!
+</para>
+</blockquote>
+</section>
+
+<section id="hitmode.highlights">
+<title>Highlights</title>
+<variablelist>
+
+<varlistentry>
+    <term>antilag</term>
+    <listitem>
+    <para>
+        Antilag has been completely overhauled and integrated allowing for
+        <emphasis role="bold">all</emphasis> bullet-fire weapons to benefit.
+        Prior to this, mounted weapons such as Browning and MG42 did not benefit from antilag.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>multiple modes</term>
+    <listitem>
+    <para>
+        The new architecture allows for &project:name; to support multiple hitmodes in a single release
+        and leave it up to the server to decide which mode is best for them.
+        As such, we have implemented backwards-compatible modes offering boxes which you are accustomed to,
+        while at the same time permitted us to address some old weaknesses and to also offer newer,
+        more advanced modes.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>efficiency</term>
+    <listitem>
+    <para>
+        More hitmode and more sophistication usually results in a performance penalty.
+        This is not the case with the new architecture. We use a hierarchal system to
+        cull as many uneeded hit-checks as possible, while also no longer requiring
+        temporary entities from the game engine. The net savings are very significant,
+        resulting in more pound-for-pound CPU relief in typical gameplay, even when comparing
+        a standing-up player with 7-boxes each in <emphasis>real</emphasis> mode,
+        to 2-boxes each in pre-2.1.0 mode.
+    </para>
+    </listitem>
+</varlistentry>
+
+<varlistentry>
+    <term>visual debugging</term>
+    <listitem>
+    <para>
+        Visual and data debugging support has been added which allows for testing and
+        comparisons between different hitmodes during actual gameplay. Some of these are also
+        useful for server admins and players seeking to learn and compare the new modes available,
+        and we've decided to keep visual debugging enabled in releases so admins are free to experiment.
+    </para>
+    </listitem>
+</varlistentry>
+
+</variablelist>
+</section>
+
+<section id="hitmode.operation">
+<title>Operation</title>
+<para>
+    Hitboxes are controlled using cvars and are effective immediately upon changing the value.
+</para>
+
+<table id="hitmode.operation.table" frame="all">
+<?dbfo table-width="75%"?>
+<title>Hitmode Operation</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*"/>
+    <colspec colnum="2" colwidth="3*"/>
+    <thead>
+        <row>
+            <entry>CVAR</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry><xref linkend="cvar.g_hitmode"/></entry>
+            <entry>set active hitmode</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeAntilag"/></entry>
+            <entry>set antilag history in milliseconds</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeAntilagLerp"/></entry>
+            <entry>enable/disable antilag lerping</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeDebug"/></entry>
+            <entry>set bitflags for hitmode debugging</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeFat"/></entry>
+            <entry>set increased torso-box size in inches</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeGhosting"/></entry>
+            <entry>set lifetime of hit ghosting in milliseconds</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeReference"/></entry>
+            <entry>set reference hitmode for comparison</entry>
+        </row>
+        <row>
+            <entry><xref linkend="cvar.g_hitmodeZone"/></entry>
+            <entry>set zone for debugging</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</section>
+
+</chapter>

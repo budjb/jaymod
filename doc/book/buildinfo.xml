@@ -1,0 +1,24 @@
+<informaltable frame="none" tabstyle="buildinfo">
+<tgroup cols="2" align="left" colsep="0" rowsep="0"> 
+<colspec colnum="1" colwidth="2*"/>
+<colspec colnum="2" colwidth="16*"/>
+<tbody>
+    <row>
+        <entry>Date:</entry>
+        <entry>&project:buildDate;</entry>
+    </row>
+    <row>
+        <entry>UUID:</entry>
+        <entry>&project:repoUUID;</entry>
+    </row>
+    <row>
+        <entry>Revision:</entry>
+        <entry>&project:repoLCRev;</entry>
+    </row>
+    <row>
+        <entry>Grade:</entry>
+        <entry>&project:buildStability;</entry>
+    </row>
+</tbody>
+</tgroup>
+</informaltable>

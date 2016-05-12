@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_EDLEVEL_H
+#define GAME_CMD_EDLEVEL_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class LevEdit : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    LevEdit();
+    ~LevEdit();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_EDLEVEL_H

@@ -1,0 +1,26 @@
+include make/platform/linux
+
+###############################################################################
+
+IDMODULE.suffix = _mp_x86.dll
+
+###############################################################################
+
+DYNLOAD.l  =
+MATH.l     =
+IPHLPAPI.l = iphlpapi
+ADVAPI.l   = advapi32
+
+###############################################################################
+
+GCC/ = /opt/gcc-4.1.2-mingw/i686-mingw32/
+
+CXX.opt.PIC =
+CXX.opt.vis =
+
+CXX.ldopts.so = -shared
+
+###############################################################################
+
+SPECIALS.name =  win32
+SPECIALS.build = build.mingw

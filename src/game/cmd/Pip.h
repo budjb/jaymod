@@ -1,0 +1,21 @@
+#ifndef GAME_CMD_PIP_H
+#define GAME_CMD_PIP_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Pip : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Pip();
+    ~Pip();
+
+private:
+    void run( Client& );
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_PIP_H

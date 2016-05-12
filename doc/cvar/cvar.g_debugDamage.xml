@@ -1,0 +1,38 @@
+<refentry id="cvar.g_debugDamage">
+
+<refmeta>
+    <refentrytitle>g_debugDamage</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_debugDamage</refname>
+    <refpurpose>enables debug information for inflicted damage</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_debugDamage</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_debugDamage</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_debugDamage</command>
+    enables debug information for inflicted damage.  This cvar is cheat protected and should
+	only be used by developers.
+</para>
+</refsection>
+
+</refentry>

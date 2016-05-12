@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SPEC_H
+#define GAME_CMD_SPEC_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Spec : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Spec();
+    ~Spec();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SPEC_H

@@ -1,0 +1,30 @@
+<refentry id="cmd.lol">
+
+<refmeta>
+    <refentrytitle>lol</refentrytitle>
+    <manvolnum>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>lol</refname>
+    <refpurpose>rain grenades on players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>!lol</command>
+        <arg><replaceable>player</replaceable></arg>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>lol</command>
+    rains grenades on players.
+    This causes a single grenade to drop on every player at once.
+</para>
+</refsection>
+
+</refentry>

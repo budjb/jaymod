@@ -1,0 +1,40 @@
+<refentry id="cvar.g_wolfrof">
+
+<refmeta>
+    <refentrytitle>g_wolfrof</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_wolfrof</refname>
+    <refpurpose>enable/disable &rtcw:name; rate of fire</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_wolfrof</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_wolfrof</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_wolfrof</command>
+    enables or disables &rtcw:name; rate of fire.
+    MP40, Thompson and Sten rates of automatic-fire are adjusted to approximate that of &rtcw:name;.
+    In absolute terms, the delay between automatic-rounds is lowered from
+    <emphasis role="bold">150</emphasis>ms to <emphasis role="bold">110</emphasis>ms.
+</para>
+</refsection>
+
+</refentry>

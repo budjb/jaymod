@@ -1,0 +1,50 @@
+<refentry id="cvar.g_alliedmaxlives">
+
+<refmeta>
+    <refentrytitle>g_alliedmaxlives</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_alliedmaxlives</refname>
+    <refpurpose>sets maximum number of lives for Allied players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_alliedmaxlives</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_alliedmaxlives</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_alliedmaxlives</command>
+    sets maximum number of lives for Allied players.
+    Setting num to <literal>0</literal> disables max lives enforcement and allows unlimited lives.
+</para>
+<para>
+    <note>
+        This cvar is superceded by <xref linkend="cvar.g_maxlives"/>.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_axismaxlives"/>,
+    <xref linkend="cvar.g_maxlives"/>
+</para>
+</refsection>
+
+</refentry>

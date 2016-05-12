@@ -1,0 +1,50 @@
+<refentry id="cvar.sv_hostname">
+
+<refmeta>
+    <refentrytitle>sv_hostname</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_hostname</refname>
+    <refpurpose>set name of server shown in browse lists</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_hostname</command>
+        <arg><replaceable>"name"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_hostname</command>
+        <arg choice="plain"><literal>"ETHost"</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_hostname</command>
+    sets the name of the server as shown in browse lists.
+    In order for this value to have effect, the appropriate setting for <xref linkend="cvar.dedicated"/>
+    must be in effect.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.dedicated"/>,
+    <xref linkend="cvar.sv_master1"/>,
+    <xref linkend="cvar.sv_master2"/>,
+    <xref linkend="cvar.sv_master3"/>,
+    <xref linkend="cvar.sv_master4"/>,
+    <xref linkend="cvar.sv_master5"/>
+</para>
+</refsection>
+
+</refentry>

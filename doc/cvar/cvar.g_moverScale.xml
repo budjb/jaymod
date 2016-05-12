@@ -1,0 +1,39 @@
+<refentry id="cvar.g_moverScale">
+
+<refmeta>
+    <refentrytitle>g_moverScale</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_moverScale</refname>
+    <refpurpose>adjusts the speed of movers</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_moverScale</command>
+        <arg><replaceable>factor</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_moverScale</command>
+        <arg choice="plain"><literal>1.0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_moverScale</command>
+    adjusts the speed of movers.  This cvar is the factor to speed up movers.  Thus,
+	<literal>1.0</literal> is the default speed, anything less than <literal>1.0</literal>
+	slows movers down, and anything above speeds them up.  Examples of movers are tanks and tugs,
+	and usually include anything that moves in a map.
+</para>
+</refsection>
+
+</refentry>

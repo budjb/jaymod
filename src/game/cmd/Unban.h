@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_UNBAN_H
+#define GAME_CMD_UNBAN_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Unban : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Unban();
+    ~Unban();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_UNBAN_H

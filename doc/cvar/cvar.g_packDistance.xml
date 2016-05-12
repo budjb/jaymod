@@ -1,0 +1,38 @@
+<refentry id="cvar.g_packDistance">
+
+<refmeta>
+    <refentrytitle>g_packDistance</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_packDistance</refname>
+    <refpurpose>sets the multiplier of throw distance for ammo and health packs</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_packDistance</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_packDistance</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_packDistance</command>
+    sets the multiplier of throw distance for ammo and health packs.  The multiplier is used
+	against etmain's throw distance.  Higher <replaceable>num</replaceable> results in a farther
+	throwing distance.
+</para>
+</refsection>
+
+</refentry>

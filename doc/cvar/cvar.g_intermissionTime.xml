@@ -1,0 +1,43 @@
+<refentry id="cvar.g_intermissionTime">
+
+<refmeta>
+    <refentrytitle>g_intermissionTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_intermissionTime</refname>
+    <refpurpose>sets the intermission duration</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_intermissionTime</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_intermissionTime</command>
+        <arg choice="plain"><literal>60</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_intermissionTime</command>
+    sets the duration in seconds for end-of-match intermission. Intermission may end sooner
+	if the required percentage of players indicate that they are ready.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_intermissionReadyPercent"/>
+</para>
+</refsection>
+</refentry>

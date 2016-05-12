@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_lms_teamForceBalance">
+  <refmeta>
+    <refentrytitle>g_lms_teamForceBalance</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_lms_teamForceBalance</refname>
+
+    <refpurpose>active/désactive le mode passif d'équilibrage des
+    équipes</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_lms_teamForceBalance</command>
+
+      <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_lms_teamForceBalance</command>
+
+      <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_lms_teamForceBalance</command> active ou désactive la
+    possibilité pour les nouveaux joueurs de se joindre à une équipe possédant
+    plus de joueurs qu'une autre.</para>
+
+    <para><note>
+         Cette valeur est effective seulement quand le type de jeu LMS (le survivant) est activé par la cvar 
+
+        <xref linkend="cvar.g_gametype" />
+
+        . 
+      </note></para>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <para><xref linkend="cvar.g_lms_followTeamOnly" />, <xref
+    linkend="cvar.g_lms_lockTeams" />, <xref
+    linkend="cvar.g_lms_matchlimit" />, <xref
+    linkend="cvar.g_lms_roundlimit" />, <xref
+    linkend="cvar.g_gametype" /></para>
+  </refsection>
+</refentry>

@@ -1,0 +1,41 @@
+<refentry id="cvar.g_fixedPhysics">
+
+<refmeta>
+    <refentrytitle>g_fixedPhysics</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_fixedPhysics</refname>
+    <refpurpose>enable/disable physics corrections</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_fixedPhysics</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_fixedPhysics</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_fixedPhysics</command>
+    g_fixedPhysics enables or disables physics corrections related to player frame rates. 
+    Mathematical rounding errors directly related to certain player frame rates would allow
+	for slightly increased jumping height and distance. With this enabled, rounding errors are avoided,
+	and some artificial rounding error is introduced to simulate those errors, and thus the advantage negated.
+	<xref linkend="cvar.g_fixedPhysicsFPS"/> controls the FPS the added rounding error emulates.
+</para>
+</refsection>
+
+</refentry>

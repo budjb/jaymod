@@ -1,0 +1,159 @@
+GCC/ = /usr/
+
+###############################################################################
+
+IDMODULE.suffix  = _mac
+STATICLIB.suffix = .a
+
+###############################################################################
+
+DYNLOAD.l  =
+MATH.l     =
+IPHLPAPI.l =
+ADVAPI.l   =
+
+###############################################################################
+
+M4  = m4
+TAR = tar
+AR  = /usr/bin/ar
+RANLIB = /usr/bin/ranlib
+
+###############################################################################
+
+CXX = $(GCC/)bin/g++
+
+CXX.pch.ext  = gch
+CXX.pch.arch = $(CXX.arch)
+
+CXX.opt.D     = $(call fnPrefix,-D,$(CXX.D) $($(CXX.inherit).CXX.D))
+CXX.opt.I     = $(call fnPrefix,-I,$($(CXX.inherit).CXX.I<) $(CXX.I) $($(CXX.inherit).CXX.I))
+CXX.opt.L     = $(call fnPrefix,-L,$(CXX.L) $($(CXX.inherit).CXX.L))
+CXX.opt.R     = $(call fnPrefix,-Xlinker -R,$(CXX.R) $($(CXX.inherit).CXX.R))
+CXX.opt.U     = $(call fnPrefix,-U,$(CXX.U) $($(CXX.inherit).CXX.U))
+CXX.opt.arch  = $(call fnPrefix,-arch ,$(CXX.arch) $($(CXX.arch).CXX.arch))
+CXX.opt.l     = $(call fnPrefix,-l,$(CXX.l) $($(CXX.inherit).CXX.l))
+CXX.opt.fwork = $(call fnPrefix,-framework ,$(CXX.fwork) $($(CXX.inherit).CXX.fwork))
+
+CXX.opt.ML   = -fmessage-length=0
+CXX.opt.NSA  = -fno-strict-aliasing
+CXX.opt.O    = -O3 -ffast-math -falign-functions=16 -falign-loops=16 -finline
+CXX.opt.PIC  = -fPIC
+CXX.opt.W    = -w #-Wall -Winvalid-pch -Wno-long-double -Wno-unknown-pragmas
+CXX.opt.g    = -g
+CXX.opt.pipe = -pipe
+CXX.opt.std  = -fno-exceptions -fno-rtti -fasm-blocks -fpascal-strings
+CXX.opt.vis  = -fvisibility=hidden
+
+CXX.ldopts.so = -bundle
+
+###############################################################################
+
+CXX.D     =
+CXX.I     = $(BUILD/) $(PROJECT/)src $(PROJECT/)pak
+CXX.L     =
+CXX.R     =
+CXX.U     =
+CXX.arch  = i386
+CXX.fwork =
+CXX.l     =
+
+CXX.ML   = 1
+CXX.NSA  = 1
+CXX.O    =
+CXX.PIC  = 1
+CXX.W    = 1
+CXX.g    =
+CXX.pipe =
+CXX.std  = 1
+CXX.vis  = 1
+
+###############################################################################
+
+CXX.fnStrip =
+
+###############################################################################
+
+CXX.fnCompile = $(call print.COMMAND.normal,$(CXX),$(2),$(strip \
+	$(CXX) \
+	$(CXX.opt.arch) \
+    $(foreach i,pipe W ML std NSA vis PIC O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	-c $(1) -o $(2) \
+	))
+
+CXX.fnCompilePch = $(CXX.fnCompile)
+
+###############################################################################
+
+CXX.fnPrecompile = $(call print.COMMAND.magenta,$(CXX),$(2),$(strip \
+	$(CXX) \
+	-arch $(3) \
+    $(foreach i,pipe W ML std NSA vis PIC O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	-c $(1) -o $(2) \
+	))
+
+###############################################################################
+
+CXX.fnLinkExe = $(call print.LINK,$(CXX),$(1),$(3),$(4),$(strip \
+    $(CXX) \
+	$(CXX.opt.arch) \
+    $(foreach i,pipe W ML std NSA vis PIC O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+    $(CXX.opt.D) \
+    $(CXX.opt.I) \
+    $(CXX.opt.U) \
+    $(CXX.fnLinkExe.<<) $($(CXX.inherit).CXX.fnLinkExe.<<) \
+    -o $(1).binary $(3) $(4) \
+    $(CXX.ldopts.exe) \
+    $(CXX.opt.R) \
+    $(CXX.opt.L) \
+    $(CXX.opt.l) \
+    $(CXX.opt.fwork) \
+    $(CXX.fnLinkExe.>>) $($(CXX.inherit).CXX.fnLinkExe.>>) \
+    ))
+
+###############################################################################
+
+CXX.fnCompileStatic = $(call print.STATIC,$(AR),$(1),$(2),$(AR) cq $(1) $(2))
+
+###############################################################################
+
+CXX.fnLinkSo = $(call print.LINK,$(CXX),$(1),$(2),$(strip \
+	$(CXX) \
+	$(CXX.opt.arch) \
+	$(foreach i,pipe W ML std NSA vis PIC O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	$(CXX.fnLinkSo.<<) $($(CXX.inherit).CXX.fnLinkSo.<<) \
+	-o $(1).binary $(2) \
+	$(CXX.ldopts.so) \
+	$(CXX.opt.R) \
+	$(CXX.opt.L) \
+	$(CXX.opt.l) \
+	$(CXX.opt.fwork) \
+	$(CXX.fnLinkSo.>>) $($(CXX.inherit).CXX.fnLinkSo.>>) \
+	))
+
+###############################################################################
+
+CXX.fnRanlib = $(call print.COMMAND.normal,$(RANLIB),$(1),$(RANLIB) $(1))
+
+###############################################################################
+
+define OSX.bundle
+	mkdir -p $@.bundle/Contents/MacOS/
+	m4 -I $(BUILD/)m4 -D__SO=$(patsubst %$(IDMODULE.suffix),%,$(notdir $@)) $(PROJECT/)pkg/osx/Info.plist.m4 \
+		> $@.bundle/Contents/Info.plist
+	cp -p $@.binary $@.bundle/Contents/MacOS/$(notdir $@)
+	(cd $(dir $@) && zip -rq - $(notdir $@).bundle) > $@
+endef
+
+###############################################################################
+
+world:: default debug release

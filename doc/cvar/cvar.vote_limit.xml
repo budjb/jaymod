@@ -1,0 +1,37 @@
+<refentry id="cvar.vote_limit">
+
+<refmeta>
+    <refentrytitle>vote_limit</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>vote_limit</refname>
+    <refpurpose>set maximum number of times a vote may be called</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>vote_limit</command>
+        <arg><replaceable>max</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>vote_limit</command>
+        <arg choice="plain"><literal>5</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>vote_limit</command>
+    sets the maximum number of times any particular vote may be called in a match.
+    The counter is reset at the start of every map load/init.
+</para>
+</refsection>
+
+</refentry>

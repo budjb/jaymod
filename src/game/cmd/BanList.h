@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_LSBANS_H
+#define GAME_CMD_LSBANS_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class BanList : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    BanList();
+    ~BanList();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_LSBANS_H

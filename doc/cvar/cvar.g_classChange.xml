@@ -1,0 +1,38 @@
+<refentry id="cvar.g_classChange">
+
+<refmeta>
+    <refentrytitle>g_classChange</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_classChange</refname>
+    <refpurpose>enables/disables friendly corpse class tealing</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_classChange</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_classChange</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_classChange</command>
+    enables or disables friendly corpse class stealing.
+    When enabled this allows a player to take the uniform, class and weapons of a dead teammate.
+</para>
+</refsection>
+
+</refentry>

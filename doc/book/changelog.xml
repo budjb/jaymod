@@ -1,0 +1,100 @@
+<appendix id="changelog">
+<title>Changelog</title>
+
+<section id="changelog.220">
+<title>2.2.0</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog220;
+</orderedlist>
+</section>
+
+<section id="changelog.2110">
+<title>beta 2.1.10</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog2110;
+</orderedlist>
+</section>
+
+<section id="changelog.219">
+<title>beta 2.1.9</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog219;
+</orderedlist>
+</section>
+
+<section id="changelog.218">
+<title>beta 2.1.8</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog218;
+</orderedlist>
+</section>
+
+<section id="changelog.217">
+<title>beta 2.1.7</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog217;
+</orderedlist>
+</section>
+
+<section id="changelog.216">
+<title>beta 2.1.6</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog216;
+</orderedlist>
+</section>
+
+<section id="changelog.215">
+<title>beta 2.1.5</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog215;
+</orderedlist>
+</section>
+
+<section id="changelog.214">
+<title>beta 2.1.4</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog214;
+</orderedlist>
+</section>
+
+<section id="changelog.213">
+<title>beta 2.1.3</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog213;
+</orderedlist>
+</section>
+
+<section id="changelog.212">
+<title>beta 2.1.2</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog212;
+</orderedlist>
+</section>
+
+<section id="changelog.211">
+<title>beta 2.1.1</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog211;
+</orderedlist>
+</section>
+
+<section id="changelog.210">
+<title>beta 2.1.0</title>
+<orderedlist spacing="compact">
+    <?dbfo label-width="2.2em"?>
+    &changelog210;
+</orderedlist>
+</section>
+
+</appendix>

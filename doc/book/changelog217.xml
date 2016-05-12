@@ -1,0 +1,415 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <emphasis role="subject">lagometer</emphasis> to show rate of server snapshots received per second,
+    sampled over the last 5 seconds.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    visual indication when a class is disabled in the limbo menu.  The class will be mostly transparent.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    broken medic regeneration introduced in 2.1.6.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">rank icons</emphasis> to fireteam window.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">shove</emphasis> bug that would allow dead and playdead players to shove.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">killer</emphasis> view lock for 5 seconds after death.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <xref linkend="cvar.g_medicSelfHealDelay"/> for more control over &medic; self-healing.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    various g_hitmodeDebug and g_bulletmodeDebug hexadecimal/positional
+    <emphasis role="subject">client formatting</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="security">Security Fix:</emphasis>
+    authorization flag '9' not enforced correctly.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    Haste's fixed physics code.  This removes frame-dependent rounding errors that cause certain
+	fps settings to move slightly farther.  This feature attempts to give this advantage
+	to everyone regardless of their frames settings.  New cvars are
+	<xref linkend="cvar.g_fixedPhysics"/> and <xref linkend="cvar.g_fixedPhysicsFPS"/>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    leaning bug that would allow a player to cancel an in-progress panzerfaust shot.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    overbounce bug.  Fix found from a mod by Icculus.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="security">Security Fix:</emphasis>
+    ban enforcement glitch manifesting as failed www download.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    command <emphasis role="subject">!seen</emphasis> not reporting correct results.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    optional reason for <emphasis role="subject">!mute</emphasis> and details are displayed using !finger command.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <xref linkend="cvar.g_adminLog"/> to be more efficient and log format is now
+    +/- [TIMESTAMP] [SLOT#] [GUID/player] COMMAND...
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    !commands to support partial command-name qualification if command-name is sufficient to be unique.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed</emphasis>
+    all !commands to use consistent colors and output styles.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis> name-filter multi-matching to
+    <emphasis role="subject">!lol, !pip, !pop, !shake, !slap, !smite</emphasis> commands.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    !listplayers to show spectators across 2-columns when possible.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    kick/ban and ban-enforcement popup-messages given to clients.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    optional distance argument to
+    <emphasis role="subject">!fling, !flinga, !launch, !launcha, !throw, !throwa</emphasis> commands.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    new command <emphasis role="subject">!lsusers</emphasis> to search user database.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    command <emphasis role="subject">!setlevel</emphasis>
+    to suppoort setting by level name (or best match).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Updated</emphasis>
+    command <emphasis role="subject">!ban</emphasis>
+    to support online/offline banning with -player or -user argument.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    poison-gas should not give damage under water.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    g_bannerTime defaults to a 5 second minimum instead of becoming disabled.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Database Change:</emphasis> as per new ACL system,
+    <emphasis role="subject">level.db</emphasis> 'flags' migrates to 'acl'.
+    When run for the first time against an older db, the values will automatically be
+    converted to the new ACL format. Downward-conversion is not supported.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Database Change:</emphasis> as per new ACL system,
+    <emphasis role="subject">user.db</emphasis> 'authflags' migrates to 'acl'.
+    When run for the first time against an older db, the values will automatically be
+    converted to the new ACL format. Downward-conversion is not supported.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">!userdelete, !useredit, !userinfo, !userlist</emphasis>
+    for online manipulation of <emphasis role="subject">user.db</emphasis> records.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    chapter documenting the new <emphasis role="subject">Admin System</emphasis> to docs.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Renamed</emphasis> cvars as follows:
+    <orderedlist spacing="compact">
+    <listitem>
+        <emphasis role="subject">g_shrubbot</emphasis> --&gt; <xref linkend="cvar.g_admin"/>
+    </listitem>
+    <listitem>
+        <emphasis role="subject">g_logAdmin</emphasis> --&gt; <xref linkend="cvar.g_adminLog"/>
+    </listitem>
+    <listitem>
+        <emphasis role="subject">g_dropMsg</emphasis> --&gt; <xref linkend="cvar.g_protestMessage"/>
+    </listitem>
+    </orderedlist>
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Renamed</emphasis> admin commands as follows:
+    <orderedlist spacing="compact">
+    <listitem>
+        <emphasis role="subject">!showbans</emphasis> --&gt; <emphasis role="subject">!lbanlist</emphasis>
+    </listitem>
+    <listitem>
+        <emphasis role="subject">!listlevels</emphasis> --&gt; <emphasis role="subject">!levlist</emphasis>
+    </listitem>
+    <listitem>
+        <emphasis role="subject">!readconfig</emphasis> --&gt; <emphasis role="subject">!dbload</emphasis>
+    </listitem>
+    </orderedlist>
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis> new admin system commands
+    <emphasis role="subject">!levadd, !levdelete, !levedit, !levinfo</emphasis>
+    for online manipulation of <emphasis role="subject">level.db</emphasis> records.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    new command <emphasis role="subject">!page</emphasis> to display pages from previous !commands
+    with very long output.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Dropped</emphasis> redundant cvar
+    <emphasis role="subject">g_doWarmup</emphasis>,
+    use <xref linkend="cvar.g_warmup"/> instead.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Altered</emphasis> cvar
+    <emphasis role="subject">sv_tempBanMessage</emphasis> to read-only as it is now
+    re-computed as a result of changes to <xref linkend="cvar.g_kickTime"/>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    countdown tick sound to <emphasis role="subject">gamestate</emphasis> display on client.
+    Only in effect when announcer is enabled.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    gametype/gamestate enum display to <emphasis role="subject">!status</emphasis> command.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    command <emphasis role="subject">!dbsave</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">!putteam</emphasis> would fail when teams were at maximum capacity per their settings.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    antiwarp for <emphasis role="subject">limbo'd</emphasis> players.
+    Bug manifested when antiwarp is enabled for limbo'd players.
+    This should fix the infamous <emphasis role="subject">missing scoreboard</emphasis>
+    issue players have experienced since antiwarp was introduced (thanks to zinx and density for passing on).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    support for &etpro:name;'s <emphasis role="subject">delete</emphasis>
+    mapscript command. (thank you |Rain|).
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Fixed:</emphasis>
+    Omni-bot bug that would crash the server if an objective didn't have a name.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">!chicken</emphasis> admin command.  This will taunt
+	the specified player.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">g_proneDelay</emphasis> from ETPro.  When enabled,
+	players will have a slight temporary penalty in accuracy and will have to
+	wait longer to get back up.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="significant">Added</emphasis>
+    incendiary weapon <emphasis role="subject">Molotov Cocktail</emphasis> under the same
+    weapon-bank as grenade (weapon-bank 4).
+    Requires g_weapon flag 4096 to be enabled.
+    Requires level 2 light-weapons skill or higher.
+    Requires player to be one of { engineer, field-ops, soldier }.
+    Hint: try throwing at/through breakables such as windows or fences.
+    We're still touching it up cosmetically but most of the visual/audio rendering is in place.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <xref linkend="cvar.g_weapons"/> flag for <emphasis role="subject">no-adrenaline</emphasis> 
+    should now work reliably.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <emphasis role="subject">thrown-knife</emphasis> to rotate end-over-end,
+    and added small trail for better visual tracking.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    &omni:name; to no longer user relative omni-bot/ directory in search path and
+    elevated fs_homepath and fs_basepath to be first in search list, respectively.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    simplistic <emphasis role="subject">notes</emphasis> for user records.
+    The arguments { -nadd, -ndelete, -nedit, -ninsert } are used to respectively
+    { add, delete, edit, insert }.
+    The maximum number of notes allowed is 9 and notes can be viewed using
+    either !finger or !userinfo commands.
+</simpara>
+</listitem>

@@ -1,0 +1,30 @@
+weaponDef
+{
+    client {
+        weaponConfig        "models/multiplayer/smokebomb/weapon.cfg"
+        handsModel          "models/multiplayer/smokebomb/v_smokebomb_hand.mdc"
+        
+        flashDlightColor    1 0.7 0.5
+        overheatSound       "sound/weapons/grenade/gren_smoke.wav"
+        
+        weaponSelectedIcon  "models/multiplayer/poison_gas/icon.tga"
+        
+        missileModel        "models/multiplayer/smokebomb/smokebomb.md3"
+        missileTrailFunc    "GrenadeTrail" // { "GrenadeTrail", "RocketTrail", "PyroSmokeTrail", "DynamiteTrail" }
+        
+        modModel 0          "models/multiplayer/poison_gas/allies"
+        modModel 1          "models/multiplayer/poison_gas/axis"
+        
+        firstPerson {
+            model           "models/multiplayer/smokebomb/v_smokebomb.md3"
+            alliedSkin      "models/multiplayer/poison_gas/cannister_allies_1st.skin"
+            axisSkin        "models/multiplayer/poison_gas/cannister_axis_1st.skin"
+        }
+        
+        thirdPerson {
+            model           "models/multiplayer/smokebomb/smokebomb.md3"
+            alliedSkin      "models/multiplayer/poison_gas/cannister_allies_3rd.skin"
+            axisSkin        "models/multiplayer/poison_gas/cannister_axis_3rd.skin"
+        }
+    }
+}

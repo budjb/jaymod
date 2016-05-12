@@ -1,0 +1,36 @@
+<refentry id="cvar.g_LTChargeTime">
+
+<refmeta>
+    <refentrytitle>g_LTChargeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_LTChargeTime</refname>
+    <refpurpose>set amount of time for &fieldops; to recharge</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_LTChargeTime</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_LTChargeTime</command>
+        <arg choice="plain"><literal>40000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_LTChargeTime</command>
+    sets the amount of time in milliseconds it takes for &fieldops; to recharge.
+</para>
+</refsection>
+
+</refentry>

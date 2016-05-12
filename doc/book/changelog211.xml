@@ -1,0 +1,10 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Added</emphasis>
+    OSX universal binary support for
+    <emphasis role="subject">i386</emphasis>
+    and
+    <emphasis role="subject">PPC</emphasis>
+    architectures.
+</simpara>
+</listitem>

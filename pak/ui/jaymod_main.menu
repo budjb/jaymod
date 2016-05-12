@@ -1,0 +1,48 @@
+#include "ui/menudef.h"
+
+// Defines //
+
+#define WINDOW_X		16
+#define WINDOW_Y		16
+//#define WINDOW_WIDTH	128
+#define WINDOW_WIDTH	160
+#define WINDOW_HEIGHT	152
+#define GROUP_NAME		"grpJaymod"
+
+// Macros //
+
+#include "ui/menumacros.h"
+
+// Main Menu //
+
+menuDef {
+	name		"jaymod_main"
+	visible		0
+	fullscreen	0
+	rect		WINDOW_X WINDOW_Y WINDOW_WIDTH WINDOW_HEIGHT
+	style		WINDOW_STYLE_FILLED
+  
+	onOpen {
+		// ydnar
+		conditionalscript ROldModeCheck 2
+			( "clearFocus ; open vid_confirm" )
+			( "clearFocus" )
+	}
+	
+	onEsc {
+		close jaymod_main ;
+		open ingame_main
+	}
+
+// Window //
+
+	WINDOW( "^xJAY^4MOD", 50 )
+	
+// Buttons //
+
+	BUTTON( 6, 32, WINDOW_WIDTH-12, 18, "DISPLAY", .3, 14, close jaymod_main ; open jaymod_display )
+	BUTTON( 6, 56, WINDOW_WIDTH-12, 18, "SOUND", .3, 14, close jaymod_main ; open jaymod_sound )
+	BUTTON( 6, 80, WINDOW_WIDTH-12, 18, "MISC", .3, 14, close jaymod_main ; open jaymod_misc )
+	BUTTON( 6, 104, WINDOW_WIDTH-12, 18, "CREDITS", .3, 14, close jaymod_main ; open credits_jaymod )
+	BUTTON( 6, 128, WINDOW_WIDTH-12, 18, "^xBACK", .3, 14, close jaymod_main ; open ingame_main )
+}

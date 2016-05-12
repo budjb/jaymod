@@ -1,0 +1,77 @@
+<refentry id="cvar.dedicated">
+
+<refmeta>
+    <refentrytitle>dedicated</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>dedicated</refname>
+    <refpurpose>set server mode</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>dedicated</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.dedicated.modes" frame="all">
+<?dbfo table-width="70%"?>
+<title>dedicated Modes</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="2*" align="center"/>
+    <colspec colnum="2" colwidth="9*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>mixed client/server</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>dedicated LAN (do not register with browselists)</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>dedicated Internet (register with browselists)</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection> 
+<title>Default</title>
+    <cmdsynopsis>
+        <command>dedicated</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>dedicated</command>
+    sets the server mode.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_hostname"/>,
+    <xref linkend="cvar.sv_master1"/>,
+    <xref linkend="cvar.sv_master2"/>,
+    <xref linkend="cvar.sv_master3"/>,
+    <xref linkend="cvar.sv_master4"/>,
+    <xref linkend="cvar.sv_master5"/>
+</para>
+</refsection>
+
+</refentry>

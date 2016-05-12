@@ -1,0 +1,99 @@
+<chapter id="database">
+<title>Database System</title>
+
+<para>
+    As of &project:name; 2.1.0 a new text-based database file structure has been implemented.
+    Replacing the old data files are new <filename>.db</filename> files.
+    These files, when possible, store information in human-readable ASCII format.
+    <important>
+        All <filename>.db</filename> files are loaded into memory at game-init (map begin) time,
+        and subsequently saved out to disk (overwriting the files) at game-shutdown (map end) time.
+        This means any <emphasis>manual</emphasis> edits made to the database files will be lost
+        at game-shutdown time.
+        The best practice for <emphasis>manual</emphasis> edits (eg: adding levels to level.db file) is
+        to first shutdown the server before editing database files.
+    </important>
+</para>
+<para>
+    The following table describes the new locations for old data.
+</para>
+
+<table id="database.transition" frame="all">
+<?dbfo table-width="60%"?>
+<title>Data Transition</title>
+<tgroup cols="3" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="3*"/>
+    <colspec colnum="2" colwidth="2*"/>
+    <colspec colnum="3" colwidth="6*"/>
+    <thead>
+        <row>
+            <entry>pre-2.1.0</entry>
+            <entry>2.1.0</entry>
+            <entry>DATA DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>shrubbot.cfg</entry>
+            <entry>level.db</entry>
+            <entry>access levels</entry>
+        </row>
+        <row>
+            <entry>shrubbot.cfg</entry>
+            <entry>user.db</entry>
+            <entry>admin and bans</entry>
+        </row>
+        <row>
+            <entry>xpbackup.dat</entry>
+            <entry>user.db</entry>
+            <entry>saved xp</entry>
+        </row>
+        <row>
+            <entry>recspree.dat</entry>
+            <entry>map.db</entry>
+            <entry>top killing sprees</entry>
+        </row>
+        <row>
+            <entry>seendb.dat</entry>
+            <entry>user.db</entry>
+            <entry>admin and bans</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+
+<variablelist>
+
+<varlistentry>
+<term>level.db</term>
+<listitem>
+<para>
+    Stores Admin System levels available for promoting users to higher levels of access.
+    Data maintenance on this file should be done with the appropriate Admin System commands.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>map.db</term>
+<listitem>
+<para>
+    Stores map related information such as killing-spree data.
+    Data maintenance on this file can only be done with a text editor while the server is shutdown.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>user.db</term>
+<listitem>
+<para>
+    Stores Admin System user related information, such as user level assignments, automatic
+    greetings, ban, mute and XP-save data.
+    Data maintenance on this file should be done with the appropriate Admin System commands.
+</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</chapter>

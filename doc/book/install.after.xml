@@ -1,0 +1,29 @@
+<section id="install.after">
+<title>After Install</title>
+<para>
+    This section describes the post-install procedure.
+</para>
+
+<orderedlist>
+    <listitem>
+    <para>
+        Edit <command>serverctl</command>.
+        This script has several important variable settings. At a bare-minimum,
+        you must at least edit <varname>ET_IP</varname> and change it to your
+        (public) Internet IP address.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; vi serverctl
+</screen>
+    </listitem>
+
+    <listitem>
+        &task.startup;
+    </listitem>
+
+    <listitem>
+        &task.rmextract;
+    </listitem>
+</orderedlist>
+
+</section>

@@ -1,0 +1,51 @@
+<refentry id="cvar.g_banners">
+
+<refmeta>
+    <refentrytitle>g_banners</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_banners</refname>
+    <refpurpose>set number of banners to display</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_banners</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_banners</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_banners</command>
+    sets the number of banners to display.
+    A value of <literal>0</literal> disables displaying of any banners.
+    A positive value will require corresponding <command>g_banner{1..<replaceable>num</replaceable>}</command>
+    variables to be defined. For example, if <replaceable>num</replaceable> is <literal>3</literal> then
+    the following is applicable:
+<screen>set g_banner1 <literal>"Message text 1."</literal>
+set g_banner2 <literal>"Message text 2."</literal>
+set g_banner3 <literal>"Message text 3."</literal>
+</screen>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_bannerLocation"/>,
+    <xref linkend="cvar.g_bannerTime"/>
+</para>
+</refsection>
+</refentry>

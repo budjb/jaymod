@@ -1,0 +1,49 @@
+<refentry id="cvar.g_redlimbotime">
+
+<refmeta>
+    <refentrytitle>g_redlimbotime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_redlimbotime</refname>
+    <refpurpose>the amount of time between Axis team respawns</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_redlimbotime</command>
+        <arg><replaceable>interval</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_redlimbotime</command>
+        <arg choice="plain"><literal>30000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_redlimbotime</command>
+    specifies the time interval in milliseconds between Axis respawns.  This cvar is used for the actual
+	calculations in-game and is latched, meaning it cannot be changed during a match.  Mapscripts set this
+	cvar, and the <xref linkend="cvar.g_userAxisRespawnTime"/> cvar overrides this as well.  Consequently,
+	<xref linkend="cvar.g_userAxisRespawnTime"/> should be used to set custom spawn times, and this cvar should
+	not be used at all.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_userAlliedRespawnTime"/>,
+    <xref linkend="cvar.g_userAxisRespawnTime"/>
+    <xref linkend="cvar.g_bluelimbotime"/>,
+</para>
+</refsection>
+
+</refentry>

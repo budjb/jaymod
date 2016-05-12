@@ -1,0 +1,246 @@
+The Jaymod Build System - Fri Jul 14 12:47:16 EDT 2006
+Author: Mr.Mxyzptlk
+--------------------------------------------------------------------------------
+GOALS
+
+The goals of this build system are as follows:
+
+1.  Produce Jaymod builds for all supported platforms. As of this writing,
+    the build system is hosted in the following environments:
+
+        x86 Linux (using gcc)
+        x86 Linux (using gcc-mingw cross-compiler for win32 target)
+        x86 Windows (using MSVC++)
+        ppc OSX (using bundled gcc)
+        x86 OSX (using bundled gcc)
+
+2.  Automate as much of the build/release process as possible. The build
+    system does not stop with compiling files for a particular platform. It
+    also does post-compile operations such as copying files into trees
+    suitable for archiving and install packaging. M4 processing of files
+    is also automated.
+
+3.  Centralize project name and version details that can be used by source
+    code, build system and installers.
+
+4.  Seperate source from build output as much as possible. All files created
+    by people are in the source tree, and files that are generated through
+    this build system are placed into an output directory build/ .
+    Depending on the programming language, build/ will have very similar
+    organization to the source tree, but differ as needed for final packaging
+    and installation purposes.
+
+5.  Permit separation of sources into modules. A module can be subset
+    of particular language files grouped simply for organizational purposes,
+    or it can represent things like shared-library modules, or groups of
+    certain types of files. My preference was to impact Jaymod project as
+    little as possible, so all C files are organized fairly similar to
+    that of the STOCK ET-SDK. Modules were added for pk3 and packaging.
+
+6.  Do not complicate the build system for very specific developer needs.
+    If you desire an integrated and sophisticated solution for development,
+    your best choice is to stick with an IDE that you are productive with.
+    This build system can be used for development if you don't care about
+    include-file dependencies or other features that in my opinion add
+    far too much complexity to makefiles.
+
+7.  Offer reasonable build performance. Effort was put into support for
+    pre-compiled header files. So when possible, it helps with build speed
+    and rebuilds are pretty quick these days.
+
+--------------------------------------------------------------------------------
+COMMON PLATFORM REQUIREMENTS
+
+1.  A default installation of all the relevant version of ET for your
+    particular platform. ET-2.60b is currently used.
+
+2.  Subversion (SVN) client.
+    
+3.  GNU make version 3.80 . Older versions have not been tested and might not
+    work. This make system uses a wide variety of advanced make features.
+
+4.  Python 2.4.1 or higher. Slightly older versions are probably safe as we
+    do not use anything too fancy from Python. Python is used to probe
+    operating system, subversion workspace, and a project data file to
+    generate MAKE and C include-files to make that information available
+    to those languages.
+
+5.  GNU M4 1.4.3 or higher. This is used to perform variable substitution
+    in many files throughout the build system for things like the project's
+    official name, version numbers, etc. Slightly older versions are safe.
+
+6.  GNU coreutils 5.2.1 (any version should do) for commands like cp and rm.
+
+7.  Zip 2.31 or newer. REQUIRED ONLY FOR PACKAGING.
+
+8.  Tar utility. REQUIRED ONLY FOR PACKAGING.
+
+9.  Rsync utility. REQUIRED ONLY FOR PACKAGING.
+
+--------------------------------------------------------------------------------
+LINUX PLATFORM REQUIREMENTS
+
+1.  GNU GCC 4.1.1 for builds. I regularily compile with Mandriva 2007 default
+    compiler GCC 4.1.1 . Test compiles using 4.2-snapshot 4.3-snapshot are
+    known to work as well.
+
+--------------------------------------------------------------------------------
+WINDOWS PLATFORM REQUIREMENTS
+
+1.  Microsoft Visual C++ Studio 2005 for both DEVELOPER and RELEASE builds.
+    I do not have Visual C++ Studio 2003 installed, but I'm sure aside from
+    some path changes, that version will also work.
+
+2.  Cygwin. This is used to provide a unix-like environment on a Windows
+    system. Don't worry, we do NOT use the GNU GCC compiler on Windows as
+    that introduces a runtime requirement for Cygwin. We only use Cygwin
+    to host the BUILD environment -- to provide the login-shell account,
+    make, python, m4 and file-utils and invoke Microsoft's C compiler.
+    Cygwin is quite extensive, so we do not need to install it all. Major
+    components that we need are:
+
+        - if asked any questions about line-terminations, select default
+        - recommended packages
+        - OpenSSH (for remote login purposes)
+        - subversion client
+        - make
+        - python
+        - m4
+        - coreutils (probably a default)
+        - zip/unzip
+        - tar
+
+--------------------------------------------------------------------------------
+OSX PLATFORM REQUIREMENTS
+
+1. Bundled GNU GCC 4.0.1 for builds.
+
+--------------------------------------------------------------------------------
+MAKE ENVIRONMENT VARIABLES
+
+Certain environment variables are inherited by make from your shell. Some of
+them are typical like PATH, and others are specific to this build system and
+may be either set in the shell, or over-ridden on the command line when
+invoking make.
+
+- PLATFORM
+  Optional. Examples { <UNDEFINED>, mingw }
+  Set this variable to 'mingw' on linux to perform a cross-compiler build
+  and produce win32 binaries. Otherwise, setting this variable is not
+  needed as the build system can determine the correct platform. If for
+  some reason it cannot, look in make/platforms/ for a list of supported
+  platforms (each file represents a platform).
+
+- VARIANT
+  Optional. Examples { <UNDEFINED>, debug, release }
+  Set this variable to indicate the platform variant build. Look in
+  make/variants for a list of supported variants (each file represents one
+  variant). Note this value should only be the suffix after a platforom
+  name. For example, 'debug' is a valid variant, and 'linux-debug' is invalid.
+
+--------------------------------------------------------------------------------
+MAKE TARGETS
+
+- make clean
+  This will clean out your build/ output directory in preperation for building
+  from scratch. All output files from the make system are placed into build/
+  to permit easy, recursive directory cleanup.
+  NOTE: make clean if you change any header files.
+  NOTE: make clean if you add/remove files from pak/ and pkg/ modules.
+  NOTE: if you are dealing with many any variants, ane make world and such,
+        then you may simply have to rm -fr build* which is much easier way
+        of the full cleanup.
+
+- make (or make all)
+  This will build everything that needs to be built stopping short of the
+  packaging step. Auto-generated files such as project.h, file listings,
+  C compilation, binary linking, and pak/ staging are all done as part of
+  this target.
+
+- make pkg (implicit dependency target: all)
+  This will create .tar.gz bundle for the specific build (variant) you
+  are working with. It also automatically does 'make all' if needed.
+
+- make default
+  Convenience target. Exactly similar to: make pkg VARIANT=
+
+- make debug
+  Convenience target. Exactly similar to: make pkg VARIANT=debug
+
+- make release
+  Convenience target. Exactly similar to: make pkg VARIANT=release
+
+- make specials
+  Build the host special binaries, if any.
+
+- make world
+  Convenience target that builds all host variants.
+  Exactly similar to the following (depending on platform):
+      make pkg VARIANT=
+      make pkg VARIANT=debug
+      make pkg VARIANT=release
+      make pkg VARIANT=release-athlonXP
+      make pkg VARIANT=release-pentium4
+      make pkg VARIANT=release-prescott
+
+- make final
+  This target is done on what is called the hub host, which is one of the
+  build hosts, and also must be capable of building docs (make doc).
+
+  The environment vars { FINAL_LINUX, FINAL_OSX, FINAL_WINDOWS } must be set
+  as a prefix for use with rsync command which copies files from the build
+  output of each respective platform.
+
+  phase 1. on each platform, 'make release'
+  phase 2. on the hub host, 'make final'
+
+  Example:
+  [LINUX]
+  make VARIANT=release clean
+  make release
+
+  [OSX]
+  make VARIANT=release clean
+  make release
+
+  [WINDOWS]
+  make VARIANT=release clean
+  make release
+
+  [HUB-HOST] (assuming linux is hub host)
+  setenv FINAL_LINUX   PATH/build-release
+  setenv FINAL_OSX     osx-hostname:PATH/build-release
+  setenv FINAL_WINDOWS windows-hostname:PATH/build-release
+  make clean
+  make final
+
+--------------------------------------------------------------------------------
+- EXAMPLE infrequent options, specific to platform/compiler.
+
+1. Build once with a new version of gcc that is installed in a seperate
+   directory on linux, without editing any makefiles. Override the main GCC/
+   variable defined in platform/linux which indicates the base tree for gcc.
+
+   make clean
+   make GCC/=/opt/gcc-4.1.2/
+
+2. Build once with different compiler optimization flags. Look at platform/linux
+   and see variable CXX.opt.O which defines the flags used for an optimized build.
+   You will see something like: CXX.opt.O = -O3 .
+   We instead desire -Os .
+
+   make clean
+   make VARIANT=release CXX.opt.O=-Os
+
+3. Build once DISABLING warning flags. This flag is set to "1" in platform/linux .
+   So blank it out (0 does not work!) and the contents of CXX.opt.W will not be used.
+   Also we'll add some custom (bogus) defines, some simple defines, some defines
+   with numeric or string constants:
+
+   make clean
+   make CXX.W= 'CXX.D=__CUSTOMDEBUG __ENABLE_SPECIAL __MY_VAL=5 __MYVAL="foo"'
+
+4. Build once CHANGING warning flags to actually mean surpress all warnings:
+
+   make clean
+   make CXX.opt.W=-w

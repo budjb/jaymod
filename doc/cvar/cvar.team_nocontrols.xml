@@ -1,0 +1,38 @@
+<refentry id="cvar.team_nocontrols">
+
+<refmeta>
+    <refentrytitle>team_nocontrols</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>team_nocontrols</refname>
+    <refpurpose>enable/disable arbitrary control of teams</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>team_nocontrols</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>team_nocontrols</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>team_nocontrols</command> controls whether any player on a team can lock, unlock, or speclock their team.
+	Given that for normal play you usually do not want any player on a team to be able to lock a team, it is recommended
+	that you leave this enabled.
+</para>
+</refsection>
+
+</refentry>

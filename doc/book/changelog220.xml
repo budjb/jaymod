@@ -1,0 +1,20 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    covert ops can no longer start with a Thompson or MP40.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Fixed:</emphasis>
+    problems with display caused by widescreen support on 5:4 displays.  Those resolutions will now maintain the standard 4:3 aspect ratio.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    extended ASCII character exploit prevention.
+</simpara>
+</listitem>

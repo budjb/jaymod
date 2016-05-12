@@ -1,0 +1,68 @@
+<appendix id="credits">
+<title>Thanks and Credits</title>
+
+<simplesect id="credits.main">
+<blockquote>
+    <attribution>&jaybird:name;</attribution>
+    <para>
+        First and foremost, the most humble and sincere thanks go to everyone at
+        <emphasis role="bold">&clanfu:name;</emphasis>
+        for their help and participation in the development and testing of this mod.
+        Without their generous support, this mod would not be in existence.
+    </para>
+    <para>
+        My utmost, sincere thanks and appreciation go to
+        <emphasis role="bold">&zinx:name;</emphasis>,
+        <emphasis role="bold">Bani</emphasis>, and
+        <emphasis role="bold">Forty</emphasis>
+        for their contributions.
+    </para>
+    <para>
+        Many, many thanks to
+        <emphasis role="bold">&mxyzptlk:name;</emphasis>
+        for his cross-platform build/release system, C++ conversion,
+        generated document system and continued work on the mod.
+    </para>
+    <para>
+        Thanks to
+        <emphasis role="bold">Meyerinchains</emphasis>
+        for his contribution of the M97 model and animations.
+    </para>
+    <para>
+        Thanks to
+        <emphasis role="bold">Jeremy “Dr. Evil” Swigart</emphasis>
+        and the magic of the
+        <emphasis role="bold">&omni:name;</emphasis>
+        team for their continued help with the implementation and debugging
+        support of &omni:name; in &project:name;.
+    </para>
+    <para>
+        Thanks at
+        <emphasis role="bold">Lazyphreak</emphasis>
+        at the &project:name; forums for taking the time to get all the original Shrub flags.
+    </para>
+    <para>
+        Thanks to
+        <emphasis role="bold">&etpub:name;</emphasis>
+        for the contribution to the &et:name:abbr; community in general.
+        &project:name; incorporates modified bits of code from their project.
+    </para>
+    <para>
+        There are several server admins that frequent the &project:name; forums assisting those that require it
+        without hesitation or commission. They simply choose to contribute, and for that I thank all of you and
+        hope you will continue what you do.
+    </para>
+    <para>
+        Thanks to
+        <emphasis role="bold">&sd:name:tm;</emphasis>
+        for taking the time to develop and release an incredible free
+        <emphasis role="bold">&idsoftware:name:tm;</emphasis>
+        based game.
+        They have made a good many fan because of their generosity and dedication to the gaming community.
+        Thanks to the &sd:name;
+        <emphasis role="bold">forums community</emphasis>
+        for the help they provide to everyone wanting to mod for &et:name:abbr;.
+    </para>
+</blockquote>
+</simplesect>
+</appendix>

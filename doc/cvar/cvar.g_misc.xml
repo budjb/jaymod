@@ -1,0 +1,76 @@
+<refentry id="cvar.g_misc">
+
+<refmeta>
+    <refentrytitle>g_misc</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_misc</refname>
+    <refpurpose>set various bitflags</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_misc</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_misc.flags" frame="all">
+<title>g_misc Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="91*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>players can double-jump</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>binoc-war - enables binocular pickup stats</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>only admins (admin level 1 or higher) can connect to server</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>players can throw health/ammo packs vertically</entry>
+        </row>
+        <row>
+            <entry>32</entry>
+            <entry>level-4 battle-sense revivees get full health</entry>
+        </row>
+        <row>
+            <entry>64</entry>
+            <entry>more realistic weapons aim-spread, factoring player crouch/prone, slick-surfaces and water</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_misc</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_misc</command>
+    sets various bitflags for miscellaneous game options.
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,41 @@
+MODULE.LUA.srcs = \
+	$(PROJECT/)src/lua/lapi.c \
+	$(PROJECT/)src/lua/lcode.c \
+	$(PROJECT/)src/lua/ldebug.c \
+	$(PROJECT/)src/lua/ldo.c \
+	$(PROJECT/)src/lua/ldump.c \
+	$(PROJECT/)src/lua/lfunc.c \
+	$(PROJECT/)src/lua/lgc.c \
+	$(PROJECT/)src/lua/llex.c \
+	$(PROJECT/)src/lua/lmem.c \
+	$(PROJECT/)src/lua/lobject.c \
+	$(PROJECT/)src/lua/lopcodes.c \
+	$(PROJECT/)src/lua/lparser.c \
+	$(PROJECT/)src/lua/lstate.c \
+	$(PROJECT/)src/lua/lstring.c \
+	$(PROJECT/)src/lua/ltable.c \
+	$(PROJECT/)src/lua/ltm.c \
+	$(PROJECT/)src/lua/lundump.c \
+	$(PROJECT/)src/lua/lvm.c \
+	$(PROJECT/)src/lua/lzio.c \
+	$(PROJECT/)src/lua/lauxlib.c \
+	$(PROJECT/)src/lua/lbaselib.c \
+	$(PROJECT/)src/lua/ldblib.c \
+	$(PROJECT/)src/lua/liolib.c \
+	$(PROJECT/)src/lua/lmathlib.c \
+	$(PROJECT/)src/lua/loslib.c \
+	$(PROJECT/)src/lua/ltablib.c \
+	$(PROJECT/)src/lua/lstrlib.c \
+	$(PROJECT/)src/lua/loadlib.c \
+	$(PROJECT/)src/lua/linit.c
+
+MODULE.LUA.objs    = $(MODULE.LUA.srcs:$(PROJECT/)src/%.c=$(BUILD/)%.o)
+MODULE.LUA.a       = $(BUILD/)lua/liblua$(STATICLIB.suffix)
+#MODULE.LUA.CXX.D += LUA_USE_LINUX
+MODULE.LUA.CXX.vis = 0
+MODULE.LUA.pdb     = $(BUILD/)lua/
+
+###############################################################################
+
+BUILD.output += $(MODULE.LUA.objs)
+BUILD.output += $(MODULE.LUA.a)

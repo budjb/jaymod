@@ -1,0 +1,37 @@
+<refentry id="cvar.match_warmupDamage">
+
+<refmeta>
+    <refentrytitle>match_warmupDamage</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_warmupDamage</refname>
+    <refpurpose>enable/disable damage during warmup</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_warmupDamage</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_warmupDamage</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_warmupDamage</command>
+    enables or disables damage during warmup period.
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,183 @@
+GCC/ = /usr/
+
+###############################################################################
+
+IDMODULE.suffix = .mp.i386.so
+STATICLIB.suffix   = .a
+
+###############################################################################
+
+DYNLOAD.l  = dl
+MATH.l     = m
+IPHLPAPI.l =
+ADVAPI.l   =
+
+###############################################################################
+
+M4  = m4
+TAR = tar
+AR  = /usr/bin/ar
+
+###############################################################################
+
+CXX = $(GCC/)bin/g++
+
+CXX.pch.ext  = gch
+CXX.pch.arch = default
+
+CXX.opt.D = $(call fnPrefix,-D,$(CXX.D) $($(CXX.inherit).CXX.D))
+CXX.opt.I = $(call fnPrefix,-I,$($(CXX.inherit).CXX.I<) $(CXX.I) $($(CXX.inherit).CXX.I))
+CXX.opt.L = $(call fnPrefix,-L,$(CXX.L) $($(CXX.inherit).CXX.L))
+CXX.opt.R = $(call fnPrefix,-Xlinker -R,$(CXX.R) $($(CXX.inherit).CXX.R))
+CXX.opt.U = $(call fnPrefix,-U,$(CXX.U) $($(CXX.inherit).CXX.U))
+CXX.opt.l = $(call fnPrefix,-l,$(CXX.l) $($(CXX.inherit).CXX.l))
+
+CXX.opt.BIT    = -m32
+CXX.opt.ML     = -fmessage-length=0
+CXX.opt.NSA    = -fno-strict-aliasing
+CXX.opt.O      = -O3 -march=i686 -ffast-math
+CXX.opt.PIC    = -fPIC
+CXX.opt.W      = -Wall -Winvalid-pch -Wno-write-strings
+CXX.opt.g      = -g
+CXX.opt.pipe   = -pipe
+CXX.opt.p      = -p
+CXX.opt.static = -static-libgcc
+CXX.opt.std    = -fno-exceptions -fno-rtti
+CXX.opt.vis    = -fvisibility=hidden
+
+CXX.ldopts.exe =
+CXX.ldopts.so  = -shared -Wl,-z,defs -Wl,-z,relro -Wl,-z,now -Wl,-Bsymbolic
+
+###############################################################################
+
+CXX.D =
+CXX.I = $(BUILD/) $(PROJECT/)src $(PROJECT/)pak
+CXX.L = $(BUILD/)
+CXX.R =
+CXX.U =
+CXX.l =
+
+CXX.BIT    = 1
+CXX.ML     = 1
+CXX.NSA    = 1
+CXX.O      =
+CXX.PIC    = 1
+CXX.W      = 1
+CXX.g      =
+CXX.pipe   = 1
+CXX.p      =
+CXX.static =
+CXX.std    = 1
+CXX.vis    = 1
+
+###############################################################################
+
+CXX.fnStrip =
+
+###############################################################################
+
+CXX.fnCompile = $(call print.COMMAND.normal,$(CXX),$(2),$(strip \
+	$(CXX) \
+    $(foreach i,pipe W ML BIT std NSA vis PIC O g p,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	-c $(1) -o $(2) \
+	))
+
+CXX.fnCompilePch = $(CXX.fnCompile)
+
+###############################################################################
+
+CXX.fnPrecompile = $(call print.COMMAND.magenta,$(CXX),$(2),$(strip \
+	$(CXX) \
+    $(foreach i,pipe W ML BIT std NSA vis PIC O g p,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	-c $(1) -o $(2) \
+	))
+
+###############################################################################
+
+CXX.libstdcxx.DEPS =
+CXX.libstdcxx.link = -static-libgcc
+
+BUILD.output += $(CXX.libstdcxx.DEPS)
+
+###############################################################################
+
+CXX.fnCompileStatic = $(call print.STATIC,$(AR),$(1),$(2),$(AR) cq $(1) $(2))
+
+###############################################################################
+
+CXX.fnLinkExe = $(call print.LINK,$(CXX),$(1),$(3),$(4),$(strip \
+    $(CXX) \
+    $(foreach i,pipe W ML BIT std NSA vis PIC O g p static,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+    $(CXX.opt.D) \
+    $(CXX.opt.I) \
+    $(CXX.opt.U) \
+    $(CXX.fnLinkExe.<<) $($(CXX.inherit).CXX.fnLinkExe.<<) \
+    -o $(1) $(3) $(4) \
+    $(CXX.ldopts.exe) \
+    $(CXX.opt.R) \
+    $(CXX.opt.L) \
+    $(CXX.opt.l) \
+    $(CXX.fnLinkExe.>>) $($(CC.inherit).CC.fnLinkExe.>>) \
+    ))
+
+###############################################################################
+
+# Parameter list:
+# 1 - Output name
+# 2 - object list
+CXX.fnLinkSo = $(call print.LINK,$(CXX),$(1),$(2),$(strip \
+    $(CXX) \
+    $(foreach i,pipe W ML BIT std NSA vis PIC O g p static,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+    $(CXX.opt.D) \
+    $(CXX.opt.I) \
+    $(CXX.opt.U) \
+    $(CXX.fnLinkSo.<<) $($(CXX.inherit).CXX.fnLinkSo.<<) \
+    -o $(1) $(2) \
+    $(CXX.ldopts.so) \
+    $(CXX.opt.R) \
+    $(CXX.opt.L) \
+    $(CXX.opt.l) \
+    $(CXX.fnLinkSo.>>) $($(CC.inherit).CC.fnLinkSo.>>) \
+    ))
+
+###############################################################################
+
+SPECIALS.name  = linux
+SPECIALS.build = build
+SPECIALS.base  = $(PROJECT.packageBase)-$(SPECIALS.name)
+SPECIALS.base/ = $(BUILD/)$(SPECIALS.base)/
+
+specials::
+	$(MAKE) VARIANT=release-athlonXP
+	$(MAKE) VARIANT=release-athlon64
+	$(MAKE) VARIANT=release-amdfam10
+	$(MAKE) VARIANT=release-pentium4
+	$(MAKE) VARIANT=release-prescott
+	$(MAKE) VARIANT=release-core2
+	$(call fn.rm.fr,$(PKGSPECIAL.base/))
+	$(call fn.mkdir,$(SPECIALS.base/)athlonXP)
+	$(call fn.mkdir,$(SPECIALS.base/)athlon64)
+	$(call fn.mkdir,$(SPECIALS.base/)amdfam10)
+	$(call fn.mkdir,$(SPECIALS.base/)pentium4)
+	$(call fn.mkdir,$(SPECIALS.base/)prescott)
+	$(call fn.mkdir,$(SPECIALS.base/)core2)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-athlonXP/%),$(SPECIALS.base/)athlonXP/.)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-athlon64/%),$(SPECIALS.base/)athlon64/.)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-amdfam10/%),$(SPECIALS.base/)amdfam10/.)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-pentium4/%),$(SPECIALS.base/)pentium4/.)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-prescott/%),$(SPECIALS.base/)prescott/.)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-core2/%),$(SPECIALS.base/)core2/.)
+	$(TAR) czf $(BUILD/)$(SPECIALS.base).tar.gz -C $(BUILD/) ./$(SPECIALS.base)
+
+world:: default debug release specials
+
+###############################################################################
+
+$(BUILD/)libstdc++.a:
+	$(call print.COMMAND.normal,cp,$@,cp `$(CXX) $(CXX.opt.BIT) --print-file-name $(notdir $@)` $@)

@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_RESET_H
+#define GAME_CMD_RESET_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Reset : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Reset();
+    ~Reset();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_RESET_H

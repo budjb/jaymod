@@ -1,0 +1,40 @@
+<refentry id="cvar.g_campaignFile">
+
+<refmeta>
+    <refentrytitle>g_campaignFile</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_campaignFile</refname>
+    <refpurpose>set campaign filename</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_campaignFile</command>
+        <arg><replaceable>filename</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_campaignFile</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_campaignFile</command>
+    sets the explicit campaign filename to use.
+    Usually &et:name:abbr; will force a client to download any file on the server
+    (either in the mod directory or etmain) which contains a <filename>.campaign</filename> file.
+    If you want to change this behavior, you can <replaceable>filename</replaceable> to the specific campaign
+    desired. Note that you must set this to the file's name, not the pk3's name.
+</para>
+</refsection>
+
+</refentry>

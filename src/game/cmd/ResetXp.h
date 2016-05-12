@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_RESETXP_H
+#define GAME_CMD_RESETXP_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class ResetXp : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    ResetXp();
+    ~ResetXp();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_RESETXP_H

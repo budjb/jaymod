@@ -1,0 +1,37 @@
+<refentry id="cvar.g_landminetimeout">
+
+<refmeta>
+    <refentrytitle>g_landminetimeout</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_landminetimeout</refname>
+    <refpurpose>enable/disable landmine cleanup upon owner disconnect</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_landminetimeout</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_landminetimeout</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_landminetimeout</command>
+    enables or disables landmine cleanup when the player who planted them disconnects from server.
+</para>
+</refsection>
+
+</refentry>

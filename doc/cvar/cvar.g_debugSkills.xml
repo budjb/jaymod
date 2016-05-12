@@ -1,0 +1,39 @@
+<refentry id="cvar.g_debugSkills">
+
+<refmeta>
+    <refentrytitle>g_debugSkills</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_debugSkills</refname>
+    <refpurpose>enables debugging of the skills system</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_debugSkills</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_debugSkills</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_debugSkills</command>
+    enables debugging of the skills system.  This cvar should only be used by developers.
+	Setting <replaceable>num</replaceable> to <literal>0</literal> disables debugging,
+    <literal>1</literal> enables debug output to console,
+	and <literal>2</literal> also logs debug to disk.
+</para>
+</refsection>
+
+</refentry>

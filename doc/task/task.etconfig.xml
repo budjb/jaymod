@@ -1,0 +1,11 @@
+<para>
+    Remove any existing etconfig.cfg files (don't worry, these files are automatically
+    written by &et:name:abbr; everytime a game ends and just keep a copy of the last
+    known settings for certain CVARs).
+</para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; rm etmain/etconfig.cfg
+&bash.prompt.et; rm jaymod/etconfig.cfg
+&bash.prompt.et; rm .etwolf/etmain/etconfig.cfg
+&bash.prompt.et; rm .etwolf/jaymod/etconfig.cfg
+</screen>

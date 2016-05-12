@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_disableComplaints">
+  <refmeta>
+    <refentrytitle>g_disableComplaints</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_disableComplaints</refname>
+
+    <refpurpose>désactive les plaintes pour <emphasis>action ayant causée la
+    mort d'un coéquipier </emphasis> de certaines armes</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_disableComplaints</command>
+
+      <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+    <table frame="all" id="cvar.g_disableComplaints.flags">
+      <?dbfo table-width="80%"?>
+
+      <title>g_disableComplaints Flags</title>
+
+      <tgroup align="left" cols="2" colsep="1" rowsep="1">
+        <colspec align="center" colnum="1" colwidth="9*" />
+
+        <colspec colnum="2" colwidth="71*" />
+
+        <thead>
+          <row>
+            <entry>FLAG</entry>
+
+            <entry>DESCRIPTION</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>1</entry>
+
+            <entry>plainte pour mine ayant causée la mort d'un coéquipier
+            désactivée</entry>
+          </row>
+
+          <row>
+            <entry>2</entry>
+
+            <entry>plainte pour tir d'artillerie/bombardement ayant causée la
+            mort d'un coéquipier désactivée</entry>
+          </row>
+
+          <row>
+            <entry>4</entry>
+
+            <entry>plainte pour tir de mortier ayant causée la mort d'un
+            coéquipier désactivée</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_disableComplaints</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_disableComplaints</command> désactive les plaintes pour
+    <emphasis>action ayant causée la mort d'un coéquipier</emphasis> de
+    certaines armes.</para>
+  </refsection>
+</refentry>

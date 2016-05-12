@@ -1,0 +1,36 @@
+<refentry id="cvar.g_dynamiteTime">
+
+<refmeta>
+    <refentrytitle>g_dynamiteTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_dynamiteTime</refname>
+    <refpurpose>sets the timer for dynamite in seconds</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_dynamiteTime</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_dynamiteTime</command>
+        <arg choice="plain"><literal>30</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_dynamiteTime</command>
+    sets the timer for dynamite in seconds.
+</para>
+</refsection>
+
+</refentry>

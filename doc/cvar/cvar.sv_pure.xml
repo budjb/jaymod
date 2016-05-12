@@ -1,0 +1,39 @@
+<refentry id="cvar.sv_pure">
+
+<refmeta>
+    <refentrytitle>sv_pure</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_pure</refname>
+    <refpurpose>enable/disable client purity check</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_pure</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_pure</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_pure</command>
+    enables or disables client file purity checks.
+    When enabled the server will drop clients with files (pk3) which have mismatching checksums
+    (digital signatures).
+</para>
+</refsection>
+
+</refentry>

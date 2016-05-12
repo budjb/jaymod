@@ -1,0 +1,45 @@
+<refentry id="cvar.g_bannerTime">
+
+<refmeta>
+    <refentrytitle>g_bannerTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_bannerTime</refname>
+    <refpurpose>set the duration of display for each banner</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_bannerTime</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_bannerTime</command>
+        <arg choice="plain"><literal>5</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_bannerTime</command>
+    sets the <replaceable>duration</replaceable> of display for each banner in seconds.
+    The minimum value for this cvar is <literal>5</literal> seconds.  If set
+	less than that, it will default to this time.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_banners"/>,
+    <xref linkend="cvar.g_bannerLocation"/>
+</para>
+</refsection>
+</refentry>

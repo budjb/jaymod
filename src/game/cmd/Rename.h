@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_RENAME_H
+#define GAME_CMD_RENAME_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Rename : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Rename();
+    ~Rename();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_RENAME_H

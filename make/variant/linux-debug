@@ -1,0 +1,2 @@
+CXX.D += _DEBUG
+CXX.g = 1

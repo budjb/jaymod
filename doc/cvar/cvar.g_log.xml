@@ -1,0 +1,46 @@
+<refentry id="cvar.g_log">
+
+<refmeta>
+    <refentrytitle>g_log</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_log</refname>
+    <refpurpose>set game log output file</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_log</command>
+        <arg><replaceable>"file"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_log</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_log</command>
+    sets the game log output file.
+    This file contains time-stamped information from the game.
+    A value of <literal>""</literal> will disable this functionality.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_logOptions"/>,
+    <xref linkend="cvar.g_logSync"/>,
+    <xref linkend="cvar.g_adminLog"/>
+</para>
+</refsection>
+</refentry>

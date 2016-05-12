@@ -1,0 +1,44 @@
+<refentry id="cvar.g_reflectFriendlyFire">
+
+<refmeta>
+    <refentrytitle>g_reflectFriendlyFire</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_reflectFriendlyFire</refname>
+    <refpurpose>sets the percentage of friendly fire to reflect to the attacker</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_reflectFriendlyFire</command>
+        <arg><replaceable>percent</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_reflectFriendlyFire</command>
+        <arg choice="plain"><literal>100</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_reflectFriendlyFire</command>
+    sets the percentage of friendly fire to reflect to the attacker.  This only works if reflected
+	friendly fire damage is enabled.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_friendlyFire"/>
+</para>
+</refsection>
+
+</refentry>

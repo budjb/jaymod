@@ -1,0 +1,2 @@
+CXX.opt.mt = /MTd
+CXX.D += _DEBUG

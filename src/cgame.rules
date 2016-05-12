@@ -1,0 +1,18 @@
+all:: MODULE.CGAME.build
+
+MODULE.CGAME.build: CXX.inherit=MODULE.CGAME
+MODULE.CGAME.build: $(MODULE.CGAME.so)
+
+$(MODULE.CGAME.pchs): $(MODULE.BASE.pchs)
+$(MODULE.CGAME.pchs): $(BUILD/)cgame/bgame/impl.h.$(CXX.pch.ext)/%: $(PROJECT/)src/bgame/impl.h
+	$(call CXX.fnPrecompile,$<,$@,$*)
+
+$(MODULE.CGAME.objs.pch): $(MODULE.CGAME.pchs)
+$(MODULE.CGAME.objs.pch): $(BUILD/)cgame/%.o: $(PROJECT/)src/%.cpp
+	$(call CXX.fnCompilePch,$<,$@,bgame/impl.h,$(MODULE.CGAME.pchs))
+
+$(MODULE.CGAME.so): $(CXX.libstdcxx.DEPS)
+$(MODULE.CGAME.so): $(MODULE.CGAME.objs.pch) $(MODULE.LUA.a) $(MODULE.BASE.a)
+	$(call CXX.fnLinkSo,$@,$^)
+	$(call CXX.fnStrip,$@)
+	$(OSX.bundle)

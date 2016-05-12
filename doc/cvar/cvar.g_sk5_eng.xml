@@ -1,0 +1,81 @@
+<refentry id="cvar.g_sk5_eng">
+
+<refmeta>
+    <refentrytitle>g_sk5_eng</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_sk5_eng</refname>
+    <refpurpose>set bitflags for 5th-level &engineer; skill</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_sk5_eng</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_sk5_eng.flags" frame="all">
+<?dbfo table-width="50%"?>
+<title>g_sk5_eng Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="41*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>consume less charge</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>more grenades</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>landmines take longer to spot</entry>
+        </row>
+        <row>
+            <entry>8</entry>
+            <entry>landmines take longer to defuse</entry>
+        </row>
+        <row>
+            <entry>16</entry>
+            <entry>increased construction speed</entry>
+        </row>
+        <row>
+            <entry>32</entry>
+            <entry>enable S-mines</entry>
+        </row>
+        <row>
+            <entry>64</entry>
+            <entry>enable poison-gas mines</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_sk5_eng</command>
+        <arg choice="plain"><literal>127</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_sk5_eng</command>
+    set bitflags for 5th-level &engineer; skill.
+</para>
+</refsection>
+
+</refentry>

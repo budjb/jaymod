@@ -1,0 +1,47 @@
+<refentry id="cvar.sv_wwwFallbackURL">
+
+<refmeta>
+    <refentrytitle>sv_wwwFallbackURL</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_wwwFallbackURL</refname>
+    <refpurpose>set URL for failed WWW downloads</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_wwwFallbackURL</command>
+        <arg><replaceable>"URL"</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_wwwFallbackURL</command>
+        <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_wwwFallbackURL</command>
+    sets the URL for failed WWW downloads.
+    Clients will attempt to open the page specified by <replaceable>URL</replaceable> upon failing a download.
+    If an empty <literal>""</literal> is specified and the download fails, then the client will fallback
+    to the standard download mechanism controlled via <xref linkend="cvar.sv_allowDownload"/>.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_wwwBaseURL"/>,
+    <xref linkend="cvar.sv_wwwDlDisconnected"/>,
+    <xref linkend="cvar.sv_wwwDownload"/>
+</para>
+</refsection>
+</refentry>

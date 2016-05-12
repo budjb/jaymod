@@ -1,0 +1,56 @@
+<refentry id="cvar.g_lms_roundlimit">
+
+<refmeta>
+    <refentrytitle>g_lms_roundlimit</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_lms_roundlimit</refname>
+    <refpurpose>set maximum number of rounds to play before match ends</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_lms_roundlimit</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_lms_roundlimit</command>
+        <arg choice="plain"><literal>3</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_lms_roundlimit</command>
+    sets the maximum number of rounds for a single matchup between teams.
+    A team is considered to win a match when more than 50% of <replaceable>num</replaceable> rounds are won.
+</para>
+<para>
+    <important>
+        The value of <replaceable>num</replaceable> should always be an odd number.
+    </important>
+    <note>
+        This value is in effect only when LMS gametype is enabled using <xref linkend="cvar.g_gametype"/>.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_lms_followTeamOnly"/>,
+    <xref linkend="cvar.g_lms_lockTeams"/>,
+    <xref linkend="cvar.g_lms_matchlimit"/>,
+    <xref linkend="cvar.g_lms_teamForceBalance"/>,
+    <xref linkend="cvar.g_gametype"/>
+</para>
+</refsection>
+
+</refentry>

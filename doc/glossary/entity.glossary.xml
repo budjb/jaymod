@@ -1,0 +1,49 @@
+<!ENTITY et:name      "Wolfenstein: Enemy Territory">
+<!ENTITY et:name:abbr "ET">
+<!ENTITY et:name:tm   "<trademark class='registered'>&et:name;</trademark>">
+<!ENTITY et:sdk       "ET SDK">
+
+<!-- ##################################################################### -->
+
+<!ENTITY etpro:name "ETPro">
+<!ENTITY etpub:name "ETPub">
+<!ENTITY shrub:name "Shrubmod">
+<!ENTITY punkbuster:name "Punkbuster">
+
+<!ENTITY rtcw:name      "Return to Castle Wolfenstein">
+<!ENTITY rtcw:name:abbr "RTCW">
+
+<!ENTITY omni:name  "Omni-bot">
+<!ENTITY omni:namev "Omni-bot 0.81">
+
+<!-- ##################################################################### -->
+
+<!ENTITY idsoftware:name    "id Software">
+<!ENTITY idsoftware:name:tm "<trademark class='registered'>&idsoftware:name;</trademark>">
+
+<!ENTITY sd:name    "SplashDamage">
+<!ENTITY sd:name:tm "<trademark class='registered'>&sd:name;</trademark>">
+
+<!-- ##################################################################### -->
+
+<!ENTITY linux:name    "Linux">
+<!ENTITY linux:name:tm "<trademark class='registered'>&linux:name;</trademark>">
+
+<!ENTITY osx:name    "OSX">
+<!ENTITY osx:name:tm "<trademark class='registered'>&osx:name;</trademark>">
+
+<!ENTITY windows:name    "Windows">
+<!ENTITY windows:name:tm "<trademark class='registered'>&windows:name;</trademark>">
+
+<!-- ##################################################################### -->
+
+<!ENTITY covertops "Covert-Ops">
+<!ENTITY engineer  "Engineer">
+<!ENTITY fieldops  "Field-Ops">
+<!ENTITY medic     "Medic">
+<!ENTITY soldier   "Soldier">
+
+<!-- ##################################################################### -->
+
+<!ENTITY perl:name "Perl">
+<!ENTITY perl:cmd  "<command>perl</command>">

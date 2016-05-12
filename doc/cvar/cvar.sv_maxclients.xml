@@ -1,0 +1,43 @@
+<refentry id="cvar.sv_maxclients">
+
+<refmeta>
+    <refentrytitle>sv_maxclients</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_maxclients</refname>
+    <refpurpose>set maximum number of connected clients</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_maxclients</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_maxclients</command>
+        <arg choice="plain"><literal>20</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_maxclients</command>
+    sets the maximum number of connected clients.
+    Clients exceeding <replaceable>num</replaceable> will typically get a server-full message.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_fullmsg"/>
+</para>
+</refsection>
+</refentry>

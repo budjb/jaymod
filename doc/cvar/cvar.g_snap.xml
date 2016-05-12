@@ -1,0 +1,73 @@
+<refentry id="cvar.g_snap">
+
+<refmeta>
+    <refentrytitle>g_snap</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_snap</refname>
+    <refpurpose>set bitflags for server floating point value snapping</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_snap</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_snap.flags" frame="all">
+<?dbfo table-width="80%"?>
+<title>g_snap Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="71*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>round player state at end of frame</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>round player state during client-think</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>round player state during client smoothing extrapolation</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_snap</command>
+        <arg choice="plain"><literal>7</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_snap</command>
+    sets bitflags for server floating point value snapping.
+    Generally you do not need to touch this setting but under certain circumstances, the tweaking
+    of this value can help conserve network bandwidth at the cost of sub-inch, and sub-degree
+    accuracy of certain pieces of information transmitted to clients.
+</para>
+<para>
+    <caution>
+        These are expert settings and should not be tweaked without guidance from &project:name; developers.
+    </caution>
+</para>
+</refsection>
+
+</refentry>

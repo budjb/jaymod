@@ -1,0 +1,36 @@
+<refentry id="cvar.g_spawnInvul">
+
+<refmeta>
+    <refentrytitle>g_spawnInvul</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_spawnInvul</refname>
+    <refpurpose>sets spawn invulnerability period for players</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_spawnInvul</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_spawnInvul</command>
+        <arg choice="plain"><literal>3</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_spawnInvul</command>
+    sets the invulnerability period in seconds for newly spawned players.
+</para>
+</refsection>
+
+</refentry>

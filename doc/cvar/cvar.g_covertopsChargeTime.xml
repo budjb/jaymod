@@ -1,0 +1,36 @@
+<refentry id="cvar.g_covertopsChargeTime">
+
+<refmeta>
+    <refentrytitle>g_covertopsChargeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_covertopsChargeTime</refname>
+    <refpurpose>set amount of time for &covertops; to recharge</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_covertopsChargeTime</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_covertopsChargeTime</command>
+        <arg choice="plain"><literal>30000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_covertopsChargeTime</command>
+    sets the amount of time in milliseconds it takes for &covertops; to recharge.
+</para>
+</refsection>
+
+</refentry>

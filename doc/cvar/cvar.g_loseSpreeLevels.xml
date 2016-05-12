@@ -1,0 +1,49 @@
+<refentry id="cvar.g_loseSpreeLevels">
+
+<refmeta>
+    <refentrytitle>g_loseSpreeLevels</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_loseSpreeLevels</refname>
+    <refpurpose>set losing spree XP milestones</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_loseSpreeLevels</command>
+        "<arg><replaceable>level1</replaceable></arg>
+        <arg><replaceable>level2</replaceable></arg>
+        <arg><replaceable>level3</replaceable></arg>
+        <arg><replaceable>level4</replaceable></arg>
+        <arg><replaceable>level5</replaceable></arg>
+        <arg><replaceable>level6</replaceable></arg>"
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_loseSpreeLevels</command>
+        <arg choice="plain"><literal>"10 20 30 0 0 0"</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_loseSpreeLevels</command>
+    sets the XP milestones at which losing spree levels are triggered.
+    The number of levels if fixed at 6 and all levels must be specified or the setting will be ignored.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_killSpreeLevels"/>
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_GLOW_H
+#define GAME_CMD_GLOW_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Glow : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Glow();
+    ~Glow();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_GLOW_H

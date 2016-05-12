@@ -1,0 +1,36 @@
+<refentry id="cvar.match_timeoutcount">
+
+<refmeta>
+    <refentrytitle>match_timeoutcount</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_timeoutcount</refname>
+    <refpurpose>set maximum number of times non-referees can pause the match</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_timeoutcount</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_timeoutcount</command>
+        <arg choice="plain"><literal>3</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_timeoutcount</command>
+    sets the maximum number of times non-referees can pause the match.
+</para>
+</refsection>
+
+</refentry>

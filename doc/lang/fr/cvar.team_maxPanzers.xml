@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.team_maxPanzers">
+  <refmeta>
+    <refentrytitle>team_maxPanzers</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>team_maxPanzers</refname>
+
+    <refpurpose>détermine le maximum de bazooka par équipe</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>team_maxPanzers</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>team_maxPanzers</command>
+
+      <arg choice="plain"><literal>-1</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>team_maxPanzers</command> détermine le maximum de bazooka
+    qu'une équipe peut posséder simultanément. Une valeur de -1 pour
+    <replaceable>num</replaceable> établira un nombre illimité de bazookas.
+    Une valeur de 0 pour <replaceable>num</replaceable> retire l'arme de la
+    liste de choix, et <literal>1</literal> ou plus établit le maximum de
+    bazookas qu'une équipe peut posséder.</para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.team_maxArtillery" />, <xref
+    linkend="cvar.team_maxFlamers" />, <xref
+    linkend="cvar.team_maxGrenLaunchers" /> <xref
+    linkend="cvar.team_maxLandMines" />, <xref linkend="cvar.team_maxM97s" />,
+    <xref linkend="cvar.team_maxMG42s" /> <xref
+    linkend="cvar.team_maxMortars" />,</para>
+  </refsection>
+</refentry>

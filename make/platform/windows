@@ -1,0 +1,164 @@
+VC/         = $(SYSTEMDRIVE)\\Program\ Files\ \(x86\)\\Microsoft\ Visual\ Studio\ 9.0\\VC\\
+VC/lib/     = $(VC/)lib\\
+VC/include/ = $(VC/)include\\
+
+SDK/         = $(SYSTEMDRIVE)\\Program\ Files\\Microsoft\ SDKs\\Windows\\v6.0A\\
+SDK/lib/     = $(SDK/)lib\\
+SDK/include/ = $(SDK/)include\\
+
+###############################################################################
+
+IDMODULE.suffix = _mp_x86.dll
+STATICLIB.suffix   = .lib
+
+###############################################################################
+
+DYNLOAD.l  =
+MATH.l     =
+IPHLPAPI.l = iphlpapi
+ADVAPI.l   = advapi32
+
+###############################################################################
+
+M4  = m4
+TAR = tar
+LIB = $(VC/)bin/lib
+
+###############################################################################
+
+CXX = $(VC/)bin/cl
+
+CXX.pch.ext  = pch
+CXX.pch.arch = default
+
+CXX.opt.D = $(call fnPrefix,/D,$(CXX.D) $($(CXX.inherit).CXX.D))
+CXX.opt.I = $(call fnPrefix,/I,$($(CXX.inherit).CXX.I<) $(CXX.I) $($(CXX.inherit).CXX.I))
+CXX.opt.U = $(call fnPrefix,/U,$(CXX.U) $($(CXX.inherit).CXX.U))
+CXX.opt.L = $(call fnPrefix,/LIBPATH:,$(CXX.L) $($(CXX.inherit).CXX.L))
+CXX.opt.l = $(call fnSuffix,.lib,$(CXX.l) $($(CXX.inherit).CXX.l))
+
+CXX.opt.O    = /O2
+CXX.opt.W    = /Wall
+CXX.opt.base = /nologo /TP /Gd /GS- /EHsc
+CXX.opt.g    = /Zi /Fd"$(CXX.pdb)"
+CXX.opt.mt   = /MT
+CXX.opt.wd   = /wd4355 /wd4996
+
+###############################################################################
+
+CXX.D =
+CXX.I = &VC/include/ &SDK/include/ $(BUILD/) $(PROJECT/)src $(PROJECT/)pak
+CXX.U =
+CXX.L = &VC/lib/ &SDK/lib/
+CXX.l =
+
+CXX.O    =
+CXX.W    =
+CXX.base = 1
+CXX.g    = 1
+CXX.mt   = 1
+CXX.wd   = 1
+
+CXX.pdb = $($(CXX.inherit).pdb)
+
+###############################################################################
+
+LINK = $(VC/)bin/link
+
+LINK.opt.dyn  = /DYNAMICBASE
+LINK.opt.g    = /DEBUG /PDB:"$(CXX.pdb)"
+LINK.opt.ref  = /OPT:REF
+LINK.opt.base = /DLL /NOLOGO /MACHINE:X86 /SUBSYSTEM:WINDOWS
+
+LINK.g    = 1
+LINK.base = 1
+LINK.ref  =
+LINK.dyn  =
+
+###############################################################################
+
+CXX.fnCompile = $(call print.COMMAND.normal,$(CXX),$(2),$(strip \
+	$(CXX) \
+	$(foreach i,base W wd mt O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	/c $(1) \
+	/Fo$(2) \
+	))
+
+CXX.fnCompilePch = $(call print.COMMAND.normal,$(CXX),$(2),$(strip \
+	$(CXX) \
+	$(foreach i,base W wd mt O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	/c $(1) \
+	/Fo$(2) \
+	/Yu$(3) \
+	/Fp$(4) \
+	))
+
+###############################################################################
+
+CXX.fnPrecompile = $(call print.COMMAND.magenta,$(CXX),$(2),$(strip \
+	$(CXX) \
+	$(foreach i,base W wd mt O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+	$(CXX.opt.D) \
+	$(CXX.opt.I) \
+	$(CXX.opt.U) \
+	/c $(1) \
+	/Fo$(2).placebo \
+	/Yc \
+	/Fp$(2) \
+	))
+
+###############################################################################
+
+CXX.fnCompileStatic = $(call print.STATIC,$(LIB),$(1),$(2),$(LIB) /NOLOGO /OUT:$(1) $(2))
+
+###############################################################################
+
+CXX.fnLinkExe = $(call print.LINK,$(CXX),$(1),$(3),$(4),$(strip \
+    $(CXX) \
+    $(foreach i,base W wd mt O g,$(foreach j,$(CXX.$(i)),$(CXX.opt.$(i)))) \
+    $(CXX.opt.D) \
+    $(CXX.opt.I) \
+    $(CXX.opt.U) \
+    /Fe$(1) \
+    /Fo$(2) $(3) \
+    /link /MACHINE:X86 /SUBSYSTEM:CONSOLE \
+    $(4) \
+    $(CXX.opt.L) \
+    $(CXX.opt.l) \
+    ))
+
+###############################################################################
+
+CXX.fnLinkSo = $(call print.LINK,$(LINK),$(1),$(2),$(strip \
+	$(LINK) \
+	$(foreach i,base g ref dyn,$(foreach j,$(LINK.$(i)),$(LINK.opt.$(i)))) \
+	$(CXX.opt.L) \
+	/IMPLIB:$(dir $(1))$(notdir $(basename $(1))).lib \
+	/OUT:$(1) $(2) \
+	$(CXX.opt.l) \
+	))
+
+###############################################################################
+
+SPECIALS.name  = win32
+SPECIALS.build = build
+SPECIALS.base  = $(PROJECT.packageBase)-$(SPECIALS.name)
+SPECIALS.base/ = $(BUILD/)$(SPECIALS.base)/
+
+specials::
+	$(MAKE) pkg VARIANT=release-sse
+	$(MAKE) pkg VARIANT=release-sse2
+	$(call fn.rm.fr,$(PKGSPECIAL.base/))
+	$(call fn.mkdir,$(SPECIALS.base/)sse)
+	$(call fn.mkdir,$(SPECIALS.base/)sse2)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-sse/%),$(SPECIALS.base/)sse/.)
+	$(call fn.cp,$(MODULE.GAME.so:$(BUILD/)%=$(SPECIALS.build)-release-sse2/%),$(SPECIALS.base/)sse2/.)
+	$(TAR) czf $(BUILD/)$(SPECIALS.base).tar.gz -C $(BUILD/) ./$(SPECIALS.base)
+
+world:: default release specials

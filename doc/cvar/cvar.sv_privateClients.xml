@@ -1,0 +1,45 @@
+<refentry id="cvar.sv_privateClients">
+
+<refmeta>
+    <refentrytitle>sv_privateClients</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_privateClients</refname>
+    <refpurpose>set number of reserved client slots</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_privateClients</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_privateClients</command>
+        <arg choice="plain"><literal>4</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_privateClients</command>
+    sets the number of reserved client slots.
+    Reserved client slots require users to connect with private password set.
+    A value of <literal>0</literal> disables this functionality.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_privatePassword"/>,
+</para>
+</refsection>
+
+</refentry>

@@ -1,0 +1,43 @@
+<refentry id="cvar.g_watermarkFadeTime">
+
+<refmeta>
+    <refentrytitle>g_watermarkFadeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_watermarkFadeTime</refname>
+    <refpurpose>set amount of time to fade watermark</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_watermarkFadeTime</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_watermarkFadeTime</command>
+        <arg choice="plain"><literal>60</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_watermarkFadeTime</command>
+    sets the amount of time in seconds which it takes to fade a watermark.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_watermark"/>,
+    <xref linkend="cvar.g_watermarkFadeAfter"/>
+</para>
+</refsection>
+</refentry>

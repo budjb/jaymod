@@ -1,0 +1,47 @@
+<refentry id="cvar.g_dropHealth">
+
+<refmeta>
+    <refentrytitle>g_dropHealth</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_dropHealth</refname>
+    <refpurpose>enables heath pack drops on medic death</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_dropHealth</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_dropHealth</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_dropHealth</command>
+    enables health pack drops on medic death.  Setting <replaceable>num</replaceable> to <literal>0</literal>
+	disables the feature, while anything greater than <literal>0</literal> is the number of heath packs to drop
+	when a medic dies.
+</para>
+
+<caution>
+    Health pack drops are expensive. Each pack consumes a game-engine entity
+    which is limited and adds to network traffic load.  If you are not careful, high numbers
+    of medics in conjunction with this cvar set to a high number may lead to entity exhaustion.
+</caution>
+<tip>
+    Use <xref linkend="cmd.status"/> to monitor game entities.
+</tip>
+</refsection>
+
+</refentry>

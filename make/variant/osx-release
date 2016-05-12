@@ -1,0 +1,4 @@
+CXX.O = 1
+
+CXX.arch += ppc
+CXX.opt.std  += -faltivec -mcpu=G4

@@ -1,0 +1,38 @@
+<refentry id="cvar.sv_fps">
+
+<refmeta>
+    <refentrytitle>sv_fps</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_fps</refname>
+    <refpurpose>set server frequency</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_fps</command>
+        <arg><replaceable>frequency</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_fps</command>
+        <arg choice="plain"><literal>20</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_fps</command>
+    sets the server frequency in frames per second (fps).
+    The &et:name:abbr; SDK has some sections of code which assume <literal>20</literal> fps and at this
+    time it is not recommended this value be changed.
+</para>
+</refsection>
+
+</refentry>

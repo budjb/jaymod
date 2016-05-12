@@ -1,0 +1,44 @@
+<section id="install.preparing">
+<title>Preparing to Install</title>
+<para>
+    This section describes pre-install procedure.
+</para>
+
+<orderedlist>
+    <listitem>
+        &task.requirements;
+    </listitem>
+
+    <listitem>
+        &task.backup;
+    </listitem>
+
+    <listitem>
+    <para>
+        Create server account.
+        This server account requires no special privileges.
+        If you desire to run more than one game server on the same host, you can
+        use the same account for all of them, or create a unique account for each
+        instance. In all cases, each server must have it's own unique directory.
+    </para>
+<screen>&bash.prompt.root; adduser -s /bin/bash <emphasis role="bold">etserver</emphasis>
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Download and install &et:name;.
+        There are many mirrors across the internet offering &et:name:abbr; for download.
+        Look for the latest &linux:name; version of the game: 2.60 and the 2.60b patch.
+        The default directory locations are highly recommended.
+    </para>
+<screen>&bash.prompt.root; cd /tmp/
+&bash.prompt.root; sh et-linux-2.60.x86.run --nox11
+&bash.prompt.root; unzip ET-2.60b.zip
+&bash.prompt.root; cd "Enemy Territory 2.60b/"
+&bash.prompt.root; cp *.x86 /usr/local/games/enemy-territory/.
+</screen>
+    </listitem>
+</orderedlist>
+
+</section>

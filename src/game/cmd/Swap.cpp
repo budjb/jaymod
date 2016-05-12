@@ -1,0 +1,34 @@
+#include <bgame/impl.h>
+
+namespace cmd {
+
+///////////////////////////////////////////////////////////////////////////////
+
+Swap::Swap()
+    : AbstractBuiltin( "swap" )
+{
+    __usage << xvalue( "!" + _name );
+    __descr << "Put all Axis on Allies, and all Allies on Axis. Spectators stay Spectator.";
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+Swap::~Swap()
+{
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+AbstractCommand::PostAction
+Swap::doExecute( Context& txt )
+{
+    if (txt._args.size() > 1)
+        return PA_USAGE;
+
+    Svcmd_SwapTeams_f();
+    return PA_NONE;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+} // namespace cmd

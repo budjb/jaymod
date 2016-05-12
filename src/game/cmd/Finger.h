@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_FINGER_H
+#define GAME_CMD_FINGER_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Finger : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Finger();
+    ~Finger();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_FINGER_H

@@ -1,0 +1,48 @@
+<refentry id="cvar.g_xpSaveTimeout">
+
+<refmeta>
+    <refentrytitle>g_xpSaveTimeout</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_xpSaveTimeout</refname>
+    <refpurpose>set XP-save duration</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_xpSaveTimeout</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_xpSaveTimeout</command>
+        <arg choice="plain"><literal>1h</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_xpSaveTimeout</command>
+    sets the XP-save duration in seconds.
+    A value of <literal>0</literal> specifies XP-save will never timeout.
+</para>
+&syntax.duration;
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_xpCap"/>,
+    <xref linkend="cvar.g_xpMax"/>,
+    <xref linkend="cvar.g_xpSave"/>,
+    <xref linkend="xpsave"/>
+</para>
+</refsection>
+
+</refentry>

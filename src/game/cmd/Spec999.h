@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SPEC999_H
+#define GAME_CMD_SPEC999_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Spec999 : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Spec999();
+    ~Spec999();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SPEC999_H

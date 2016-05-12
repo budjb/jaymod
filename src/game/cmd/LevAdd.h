@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_ADDLEVEL_H
+#define GAME_CMD_ADDLEVEL_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class LevAdd : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    LevAdd();
+    ~LevAdd();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_ADDLEVEL_H

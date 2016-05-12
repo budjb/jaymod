@@ -1,0 +1,85 @@
+<section id="upgrade.shrubbot">
+<title>Shrubbot Conversion</title>
+
+<para>
+    This section is intended for server administrators migrating &project:name;
+    from pre-2.1.0 to &project:version;.
+    If you have already migrated or migration does not apply, you should skip this section.
+</para>
+
+<para>
+    As of &project:name; 2.1.0 the data files have changed and are not compatible
+    with older versions. In order to assist servers wanting to upgrade, we provide
+    a &perl:name; script which can convert most (not all) of the data from old
+    <command>shrubbot.cfg</command>
+    to the newer <filename>.db</filename> formats.
+</para>
+
+<para>
+    <note>
+        The conversion script is written in &perl:name;.
+        Most &linux:name;&osx:name; systems have this available and should be able to run the script.
+        &windows:name; systems typically do not have &perl:name; available.
+        You can either install &perl:name; yourself, or find someone else (maybe a friendly &linux:name;)
+        whom you can trust and have run the script for you.
+    </note>
+    <warning>
+        Upgrades are only supported from &project:name; 2.0.X to &project:title;.
+        Older versions may not convert as expected.
+    </warning>
+</para>
+
+<para>
+    Data from <filename>shrubbot.cfg</filename>
+    will be converted and placed into
+    <filename>user.db</filename> and <filename>level.db</filename>.
+    Other data found in <filename>.dat</filename> files is silently
+    <emphasis role="bold">ignored</emphasis>
+    and
+    <emphasis role="bold">not</emphasis> converted.
+</para>
+
+<para>
+    Admin, level and permanent-ban records are converted. Temporary-ban records are not converted.
+</para>
+
+<orderedlist>
+    <listitem>
+    <para>
+        Change to server's &project:name; directory as <command>convert_shrub</command>
+            expects to find <filename>shrubbot.cfg</filename> in the current directory.
+            Execute <command>convert_shrub</command>. The script usually has the correct file permissions
+            and can find &perl:cmd; by itself on recent &linux:name; systems, but for our example
+            we will explicitly run it from your shell path.
+        </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/jaymod/
+&bash.prompt.et; &perl:cmd; ~etserver/&project:packageBase;/linux/convert_shrub
+</screen>
+    </listitem>
+
+    <listitem>
+        <para>
+            Examine the newly created <filename>.db</filename> files.
+            The next time &project:name; server is launched it will read the files into memory.
+            Then shutdown the server and the full (scrubbed) data will be written which is cleaner,
+            and more rich than what <command>convert_shrub</command> can produce.
+        </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/jaymod/
+&bash.prompt.et; less level.db
+&bash.prompt.et; less user.db
+</screen>
+    </listitem>
+
+    <listitem>
+        <para>
+            Rename <filename>shrubbot.cfg</filename>. This file is no longer required but is recommended
+            to keep this file around if you want to compare the converted data.
+            We rename it to show the file is no longer in use.
+        </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/jaymod/
+&bash.prompt.et; mv shrubbot.cfg shrubbot.cfg.DISABLED
+</screen>
+    </listitem>
+</orderedlist>
+
+</section>

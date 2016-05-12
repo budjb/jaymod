@@ -1,0 +1,21 @@
+<para>
+    When enabled, the following is in effect:
+    <itemizedlist>
+        <listitem>players spawn as &soldier; with a panzerfaust, a knife and 100 grenades</listitem>
+      • <listitem>panzerfaust shoots faster</listitem>
+      • <listitem>soldier charge recharges faster</listitem>
+      • <listitem>soldier runs faster</listitem>
+      • <listitem>panzer ammo is not consumed (infinite shots)</listitem>
+      • <listitem>panzer damage is reduced to 33% of original amount</listitem>
+      • <listitem>panzer splash damage radius is 67% of its original amount</listitem>
+    </itemizedlist>
+</para>
+<para>
+    <note>
+        This is a fun game mode and as such, it may not be compatible with the objectives of most maps.
+    </note>
+    <warning>
+        This feature is mutually exclusive to <xref linkend="cvar.g_knifeonly"/>,
+        and <xref linkend="cvar.g_sniperWar"/>.
+    </warning>
+</para>

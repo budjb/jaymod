@@ -1,0 +1,36 @@
+<refentry id="cvar.g_ammoRechargeTime">
+
+<refmeta>
+    <refentrytitle>g_ammoRechargeTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_ammoRechargeTime</refname>
+    <refpurpose>set time interval between ammo-pack cabinet respawns</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_ammoRechargeTime</command>
+        <arg><replaceable>interval</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_ammoRechargeTime</command>
+        <arg choice="plain"><literal>60000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_ammoRechargeTime</command>
+    sets the time interval in milliseconds between ammo-pack cabinet respawns.
+</para>
+</refsection>
+
+</refentry>

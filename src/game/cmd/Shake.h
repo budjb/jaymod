@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SHAKE_H
+#define GAME_CMD_SHAKE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Shake : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Shake();
+    ~Shake();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SHAKE_H

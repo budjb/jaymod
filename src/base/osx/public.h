@@ -1,0 +1,13 @@
+#ifndef BASE_OSX_PUBLIC_H
+#define BASE_OSX_PUBLIC_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+#define LF_PUBLIC  __attribute__((visibility("default")))
+#define LF_PRIVATE __attribute__((visibility("hidden")))
+
+#define __MACOS__ 1
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // BASE_OSX_PUBLIC_H

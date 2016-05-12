@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SHUFFLE_H
+#define GAME_CMD_SHUFFLE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Shuffle : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Shuffle();
+    ~Shuffle();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SHUFFLE_H

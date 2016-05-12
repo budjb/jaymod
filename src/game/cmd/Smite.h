@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SMITE_H
+#define GAME_CMD_SMITE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Smite : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Smite();
+    ~Smite();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SMITE_H

@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SETLEVEL_H
+#define GAME_CMD_SETLEVEL_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class SetLevel : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    SetLevel();
+    ~SetLevel();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SETLEVEL_H

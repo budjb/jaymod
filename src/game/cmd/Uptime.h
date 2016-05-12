@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_UPTIME_H
+#define GAME_CMD_UPTIME_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Uptime : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Uptime();
+    ~Uptime();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_UPTIME_H

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_bannerLocation">
+  <refmeta>
+    <refentrytitle>g_bannerLocation</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_bannerLocation</refname>
+
+    <refpurpose>détermine l'emplacement d'une bannière à l'écran</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_bannerLocation</command>
+
+      <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+    <table frame="all" id="cvar.g_bannerLocation.modes">
+      <?dbfo table-width="40%"?>
+
+      <title>g_bannerLocation Modes</title>
+
+      <tgroup align="left" cols="2" colsep="1" rowsep="1">
+        <colspec align="center" colnum="1" colwidth="2*" />
+
+        <colspec colnum="2" colwidth="5*" />
+
+        <thead>
+          <row>
+            <entry>MODE</entry>
+
+            <entry>DESCRIPTION</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>0</entry>
+
+            <entry>dans le <emphasis>chat</emphasis></entry>
+          </row>
+
+          <row>
+            <entry>1</entry>
+
+            <entry>sur la gauche de l'écran</entry>
+          </row>
+
+          <row>
+            <entry>2</entry>
+
+            <entry>au centre de l'écran</entry>
+          </row>
+
+          <row>
+            <entry>3</entry>
+
+            <entry>uniquement dans la console </entry>
+          </row>
+
+          <row>
+            <entry>4</entry>
+
+            <entry>en haut au centre de l'écran</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_bannerLocation</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_bannerLocation</command> sets the location used to
+    display banners on client screens.</para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.g_banners" />, <xref
+    linkend="cvar.g_bannerTime" /></para>
+  </refsection>
+</refentry>

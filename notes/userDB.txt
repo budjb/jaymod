@@ -1,0 +1,51 @@
+##
+## GUID-IDENTITY (38+21+42+160+17+71 = 349)
+##
+guid      char[32]
+timestamp char[10]
+name      char[36]
+greeting  char[150]
+level     char[10]
+flags     char[64]
+
+##
+## XPSAVE (21+100+8+8 = 137)
+##
+timestamp  char[10]
+skillxp    char[...] xor+b64+cksum[ %10.2f %10.2f %10.2f %10.2f %10.2f %10.2f %10.2f ]
+muted      char[1]
+muted      char[1]
+
+##
+## LAST-SEEN (21 = 21)
+##
+timestamp char[10]
+
+##
+## [OPTIONAL IF BANNED]
+## GUID-BASED BANNING (who cares, assume 512 bytes)
+##
+banned       char[1] (must be set to 1 if BANNED, and following fields are expected)
+when         char[10]
+whens        char[32]
+ip           char[15]
+mac          char[17]
+reason       char[256]
+banner.guid  char[32]
+banner.name  char[36]
+
+READ SESSION
+  if (!FIRSTTIME_CONNECT || XP_IS_ALL_GOOD)
+     restorexp
+  else
+     resetxp
+
+WRITE SESSION
+  if (!RESTART)
+      update timestamp
+      update xp
+
+CLIENT DISCONNECT
+  update timestamp
+  if (!WARMUP)
+      update xp

@@ -1,0 +1,38 @@
+<refentry id="cvar.g_heavyWeaponRestriction">
+
+<refmeta>
+    <refentrytitle>g_heavyWeaponRestriction</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_heavyWeaponRestriction</refname>
+    <refpurpose>sets a limit of heavy weapons that can be used at once per team</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_heavyWeaponRestriction</command>
+        <arg><replaceable>percent</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_heavyWeaponRestriction</command>
+        <arg choice="plain"><literal>100</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_heavyWeaponRestriction</command>
+    sets a limit of heavy weapons that can be used at once per team based on the number of players on the team.
+	For each type of heavy weapon, a team can have only the specified percentage of the team's total players using
+	that weapon.
+</para>
+</refsection>
+
+</refentry>

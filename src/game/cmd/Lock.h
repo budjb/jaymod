@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_LOCK_H
+#define GAME_CMD_LOCK_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Lock : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Lock();
+    ~Lock();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_LOCK_H

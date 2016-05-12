@@ -1,0 +1,26 @@
+-include $(BUILD/)make/pkg.in.defs
+
+###############################################################################
+
+MODULE.PKG.stage/  = $(BUILD/)$(PROJECT.packageBase)/
+MODULE.PKG.out.bin = $(MODULE.PKG.in.bin:$(PROJECT/)pkg/%=$(MODULE.PKG.stage/)%)
+MODULE.PKG.out.m4  = $(MODULE.PKG.in.m4:$(PROJECT/)pkg/%.m4=$(MODULE.PKG.stage/)%)
+MODULE.PKG.pk3     = $(MODULE.PKG.stage/)$(PROJECT.pk3)
+MODULE.PKG.tar     = $(BUILD/)$(PROJECT.packageBase).tar.gz
+
+MODULE.PKG.final.pak/    = $(BUILD/)final/pak/
+MODULE.PKG.final.pkg/    = $(BUILD/)final/$(PROJECT.packageBase)/
+MODULE.PKG.final.tar     = $(BUILD/)final/$(PROJECT.packageBase).tar.gz
+MODULE.PKG.final.doc.pdf = $(BUILD/)final/$(PROJECT.packageBase)/doc/$(PROJECT.namef).pdf
+
+###############################################################################
+
+BUILD.output += $(MODULE.PKG.out.bin)
+BUILD.output += $(MODULE.PKG.out.m4)
+BUILD.output += $(MODULE.PKG.out.pk3)
+BUILD.output += $(MODULE.PKG.out.tar)
+BUILD.output += $(MODULE.PKG.doc.pdf)
+
+BUILD.output += $(MODULE.PKG.final.pak/)placebo
+BUILD.output += $(MODULE.PKG.final.pkg/)placebo
+BUILD.output += $(MODULE.PKG.final.doc.pdf)

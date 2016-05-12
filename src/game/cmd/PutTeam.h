@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_PUTTEAM_H
+#define GAME_CMD_PUTTEAM_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class PutTeam : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    PutTeam();
+    ~PutTeam();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_PUTTEAM_H

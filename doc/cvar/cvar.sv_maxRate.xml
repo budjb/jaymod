@@ -1,0 +1,37 @@
+<refentry id="cvar.sv_maxRate">
+
+<refmeta>
+    <refentrytitle>sv_maxRate</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_maxRate</refname>
+    <refpurpose>set maximum network bandwidth per client</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_maxRate</command>
+        <arg><replaceable>rate</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_maxRate</command>
+        <arg choice="plain"><literal>13000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_maxRate</command>
+    sets the maximum network bandwidth in bytes/s per client.
+    This value applies to data sent in the server -> client direction.
+</para>
+</refsection>
+
+</refentry>

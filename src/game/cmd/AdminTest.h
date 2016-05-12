@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_ADMINTEST_H
+#define GAME_CMD_ADMINTEST_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class AdminTest : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    AdminTest();
+    ~AdminTest();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_ADMINTEST_H

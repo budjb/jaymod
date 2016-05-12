@@ -1,0 +1,49 @@
+#if defined( CGAMEDLL )
+#    include <cgame/cg_local.h>
+#elif defined( GAMEDLL )
+#    include <game/g_local.h>
+#elif defined( UIDLL )
+#    include <ui/ui_local.h>
+#else
+#    error "DLL-MODULE is not defined."
+#endif
+
+#include <sys/time.h>
+
+//////////////////////////////////////////////////////////////////////////////
+
+void
+Process::beginCriticalSection()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+void
+Process::endCriticalSection()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+void
+Process::signalInit()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+void
+Process::signalShutdown()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+Process::mstime_t
+Process::mstime()
+{
+    timeval tv;
+    gettimeofday( &tv, 0 );
+    return mstime_t( tv.tv_sec ) * mstime_t( 1000 ) + mstime_t( tv.tv_usec ) / mstime_t( 1000 );
+}

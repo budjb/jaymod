@@ -1,0 +1,75 @@
+<chapter id="operation">
+<title>Operation</title>
+
+<para>
+    &project:name; supplies a <command>serverctl</command> script which is used to
+    control the game server process on &linux:name;. While you could create your own script
+    to manage your game server, it is recommended you examine the launch command
+    and signal usage in order to get a better understanding of officially endorsed
+    methods.
+</para>
+
+<section id="operation.signals">
+<title>Signals</title>
+<para>
+    &project:name; has special signal handling routines for &linux:name;.
+    The <command>serverctl</command> script makes use of these signals.
+    If you have your own scripts, it is recommended you use the following signals for
+    the appropriate actions.
+</para>
+<variablelist>
+    <varlistentry>
+    <term>sighup</term>
+    <listitem>
+    <para>
+        Queues a graceful shutdown sequence composed of { killserver, quit } server commands.
+    </para>
+    </listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term>sigterm</term>
+    <listitem>
+    <para>
+        Queues a graceful shutdown sequence composed of { killserver, quit } server commands.
+    </para>
+    </listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term>sigusr1</term>
+    <listitem>
+    <para>
+        Queues a graceful database reload composed of { !dbload } server commands.
+    </para>
+    </listitem>
+    </varlistentry>
+</variablelist>
+</section>
+
+<section id="operation.startup">
+<title>Startup</title>
+&task.startup;
+</section>
+
+<section id="operation.shutdown">
+<title>Shutdown</title>
+&task.shutdown;
+</section>
+
+<section id="operation.status">
+<title>Show online status</title>
+&task.status;
+</section>
+
+<section id="operation.restart">
+<title>Restart</title>
+&task.restart;
+</section>
+
+<section id="operation.reload">
+<title>Reload database</title>
+&task.reload;
+</section>
+
+</chapter>

@@ -1,0 +1,6 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    bug allowing muted players to still use the say_teamnl command.
+</simpara>
+</listitem>

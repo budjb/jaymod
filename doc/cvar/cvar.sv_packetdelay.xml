@@ -1,0 +1,45 @@
+<refentry id="cvar.sv_packetdelay">
+
+<refmeta>
+    <refentrytitle>sv_packetdelay</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_packetdelay</refname>
+    <refpurpose>set simulated server latency</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_packetdelay</command>
+        <arg><replaceable>delay</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_packetdelay</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_packetdelay</command>
+    sets the simulated server latency in milliseconds.
+    The server can be coaxed into simulated network latency by artificially delaying transmission
+    of packets in direction of server -> client.
+    A value of <literal>0</literal> will disable this functionality.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_packetloss"/>
+</para>
+</refsection>
+</refentry>

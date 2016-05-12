@@ -1,0 +1,75 @@
+<refentry id="cvar.g_xpCap">
+
+<refmeta>
+    <refentrytitle>g_xpCap</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_xpCap</refname>
+    <refpurpose>set XP-limit action</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_xpCap</command>
+        <arg><replaceable>action</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_xpCap.values" frame="all">
+<?dbfo table-width="85%"?>
+<title>g_xpCap Actions</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="76*"/>
+    <thead>
+        <row>
+            <entry>ACTION</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>0</entry>
+            <entry>allow the player to continue gaining XP for skills which are not maxed out</entry>
+        </row>
+        <row>
+            <entry>1</entry>
+            <entry>disallow any further XP gain but keep it at max amount</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>automatically reset player's XP to 0</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_xpCap</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_xpCap</command>
+    sets the action to take when <xref linkend="cvar.g_xpMax"/> is exceeded.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_xpMax"/>,
+    <xref linkend="cvar.g_xpSave"/>,
+    <xref linkend="cvar.g_xpSaveTimeout"/>,
+    <xref linkend="xpsave"/>
+</para>
+</refsection>
+
+</refentry>

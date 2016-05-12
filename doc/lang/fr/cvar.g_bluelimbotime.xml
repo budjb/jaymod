@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_bluelimbotime">
+  <refmeta>
+    <refentrytitle>g_bluelimbotime</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_bluelimbotime</refname>
+
+    <refpurpose>la durée entre les réapparitions
+    (<emphasis>respawn</emphasis>) des membres de l'équipe Allied</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_bluelimbotime</command>
+
+      <arg><replaceable>interval</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_bluelimbotime</command>
+
+      <arg choice="plain"><literal>30000</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_bluelimbotime</command> spécifie la durée entre les
+    réapparitions (<emphasis>respawn</emphasis>) en millisecondes des membres
+    de l'équipe Allied. Cette variable est utilisée dans le jeu pour des
+    calculs nécessaires et est fermée ce qui veut dire qu'elle ne peut être
+    changée pendant un match. Les scriptes de carte la détermine et elle est
+    subordonnée à la variable <xref linkend="cvar.g_userAlliedRespawnTime" />.
+    En conséquence, la variable <xref
+    linkend="cvar.g_userAlliedRespawnTime" /> devrait être employée pour
+    établir des temps de réapparition sur mesure et cette variable ne devrait
+    absolument pas être utilisée.</para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.g_userAlliedRespawnTime" />, <xref
+    linkend="cvar.g_userAxisRespawnTime" /> <xref
+    linkend="cvar.g_redlimbotime" />,</para>
+  </refsection>
+</refentry>

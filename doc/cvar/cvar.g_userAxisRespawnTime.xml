@@ -1,0 +1,46 @@
+<refentry id="cvar.g_userAxisRespawnTime">
+
+<refmeta>
+    <refentrytitle>g_userAxisRespawnTime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_userAxisRespawnTime</refname>
+    <refpurpose>the amount of time between Axis team respawns</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_userAxisRespawnTime</command>
+        <arg><replaceable>interval</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_userAxisRespawnTime</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_userAxisRespawnTime</command> specifies the time interval in seconds between Axis respawns.
+    This cvar is used for custom spawn times -- that is, it overrides the time set in the map's script.
+    It automatically updates the <xref linkend="cvar.g_redlimbotime"/> cvar accordingly.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_bluelimbotime"/>,
+    <xref linkend="cvar.g_redlimbotime"/>,
+    <xref linkend="cvar.g_userAlliedRespawnTime"/>
+</para>
+</refsection>
+
+</refentry>

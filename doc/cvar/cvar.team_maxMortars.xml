@@ -1,0 +1,58 @@
+<refentry id="cvar.team_maxMortars">
+
+<refmeta>
+    <refentrytitle>team_maxMortars</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>team_maxMortars</refname>
+    <refpurpose>sets the maximum number of mortars per team</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>team_maxMortars</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+    <cmdsynopsis>
+        <command>team_maxMortars</command>
+        <arg><replaceable>num</replaceable>%</arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>team_maxMortars</command>
+        <arg choice="plain"><literal>-1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>team_maxMortars</command>
+    sets the maximum number of mortars each team can have at once.
+    Setting <replaceable>num</replaceable> to <literal>-1</literal> allows for unlimited mortars.
+    Setting <replaceable>num</replaceable> to <literal>0</literal> disables the weapon altogether,
+	and <literal>1</literal> or higher specifies the maximum number of mortars per team.
+    If desired, the maximum can be specified as a percentage of team players by suffixing
+    <replaceable>num</replaceable> with a percent-symbol.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.team_maxArtillery"/>,
+    <xref linkend="cvar.team_maxFlamers"/>,
+    <xref linkend="cvar.team_maxGrenLaunchers"/>
+    <xref linkend="cvar.team_maxLandMines"/>,
+    <xref linkend="cvar.team_maxM97s"/>,
+    <xref linkend="cvar.team_maxMG42s"/>
+    <xref linkend="cvar.team_maxPanzers"/>
+</para>
+</refsection>
+
+</refentry>

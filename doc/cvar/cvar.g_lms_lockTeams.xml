@@ -1,0 +1,53 @@
+<refentry id="cvar.g_lms_lockTeams">
+
+<refmeta>
+    <refentrytitle>g_lms_lockTeams</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_lms_lockTeams</refname>
+    <refpurpose>enable/disable locked teams during match play</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_lms_lockTeams</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_lms_lockTeams</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_lms_lockTeams</command>
+    enables or disables locked teams during match play.
+    When enabled, the teams are locked once match play begins and new players may not join.
+</para>
+<para>
+    <note>
+        This value is in effect only when LMS gametype is enabled using <xref linkend="cvar.g_gametype"/>.
+    </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_lms_followTeamOnly"/>,
+    <xref linkend="cvar.g_lms_matchlimit"/>,
+    <xref linkend="cvar.g_lms_roundlimit"/>,
+    <xref linkend="cvar.g_lms_teamForceBalance"/>,
+    <xref linkend="cvar.g_gametype"/>
+</para>
+</refsection>
+
+</refentry>

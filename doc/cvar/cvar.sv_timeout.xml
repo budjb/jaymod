@@ -1,0 +1,37 @@
+<refentry id="cvar.sv_timeout">
+
+<refmeta>
+    <refentrytitle>sv_timeout</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_timeout</refname>
+    <refpurpose>set client network connection timeout</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_timeout</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_timeout</command>
+        <arg choice="plain"><literal>240</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_timeout</command>
+    sets the client network connection timeout in seconds.
+    Clients connections are dropped after <literal>period</literal> seconds of unreachability.
+</para>
+</refsection>
+
+</refentry>

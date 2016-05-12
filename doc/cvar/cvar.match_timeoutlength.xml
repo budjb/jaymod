@@ -1,0 +1,36 @@
+<refentry id="cvar.match_timeoutlength">
+
+<refmeta>
+    <refentrytitle>match_timeoutlength</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_timeoutlength</refname>
+    <refpurpose>set duration of player-timeout</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_timeoutlength</command>
+        <arg><replaceable>duration</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_timeoutlength</command>
+        <arg choice="plain"><literal>180</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_timeoutlength</command>
+    sets duration of a player-timeout in seconds.
+</para>
+</refsection>
+
+</refentry>

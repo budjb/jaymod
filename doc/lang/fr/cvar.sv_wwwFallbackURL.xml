@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.sv_wwwFallbackURL">
+  <refmeta>
+    <refentrytitle>sv_wwwFallbackURL</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>sv_wwwFallbackURL</refname>
+
+    <refpurpose>détermine le URL de secours pour les téléchargements
+    web</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>sv_wwwFallbackURL</command>
+
+      <arg><replaceable>"URL"</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>sv_wwwFallbackURL</command>
+
+      <arg choice="plain"><literal>""</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>sv_wwwFallbackURL</command> détermine le URL de secours
+    pour les téléchargements web. Les clients essaieront de charger la page
+    spécifiée par cette adresse <replaceable>URL</replaceable> au cours d'un
+    échec de téléchargement. Si aucune adresse n'est spécifiée (<literal>"")
+    </literal>et que le téléchargement échoue alors le client se repliera sur
+    le mécanisme standard de téléchargement déterminé par <xref
+    linkend="cvar.sv_allowDownload" />.</para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.sv_wwwBaseURL" />, <xref
+    linkend="cvar.sv_wwwDlDisconnected" />, <xref
+    linkend="cvar.sv_wwwDownload" /></para>
+  </refsection>
+</refentry>

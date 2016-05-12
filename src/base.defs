@@ -1,0 +1,13 @@
+MODULE.BASE.prj  = $(BUILD/)base/project.h
+MODULE.BASE.srcs = $(wildcard $(PROJECT/)src/base/*/*.cpp)
+MODULE.BASE.objs = $(MODULE.BASE.srcs:$(PROJECT/)src/%.cpp=$(BUILD/)%.o)
+MODULE.BASE.pchs = $(foreach i,$(CXX.pch.arch),$(BUILD/)base/public.h.$(CXX.pch.ext)/$(i))
+MODULE.BASE.a    = $(BUILD/)base/libbase$(STATICLIB.suffix)
+MODULE.BASE.pdb  = $(BUILD/)base/
+
+###############################################################################
+
+BUILD.output += $(MODULE.BASE.prj)
+BUILD.output += $(MODULE.BASE.objs)
+BUILD.output += $(MODULE.BASE.pchs)
+BUILD.output += $(MODULE.BASE.a)

@@ -1,0 +1,46 @@
+<refentry id="cvar.sv_wwwDlDisconnected">
+
+<refmeta>
+    <refentrytitle>sv_wwwDlDisconnected</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_wwwDlDisconnected</refname>
+    <refpurpose>enable/disable client disconect while downloading</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_wwwDlDisconnected</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_wwwDlDisconnected</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_wwwDlDisconnected</command>
+    enables or disables client disconection from server while downloading.
+    This disconnects a client from game server to free up slots while download is in progress.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_wwwBaseURL"/>,
+    <xref linkend="cvar.sv_wwwDownload"/>,
+    <xref linkend="cvar.sv_wwwFallbackURL"/>
+</para>
+</refsection>
+</refentry>

@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_KICK_H
+#define GAME_CMD_KICK_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Kick : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Kick();
+    ~Kick();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_KICK_H

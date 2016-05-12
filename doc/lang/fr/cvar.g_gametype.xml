@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_gametype">
+  <refmeta>
+    <refentrytitle>g_gametype</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_gametype</refname>
+
+    <refpurpose>précise le mode global du type de jeu</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_gametype</command>
+
+      <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+    <table frame="all" id="cvar.g_gametype.modes">
+      <?dbfo table-width="40%"?>
+
+      <title>g_gametype Modes</title>
+
+      <tgroup align="left" cols="2" colsep="1" rowsep="1">
+        <colspec align="center" colnum="1" colwidth="9*" />
+
+        <colspec colnum="2" colwidth="31*" />
+
+        <thead>
+          <row>
+            <entry>MODE</entry>
+
+            <entry>DESCRIPTION</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>2</entry>
+
+            <entry>objective (objectif)</entry>
+          </row>
+
+          <row>
+            <entry>3</entry>
+
+            <entry>stopwatch (chronométré)</entry>
+          </row>
+
+          <row>
+            <entry>4</entry>
+
+            <entry>campaign (campagne de plusieurs cartes)</entry>
+          </row>
+
+          <row>
+            <entry>5</entry>
+
+            <entry>last-man-standing (le survivant)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_gametype</command>
+
+      <arg choice="plain"><literal>4</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_gametype</command> précise le mode global du type de
+    jeu.</para>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <para><xref linkend="cvar.g_altStopwatchMode" />, <xref
+    linkend="cvar.g_lms_followTeamOnly" />, <xref
+    linkend="cvar.g_lms_lockTeams" />, <xref
+    linkend="cvar.g_lms_matchlimit" />, <xref
+    linkend="cvar.g_lms_roundlimit" />, <xref
+    linkend="cvar.g_lms_teamForceBalance" /></para>
+  </refsection>
+</refentry>

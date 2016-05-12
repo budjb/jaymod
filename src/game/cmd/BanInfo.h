@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_BANINFO_H
+#define GAME_CMD_BANINFO_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class BanInfo : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    BanInfo();
+    ~BanInfo();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_BANINFO_H

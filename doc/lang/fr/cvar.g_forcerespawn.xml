@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_forcerespawn">
+  <refmeta>
+    <refentrytitle>g_forcerespawn</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_forcerespawn</refname>
+
+    <refpurpose>oblige un joueur à mourir après un certain temps dans les
+    limbes </refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_forcerespawn</command>
+
+      <arg><replaceable>temps</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Default</title>
+
+    <cmdsynopsis>
+      <command>g_forcerespawn</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_forcerespawn</command> oblige un joueur à mourir après un
+    certain <emphasis>temps</emphasis> en secondes dans les limbes. Une valeur
+    de 0 pour <emphasis>temps</emphasis> annule l'option et toute valeur
+    supérieure oblige le joueur dans les limbes à mourir après que le
+    <emphasis>temps</emphasis> se soit écoulé (il quitte les limbes et attend
+    que le compte à rebours du chrono de réapparition soit échu pour
+    réapparaître dans le jeu).</para>
+  </refsection>
+</refentry>

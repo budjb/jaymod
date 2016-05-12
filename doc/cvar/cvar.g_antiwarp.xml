@@ -1,0 +1,93 @@
+<refentry id="cvar.g_antiwarp">
+
+<refmeta>
+    <refentrytitle>g_antiwarp</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_antiwarp</refname>
+    <refpurpose>enable/set bitflags for antiwarp functionality</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_antiwarp</command>
+        <arg><replaceable>flags</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_antiwarp.flags" frame="all">
+<?dbfo table-width="30%"?>
+<title>g_antiwarp Flags</title>
+<tgroup cols="2" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="21*"/>
+    <thead>
+        <row>
+            <entry>FLAG</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>enable antiwarp functionality</entry>
+        </row>
+        <row>
+            <entry>32</entry>
+            <entry>log player's warping to their desktop</entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_antiwarp</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_antiwarp</command>
+    enable/sets bitflags for antiwarp functionality.
+</para>
+<para>
+    Warping occurs when the server recieves several new commands for a player in a very short period of time.
+    This happens because packets from the player were lost or never sent.
+    The player will appear to cross a great distance in a very short period of time,
+    making them hard to hit and possibly allowing them to avoid landmine damage.
+</para>
+<para>
+    The antiwarp system delays commands when they are recieved too quickly.
+    Thus, when a player sends 700ms worth of commands in 50ms, the commands will be spread out over 700ms,
+    causing the player to move smoothly to other players.
+    This affects the player who sent the commands too quickly only by increasing their ping,
+    and will not keep increasing ping endlessly - at maximum,
+    the added ping is the highest ping the player is actually getting.
+    If temporary network issues cause ping to increase beyond a sensible number,
+    the player can stand still for a moment and their ping will normalize.
+</para>
+<para>
+    The net effect is that players with unreliable or congested upstream will not benefit from their situation;
+    rather they (in a sense) are penalized for it, while all the other players on the server are not.
+</para>
+<para>
+    <caution>
+        Flags enabling extra debug/logging can be extremely network-expensive and should
+        not be used for normal gameplay.
+    </caution>
+</para>
+<para>
+    <note>
+        The initial code implementation for antiwarp was contributed to &project:name;
+        by &zinx:name;, June 2007.
+    </note>
+</para>
+</refsection>
+
+</refentry>

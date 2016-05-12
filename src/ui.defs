@@ -1,0 +1,33 @@
+MODULE.UI.srcs = $(sort \
+	$(wildcard $(PROJECT/)src/ui/*.cpp) \
+	$(wildcard $(PROJECT/)src/ui/cvar/*.cpp) \
+	$(wildcard $(PROJECT/)src/ui/$(PROJECT.platspecific)/*.cpp) \
+	\
+	$(PROJECT/)src/bgame/Process.cpp \
+	$(PROJECT/)src/bgame/bg_campaign.cpp \
+	$(PROJECT/)src/bgame/bg_classes.cpp \
+	$(PROJECT/)src/bgame/bg_jaymod.cpp \
+	$(PROJECT/)src/bgame/bg_misc.cpp \
+	$(PROJECT/)src/bgame/q_math.cpp \
+	$(PROJECT/)src/bgame/q_shared.cpp \
+	$(wildcard $(PROJECT/)src/bgame/cvar/*.cpp) \
+	\
+	$(PROJECT/)src/bgame/$(PROJECT.platspecific)/Process.cpp \
+	$(PROJECT/)src/bgame/$(PROJECT.platspecific)/bg_cpu.cpp )
+
+MODULE.UI.objs = $(MODULE.UI.srcs:$(PROJECT/)src/%.cpp=$(BUILD/)ui/%.o)
+MODULE.UI.pchs = $(foreach i,$(CXX.pch.arch),$(BUILD/)ui/bgame/impl.h.$(CXX.pch.ext)/$(i))
+MODULE.UI.so   = $(BUILD/)ui/ui$(IDMODULE.suffix)
+MODULE.UI.pdb  = $(BUILD/)ui/
+
+###############################################################################
+
+MODULE.UI.CXX.I< += $(BUILD/)ui
+MODULE.UI.CXX.D  += UIDLL
+MODULE.UI.CXX.l  += $(MATH.l)
+
+###############################################################################
+
+BUILD.output += $(MODULE.UI.objs)
+BUILD.output += $(MODULE.UI.pchs)
+BUILD.output += $(MODULE.UI.so)

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_alliedmaxlives">
+  <refmeta>
+    <refentrytitle>g_alliedmaxlives</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_alliedmaxlives</refname>
+
+    <refpurpose>détermine le nombre de vies maximal des joueurs
+    Allied</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_alliedmaxlives</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_alliedmaxlives</command>
+
+      <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_alliedmaxlives</command> détermine le nombre de vies
+    maximal des joueurs Allied. Une valeur de 0 annule cette variable et
+    permet un nombre illimité de vies.</para>
+
+    <para><note>
+         Cette cvar est subordonnée à 
+
+        <xref linkend="cvar.g_maxlives" />
+
+         . 
+      </note></para>
+  </refsection>
+
+  <refsection>
+    <title>Voir également</title>
+
+    <para><xref linkend="cvar.g_axismaxlives" />, <xref
+    linkend="cvar.g_maxlives" /></para>
+  </refsection>
+</refentry>

@@ -1,0 +1,37 @@
+<refentry id="cvar.g_complaintlimit">
+
+<refmeta>
+    <refentrytitle>g_complaintlimit</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_complaintlimit</refname>
+    <refpurpose>sets the maximum number of complaints a player can receive per map</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_complaintlimit</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_complaintlimit</command>
+        <arg choice="plain"><literal>6</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_complaintlimit</command>
+    sets the maximum number of complaints a player can receive per map.  The counter for each player is reset when a map begins.
+	Setting <replaceable>num</replaceable> to <literal>0</literal> disables complaints kicking.
+</para>
+</refsection>
+
+</refentry>

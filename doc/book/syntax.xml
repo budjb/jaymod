@@ -1,0 +1,50 @@
+<title>Command Syntax</title>
+<para>
+    &linux:name; command syntax appears in <command>monospace</command> font prefixed with a typical shell prompt
+    denoting account/privileges for which the command should be entered with, followed by a number sign (#)
+    or dollar sign ($) indicating root or non-root accounts, respectively.
+    Do not enter the prompt text as part of the command.
+    <note>
+        The assumed &linux:name; shell is <command>bash</command>.
+    </note>
+</para>
+<para>
+    &et:name:abbr; console command syntax appears in <command>monospace</command> font prefixed with a typical
+    console prompt, a right-bracket (]).
+    Do not enter the prompt text as part of the command.
+</para>
+<table id="sytax.conventions" frame="all">
+    <title>Syntax Conventions</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+        <colspec colnum="1" colwidth="2*"/>
+        <colspec colnum="2" colwidth="10*"/>
+        <thead>
+            <row>
+                <entry>Convention</entry>
+                <entry>Description</entry>
+            </row>
+        </thead>
+        <tbody>
+            <row>
+                <entry>braces {}</entry>
+                <entry>Braces indicate required items.</entry>
+            </row>
+            <row>
+                <entry>brackets []</entry>
+                <entry>Brackets indicate optional items.</entry>
+            </row>
+            <row>
+                <entry>ellipses ...</entry>
+                <entry>Ellipses indicate an arbitrary number of similar items.</entry>
+            </row>
+            <row>
+                <entry><parameter>italics</parameter></entry>
+                <entry>Italic style indicates a variable. Substitute a real value for the variable.</entry>
+            </row>
+            <row>
+                <entry>vertical bar |</entry>
+                <entry>A vertical bar indicates a choice within braces or brackets.</entry>
+            </row>
+        </tbody>
+    </tgroup>
+</table>

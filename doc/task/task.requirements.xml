@@ -1,0 +1,10 @@
+<para>
+    Check  <xref linkend="msr"/>.
+</para>
+<para>
+    <warning>
+        Older versions of &et:name:abbr; may not work as expected, or may fail entirely.
+        Using an older version is <emphasis role="bold">not</emphasis> recommended
+        and is <emphasis role="bold">not</emphasis> supported.
+    </warning>
+</para>

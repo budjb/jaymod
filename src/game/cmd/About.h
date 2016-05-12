@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_ABOUT_H
+#define GAME_CMD_ABOUT_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class About : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    About();
+    ~About();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_ABOUT_H

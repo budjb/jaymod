@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_FLING_H
+#define GAME_CMD_FLING_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Fling : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Fling();
+    ~Fling();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_FLING_H

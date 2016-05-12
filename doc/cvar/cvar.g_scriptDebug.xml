@@ -1,0 +1,37 @@
+<refentry id="cvar.g_scriptDebug">
+
+<refmeta>
+    <refentrytitle>g_scriptDebug</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_scriptDebug</refname>
+    <refpurpose>enables debug of map script parsing</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_scriptDebug</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_scriptDebug</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_scriptDebug</command>
+    enables debug of map script parsing.
+</para>
+</refsection>
+
+</refentry>

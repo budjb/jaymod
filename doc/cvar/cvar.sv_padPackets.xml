@@ -1,0 +1,38 @@
+<refentry id="cvar.sv_padPackets">
+
+<refmeta>
+    <refentrytitle>sv_padPackets</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_padPackets</refname>
+    <refpurpose>set packet padding amount</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_padPackets</command>
+        <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_padPackets</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_padPackets</command>
+    sets the <replaceable>num</replaceable> of NOP (no-operation) messages added to packets.
+    This is primarily a debugging feature and is used to fill packets from server -> client with NOPs.
+    A value of <literal>0</literal> disables this functionality.
+</para>
+</refsection>
+
+</refentry>

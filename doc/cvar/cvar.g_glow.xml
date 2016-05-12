@@ -1,0 +1,37 @@
+<refentry id="cvar.g_glow">
+
+<refmeta>
+    <refentrytitle>g_glow</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_glow</refname>
+    <refpurpose>makes all players emit a colored glow</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_glow</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+	&boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_glow</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_glow</command>
+    makes all players emit a colored glow.  The prefered method to use this feature is with the !glow command.
+</para>
+</refsection>
+
+</refentry>

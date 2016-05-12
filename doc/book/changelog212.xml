@@ -1,0 +1,207 @@
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    mortar <emphasis role="subject">reticle shader</emphasis> bug.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">convert_shrub</emphasis> dependency on unpopular module
+    and loss of MAC information during conversion.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    &linux:name; shutdown signal management.
+    <emphasis role="subject">SIGTERM</emphasis>
+    is caught and queued to cause safe server shutdown via { killserver, quit } command sequence.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    &linux:name; readconfig signal management.
+    <emphasis role="subject">SIGHUP</emphasis>
+    is caught and queued to cause same behavior as !readconfig command.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Overhauled</emphasis>
+    critical-code sections to block &linux:name; <emphasis role="subject">signals</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <emphasis role="subject">serverctl</emphasis> to offer 'readconfig' argument.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    unavailable <emphasis role="subject">poison-syringes</emphasis> when g_friendlyFire=1.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    legacy cvar <emphasis role="subject">g_motd</emphasis> as it does nothing.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="rm">Removed</emphasis>
+    legacy voting for cvar <emphasis role="subject">g_antilag</emphasis> as it is now a read-only
+    and used solely for serverinfo purposes.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    all <emphasis role="subject">hitmodes</emphasis> to perform better during close-proximity combat.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <emphasis role="subject">g_hitmode=5</emphasis> from 7 -> 9  box model.
+    Generally, slightly easier to hit when target is facing head-on, slightly harder to hit when target
+    is sideways.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    correctness of <emphasis role="subject">fair-rifles</emphasis> parity for all relevant weapons characteristics.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    <emphasis role="subject">g_hitmode=6</emphasis> which introduces
+    <emphasis role="bold">oriented</emphasis> boxes. Generally, this is as tight (and realistic)
+    as we can get without going to a full-blown animated mesh hitmodel.
+    It is unknown at this time how much CPU this mode will consume on busy servers.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Renamed</emphasis>
+    new-style <emphasis role="subject">listplayers</emphasis> -&gt; <emphasis role="subject">lsplayers</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Restored</emphasis>
+    old-style <emphasis role="subject">listplayers</emphasis> from 2.0.X days.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added</emphasis>
+    player <emphasis role="subject">name-change</emphasis> counting (reset after each connection).
+    Value is shown in last-column output for lsplayers.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    <emphasis role="subject">!status</emphasis> to display config-string information.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    client 2D-desktop <emphasis role="subject">XP</emphasis> display
+    to show more positive values -535..65000 instead of -32768..32767 .
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    client-crash when closing <emphasis role="subject">fireteam menu</emphasis>.
+    This crash usually happens when you hit ENTER to popup fireteam menu,
+    and then subsequently hit ENTER again to close it. Bug is known to exist on 2.1.0 and 2.1.1 .
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    missing icons on the <emphasis role="subject">command map</emphasis>.  There was an issue with Windows
+    NVidia drivers when texture bits were set to 16 that caused the icons to not appear on the expanded
+    command map.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Enhanced</emphasis>
+    client console command <emphasis role="subject">jaymodinfo</emphasis> to show more information.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Merged</emphasis>
+    new interface for <emphasis role="subject">&omni:name; 0.61</emphasis>.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Added</emphasis>
+    support for <emphasis role="subject">map locations</emphasis>.  Jaymod is bundled with the map
+    locations for the standard 6 maps.  The menus have been updated accordingly.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    an issue where <emphasis role="subject">player names</emphasis> would not appear for poisoned players.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    the bug where the new <emphasis role="subject">landmines</emphasis> would cause other mines
+    (even planted ones) to shift around and make very audible noise when thrown on the ground.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    missing M97 <emphasis role="subject">text-shortcut</emphasis> where it would show up as "unknown".
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="security">Security Fix:</emphasis>
+    client-side command can be abused to cause server crashes.
+</simpara>
+</listitem>

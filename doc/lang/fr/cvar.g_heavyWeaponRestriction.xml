@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_heavyWeaponRestriction">
+  <refmeta>
+    <refentrytitle>g_heavyWeaponRestriction</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_heavyWeaponRestriction</refname>
+
+    <refpurpose>précise le nombre d'armes lourdes qu'une équipe peut
+    posséder</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_heavyWeaponRestriction</command>
+
+      <arg><replaceable>pourcent</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Valeur initiale</title>
+
+    <cmdsynopsis>
+      <command>g_heavyWeaponRestriction</command>
+
+      <arg choice="plain"><literal>100</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_heavyWeaponRestriction</command> précise le nombre
+    d'armes lourdes qu'une équipe peut posséder selon le nombre de joueurs sur
+    cette équipe. Pour chaque type d'arme lourde, l'équipe ne pourra posséder
+    qu'un nombre maximal de joueurs pouvant utiliser une arme lourde en
+    fonction d'un pourcentage du total des joueurs de l'équipe. Par exemple,
+    une équipe de 10 joueurs avec une valeur de 20 pour cette cvar ne pourra
+    posséder que 2 bazookas au total.</para>
+  </refsection>
+</refentry>

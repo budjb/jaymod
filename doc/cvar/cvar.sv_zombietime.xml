@@ -1,0 +1,40 @@
+<refentry id="cvar.sv_zombietime">
+
+<refmeta>
+    <refentrytitle>sv_zombietime</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_zombietime</refname>
+    <refpurpose>set zombie period</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_zombietime</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_zombietime</command>
+        <arg choice="plain"><literal>2</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_zombietime</command>
+    sets the zombie <replaceable>period</replaceable> in seconds.
+    When a client is normally dropped, the client goes into a zombie state for
+    <replaceable>period</replaceable> seconds to give a reasonable chance for reliable messages
+    retransmission, if necessary.
+    A value of <literal>0</literal> disables this functionality.
+</para>
+</refsection>
+
+</refentry>

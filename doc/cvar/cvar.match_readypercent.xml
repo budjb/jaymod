@@ -1,0 +1,36 @@
+<refentry id="cvar.match_readypercent">
+
+<refmeta>
+    <refentrytitle>match_readypercent</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>match_readypercent</refname>
+    <refpurpose>set percentage of players required to be ready</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>match_readypercent</command>
+        <arg><replaceable>percent</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>match_readypercent</command>
+        <arg choice="plain"><literal>100</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>match_readypercent</command>
+    sets percentage of players required to be ready before match begins.
+</para>
+</refsection>
+
+</refentry>

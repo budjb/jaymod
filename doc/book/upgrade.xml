@@ -1,0 +1,10 @@
+<chapter id="upgrade">
+<title>Upgrade</title>
+
+&upgrade.cvar;
+&upgrade.preparing;
+&upgrade.shrubbot;
+&upgrade.upgrade;
+&upgrade.after;
+
+</chapter>

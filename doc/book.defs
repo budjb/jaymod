@@ -1,0 +1,40 @@
+MODULE.DOC.stage/          = $(BUILD/)doc/$(DOCBOOK.lang)/
+MODULE.DOC.out.ecmd        = $(MODULE.DOC.stage/)entity.cmd.xml
+MODULE.DOC.out.ecvar       = $(MODULE.DOC.stage/)entity.cvar.xml
+MODULE.DOC.out.eproject    = $(MODULE.DOC.stage/)entity.project.xml
+MODULE.DOC.out.fo          = $(MODULE.DOC.stage/)book.fo
+MODULE.DOC.out.html.chunk  = $(MODULE.DOC.stage/)html/index.html
+MODULE.DOC.out.html.single = $(MODULE.DOC.stage/)book.html
+MODULE.DOC.out.pdf         = $(MODULE.DOC.stage/)$(PROJECT.namef).pdf
+MODULE.DOC.out.rcmd        = $(MODULE.DOC.stage/)ref.cmd.all.xml
+MODULE.DOC.out.rcvar       = $(MODULE.DOC.stage/)ref.cvar.all.xml
+
+###############################################################################
+
+MODULE.DOC.out.figures = $(patsubst \
+	$(PROJECT/)doc/%,$(MODULE.DOC.stage/)%, \
+	$(wildcard $(PROJECT/)doc/figures/*.png))
+
+MODULE.DOC.out.images = $(patsubst \
+	$(PROJECT/)doc/lib/%,$(MODULE.DOC.stage/)%, \
+	$(wildcard $(PROJECT/)doc/lib/images/*.png))
+
+MODULE.DOC.out.styles = $(patsubst \
+	$(PROJECT/)doc/lib/%,$(MODULE.DOC.stage/)%, \
+	$(wildcard $(PROJECT/)doc/lib/styles/*.css))
+
+###############################################################################
+
+BUILD.output += $(MODULE.DOC.out.ecmd)
+BUILD.output += $(MODULE.DOC.out.ecvar)
+BUILD.output += $(MODULE.DOC.out.eproject)
+BUILD.output += $(MODULE.DOC.out.fo)
+BUILD.output += $(MODULE.DOC.out.html.chunk)
+BUILD.output += $(MODULE.DOC.out.html.single)
+BUILD.output += $(MODULE.DOC.out.pdf)
+BUILD.output += $(MODULE.DOC.out.rcmd)
+BUILD.output += $(MODULE.DOC.out.rcvar)
+
+BUILD.output += $(MODULE.DOC.out.figures)
+BUILD.output += $(MODULE.DOC.out.images)
+BUILD.output += $(MODULE.DOC.out.styles)

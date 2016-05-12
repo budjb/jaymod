@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_RMUSER_H
+#define GAME_CMD_RMUSER_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class UserDelete : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    UserDelete();
+    ~UserDelete();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_RMUSER_H

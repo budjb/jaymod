@@ -1,0 +1,20 @@
+<section id="upgrade.after">
+<title>After Upgrade</title>
+<para>
+    This section describes tasks that you must complete after the upgrade procedure.
+</para>
+
+<sect1 id="upgrade.after.procedure">
+<title>Procedure</title>
+<orderedlist>
+    <listitem>
+        &task.startup;
+    </listitem>
+
+    <listitem>
+        &task.rmextract;
+    </listitem>
+</orderedlist>
+</sect1>
+
+</section>

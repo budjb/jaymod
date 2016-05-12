@@ -1,0 +1,34 @@
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    IP address validation checks.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="add">Added:</emphasis>
+    q3fill exploit check.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Changed:</emphasis>
+    the amount of anonymous users in the user db to double its old value.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    several center aligned screen elements to properly support wide screen displays.
+</simpara>
+</listitem>
+
+<listitem>
+<simpara>
+    <emphasis role="touch">Fixed:</emphasis>
+    <emphasis role="subject">mortar recticle</emphasis> drawing to support wide screen displays.
+</simpara>
+</listitem>

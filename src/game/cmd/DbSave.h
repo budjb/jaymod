@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_DBSAVE_H
+#define GAME_CMD_DBSAVE_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class DbSave : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    DbSave();
+    ~DbSave();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_DBSAVE_H

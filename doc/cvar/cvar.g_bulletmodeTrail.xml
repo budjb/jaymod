@@ -1,0 +1,45 @@
+<refentry id="cvar.g_bulletmodeTrail">
+
+<refmeta>
+    <refentrytitle>g_bulletmodeTrail</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_bulletmodeTrail</refname>
+    <refpurpose>set maximum number of bullet trails to render</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_bulletmodeTrail</command>
+        <arg><literal>0</literal>..<literal>25</literal></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_bulletmodeTrail</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_bulletmodeTrail</command>
+    sets the maximum number of bullet trails to render.
+    A bullet trail is a visual debugging aid which shows the path of a bullet.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_bulletmode"/>,
+    <xref linkend="cvar.g_bulletmodeDebug"/>,
+    <xref linkend="cvar.g_bulletmodeReference"/>
+</para>
+</refsection>
+</refentry>

@@ -1,0 +1,21 @@
+<para>
+    Playdead allows a player to fake being dead in the hopes an attacker will give
+    them no further attention and kindly move on.
+    You can use this feature by binding a key for it in the in-game &project:name; menu under Misc.
+    The key you specify will toggle playdead mode.
+</para>
+<para>
+    When you are in playdead mode, you cannot shoot your weapon.
+    To an enemy, you look like a dead player (after a tap-out and awaiting a respawn).
+    However, you will still be a solid body (players cannot walk through you) and your eyes will still blink.
+    <note>
+        Note that this version of playdead is a bit less bugged than &shrub:name;’s version.
+        It’s much harder to get stuck in walls, and there’s just about zero chance
+        of someone using this as an exploit to get through a wall
+        (example, bank doors on Goldrush) due to extra checks to make sure there is
+        enough clearance for your player to fall down and still be in the “world”.
+    </note>
+    <tip>
+        This is an excellent way to infiltrate enemy bases and maintain the element of surprise!
+    </tip>
+</para>

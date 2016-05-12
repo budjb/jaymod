@@ -1,0 +1,80 @@
+<section id="install.install">
+<title>Install</title>
+<para>
+    This section describes the main install procedure.
+</para>
+
+<orderedlist>
+    <listitem>
+        &task.extract;
+    </listitem>
+
+    <listitem>
+    <para>
+        Create server1/ directory structure.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver
+&bash.prompt.et; umask 022
+&bash.prompt.et; mkdir <emphasis role="bold">server1/</emphasis>
+&bash.prompt.et; cd server1/
+&bash.prompt.et; mkdir etmain/
+&bash.prompt.et; mkdir jaymod/
+&bash.prompt.et; mkdir jaymod/mapscripts/
+&bash.prompt.et; mkdir jaymod/mapconfigs/
+&bash.prompt.et; mkdir pb/
+&bash.prompt.et; mkdir log/
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Copy <command>servercl</command> script into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; cp ~etserver/&project:packageBase;/linux/serverctl .
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Copy game server module into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; cp ~etserver/&project:packageBase;/qagame.mp.i386.so jaymod/.
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Copy game server pak into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; cp ~etserver/&project:packageBase;/&project:pk3; jaymod/.
+</screen>
+    </listitem>
+
+    <listitem>
+    <para>
+        Optional: copy sample configuration files into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; cp ~etserver/&project:packageBase;/server.cfg jaymod/.
+&bash.prompt.et; cp ~etserver/&project:packageBase;/jaymod.cfg jaymod/.
+</screen>
+    </listitem>
+
+    <listitem>
+        &task.etconfig;
+    </listitem>
+
+    <listitem>
+    <para>
+        Optional: copy mapscripts into place.
+    </para>
+<screen>&bash.prompt.et; cd ~etserver/server1/
+&bash.prompt.et; cp ~etserver/&project:packageBase;/mapscripts/* jaymod/mapscripts/.
+</screen>
+    </listitem>
+</orderedlist>
+
+</section>

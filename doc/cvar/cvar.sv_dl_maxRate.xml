@@ -1,0 +1,42 @@
+<refentry id="cvar.sv_dl_maxRate">
+
+<refmeta>
+    <refentrytitle>sv_dl_maxRate</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_dl_maxRate</refname>
+    <refpurpose>set max rate for direct client downloads</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_dl_maxRate</command>
+        <arg><replaceable>rate</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_dl_maxRate</command>
+        <arg choice="plain"><literal>42000</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_dl_maxRate</command>
+    sets the max rate in bytes/s for direct client downloads.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.sv_allowDownload"/>
+</para>
+</refsection>
+</refentry>

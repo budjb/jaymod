@@ -1,0 +1,54 @@
+<refentry id="cvar.omnibot_enable">
+
+<refmeta>
+    <refentrytitle>omnibot_enable</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>omnibot_enable</refname>
+    <refpurpose>enable/disable &omni:name; module</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>omnibot_enable</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>omnibot_enable</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>omnibot_enable</command>
+    enables or disables &omni:name; module loading at game init time.
+    When enabled, &project:name; will attempt to load the &omni:name; module.
+    If the module is not found, a small error message will be logged indicating such,
+    and &project:name; will continue to operate as if &omni:name; was disabled.
+    If you do not wish to operate &omni:name; but wish to supress a loading attempt and subsequent
+    error message, then disable this feature.
+</para>
+<para>
+   <note>
+       This CVAR should be set on the server command-line and not in a <filename>.cfg</filename> file.
+   </note>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="omni"/>
+</para>
+</refsection>
+
+</refentry>

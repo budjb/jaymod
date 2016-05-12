@@ -1,0 +1,37 @@
+<refentry id="cvar.g_dragCorpse">
+
+<refmeta>
+    <refentrytitle>g_dragCorpse</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_dragCorpse</refname>
+    <refpurpose>enables corpse dragging</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_dragCorpse</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_dragCorpse</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_dragCorpse</command>
+    enables corpse dragging.
+</para>
+</refsection>
+
+</refentry>

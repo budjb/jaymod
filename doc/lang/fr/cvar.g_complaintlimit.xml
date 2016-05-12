@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry id="cvar.g_complaintlimit">
+  <refmeta>
+    <refentrytitle>g_complaintlimit</refentrytitle>
+
+    <manvolnum>cvar</manvolnum>
+  </refmeta>
+
+  <refnamediv>
+    <refname>g_complaintlimit</refname>
+
+    <refpurpose>détermine le nombre maximal de plaintes pouvant être déposées
+    contre un joueur au cours d'une carte</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>g_complaintlimit</command>
+
+      <arg><replaceable>num</replaceable></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Default</title>
+
+    <cmdsynopsis>
+      <command>g_complaintlimit</command>
+
+      <arg choice="plain"><literal>6</literal></arg>
+    </cmdsynopsis>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para><command>g_complaintlimit</command> détermine le nombre maximal de
+    plaintes pouvant être déposées contre un joueur au cours d'une carte. Le
+    compte est réinitialisé au début d'une nouvelle carte. Une valeur de 0
+    pour <replaceable>num</replaceable> empêche l'éjection d'un joueur en
+    fonction de plaintes cumulées.</para>
+  </refsection>
+</refentry>

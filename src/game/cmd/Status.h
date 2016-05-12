@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_STATUS_H
+#define GAME_CMD_STATUS_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Status : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Status();
+    ~Status();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_STATUS_H

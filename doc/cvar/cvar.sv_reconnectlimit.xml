@@ -1,0 +1,38 @@
+<refentry id="cvar.sv_reconnectlimit">
+
+<refmeta>
+    <refentrytitle>sv_reconnectlimit</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>sv_reconnectlimit</refname>
+    <refpurpose>set minimum period required between client reconnections</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>sv_reconnectlimit</command>
+        <arg><replaceable>period</replaceable></arg>
+    </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>sv_reconnectlimit</command>
+        <arg choice="plain"><literal>3</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>sv_reconnectlimit</command>
+    sets the minimum period in seconds required between client reconnections.
+    Clients reconecting before waiting at least <replaceable>period</replaceable> seconds will be disconnected.
+    A value of <literal>0</literal> will dissable.
+</para>
+</refsection>
+
+</refentry>

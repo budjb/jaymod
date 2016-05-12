@@ -1,0 +1,88 @@
+<refentry id="cvar.g_bulletmodeReference">
+
+<refmeta>
+    <refentrytitle>g_bulletmodeReference</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_bulletmodeReference</refname>
+    <refpurpose>set reference bulletmode for comparison</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_bulletmodeReference</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+
+<table id="cvar.g_bulletmodeReference.modes" frame="all">
+<title>g_bulletmodeReference Modes</title>
+<tgroup cols="3" align="left" colsep="1" rowsep="1">
+    <colspec colnum="1" colwidth="9*" align="center"/>
+    <colspec colnum="2" colwidth="12*" align="center"/>
+    <colspec colnum="3" colwidth="79*"/>
+    <thead>
+        <row>
+            <entry>MODE</entry>
+            <entry>NAME</entry>
+            <entry>DESCRIPTION</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>entity</entry>
+            <entry>
+                Bullet start-point is center of player entity.
+                This is a useful comparison feature only, and should never be used for real gameplay.
+            </entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>etmain</entry>
+            <entry>
+                Baseline (stock) &et:name:abbr; behavior.
+                Bullet start-point is consistent with players' viewpoint.
+            </entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>muzzle</entry>
+            <entry>
+                Bullet start-point is from muzzle of weapon.
+                This mode is not recommended and is highly experimental.
+                Current testing shows that it suffers from <emphasis>sighting</emphasis> problems.
+            </entry>
+        </row>
+    </tbody>
+</tgroup>
+</table>
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_bulletmodeReference</command>
+        <arg choice="plain"><literal>1</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_bulletmodeReference</command>
+    sets the reference bulletmode to render for comparison.
+    This feature has no effect unless the corresponding <xref linkend="cvar.g_bulletmodeDebug"/> flag is on.
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_bulletmode"/>,
+    <xref linkend="cvar.g_bulletmodeDebug"/>,
+    <xref linkend="cvar.g_bulletmodeTrail"/>
+</para>
+</refsection>
+</refentry>

@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_LAUNCHA_H
+#define GAME_CMD_LAUNCHA_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Launcha : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Launcha();
+    ~Launcha();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_LAUNCHA_H

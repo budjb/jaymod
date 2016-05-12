@@ -1,0 +1,54 @@
+<refentry id="cvar.g_shoveNoZ">
+
+<refmeta>
+    <refentrytitle>g_shoveNoZ</refentrytitle>
+    <manvolnum>cvar</manvolnum>
+</refmeta>
+
+<refnamediv>
+    <refname>g_shoveNoZ</refname>
+    <refpurpose>enable/disable supression of Z-axis shoving</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+    <cmdsynopsis>
+        <command>g_shoveNoZ</command>
+        <arg><replaceable>mode</replaceable></arg>
+    </cmdsynopsis>
+    &boolean.mode;
+</refsynopsisdiv>
+
+<refsection>
+<title>Default</title>
+    <cmdsynopsis>
+        <command>g_shoveNoZ</command>
+        <arg choice="plain"><literal>0</literal></arg>
+    </cmdsynopsis>
+</refsection>
+
+<refsection>
+<title>Description</title>
+<para>
+    <command>g_shoveNoZ</command>
+    enables or disables supression of Z-axis shoving.
+    When enabled, shoving in the vertical up/down direction is supressed,
+    and typically meant to help reduce shove-boosting and other tactics when they are undesired.
+</para>
+<para>
+   <note>
+       <xref linkend="cvar.g_shove"/> must be enabled for this variable to take effect.
+   </note>
+   <warning>
+       Disabling this feature can greatly alter gameplay, as it allows new and unexpected ways of winning objectives.
+   </warning>
+</para>
+</refsection>
+
+<refsection>
+<title>See Also</title>
+<para>
+    <xref linkend="cvar.g_shove"/>
+</para>
+</refsection>
+
+</refentry>

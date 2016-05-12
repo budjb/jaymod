@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_THROWA_H
+#define GAME_CMD_THROWA_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Throwa : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Throwa();
+    ~Throwa();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_THROWA_H

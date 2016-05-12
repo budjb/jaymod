@@ -1,0 +1,5 @@
+CXX.opt.g = -gdwarf-2 -g3
+
+CXX.D += _DEBUG
+CXX.O = 1
+CXX.g = 1
