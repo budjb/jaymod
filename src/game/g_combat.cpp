@@ -377,20 +377,19 @@ void player_die( gentity_t *self, gentity_t *inflictor, gentity_t *attacker, int
 	gitem_t		*item = NULL;
 	gentity_t	*ent;
 	qboolean	killedintank = qfalse;
+	//float		timeLived;
+	weapon_t	weap;
 
-	//float			timeLived;
-	weapon_t	weap = BG_WeaponForMOD( meansOfDeath );
-
-	// Jaybird - override weapon
-    if( meansOfDeath == MOD_FEAR ) {
+	// Jaybird - override/set weapon
+    	if( meansOfDeath == MOD_FEAR ) {
 		weap = BG_WeaponForMOD( self->client->lasthurt_mod );
-    } else if (meansOfDeath == MOD_FALLING && self->client->pmext.wasShoved) {
+    	} else if (meansOfDeath == MOD_FALLING && self->client->pmext.wasShoved) {
 		weap = WP_NONE;
 		attacker = &g_entities[self->client->pmext.shover];
 		meansOfDeath = MOD_SHOVED;
-    } else {
+    	} else { // default
 		weap = BG_WeaponForMOD( meansOfDeath );
-    }
+    	}
 
 	if(attacker == self) {
 		if(self->client) {
